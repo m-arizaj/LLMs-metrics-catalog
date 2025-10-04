@@ -9,9 +9,9 @@ tags: [nlg, text, código, correlación-humana-baja]
 Similitud basada en n-gramas entre referencia(s) y predicción.
 
 **Fórmula (idea general):**
-\[
+$$
 \text{BLEU} = BP \cdot \exp\left(\sum_{n=1}^{N} w_n \log p_n\right)
-\]
+$$
 
 ## Propósito
 Evaluar calidad superficial de generación (texto/código) por coincidencia n-gram.
