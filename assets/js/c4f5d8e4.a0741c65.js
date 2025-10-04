@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkll_ms_metrics_catalog=self.webpackChunkll_ms_metrics_catalog||[]).push([[634],{192:(t,s,a)=>{a.r(s),a.d(s,{default:()=>l});var c=a(6347),e=a(4848);function l(){return(0,e.jsx)(c.rd,{to:"/LLMs-metrics-catalog/intro"})}}}]);
