@@ -8,6 +8,8 @@ module.exports = {
       items: [
         'metrics/clasicas-ml/accuracy',
         'metrics/clasicas-ml/f1-score',
+        'metrics/clasicas-ml/precision',
+        'metrics/clasicas-ml/recall',
       ],
     },
     {

@@ -5,47 +5,55 @@ sidebar_label: ROUGE
 ---
 
 ## Definition
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used for evaluating automatic summarization and machine translation, also applied to code generation . It works by comparing an automatically produced summary or output (candidate) against one or more reference summaries (typically human-written). Key variants include:
+* **ROUGE-N:** Measures the overlap of n-grams (sequences of n words/tokens) .
+* **ROUGE-L:** Measures the Longest Common Subsequence (LCS) between the candidate and reference(s).
 
-[cite_start]ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used primarily for evaluating automatic summarization and machine translation software in natural language processing [cite: 6559-6560]. The metrics compare an automatically produced summary or translation against a reference or a set of references (human-produced).
+As the name suggests, ROUGE primarily focuses on **recall**—how much of the information in the reference(s) is captured by the candidate . Precision and F1 versions also exist.
 
-The main variants include:
-* [cite_start]**ROUGE-N:** Measures the overlap of n-grams (sequences of n words) between the system and reference summaries [cite: 6559-6560]. ROUGE-1 uses unigrams (single words), ROUGE-2 uses bigrams, etc.
-* **ROUGE-L:** Measures the longest common subsequence (LCS) between the system and reference summaries. It looks for the longest sequence of words that appear in both summaries in the same order, but not necessarily consecutively.
-
-[cite_start]ROUGE typically focuses on recall, measuring how much of the reference summary is captured by the system summary [cite: 6559-6560]. Precision and F1-score versions also exist.
-
-## Example (ROUGE-1 Recall)
-
-Let's compare a system-generated summary to a reference summary:
-
-* **Reference Summary:** "the cat sat on the mat"
-* **System Summary:** "the cat was on the mat"
-
-**Unigrams (individual words):**
-* Reference Unigrams: {the, cat, sat, on, mat} (Count = 5, unique = 5)
-* System Unigrams: {the, cat, was, on, mat} (Count = 5, unique = 5)
-
-**Matching Unigrams:** {the, cat, on, mat} (Count = 4)
-
-**ROUGE-1 Recall Calculation:**
-(Number of overlapping unigrams) / (Total number of unigrams in Reference Summary)
-$ROUGE-1 = 4 / 5 = 0.8$
-
-So, the ROUGE-1 recall score is 0.8.
-
-## Equation (ROUGE-N Recall)
-
-The formula for ROUGE-N recall is:
-
+## Formula (General Idea - ROUGE-N Recall)
 $$
 \text{ROUGE-N}_{\text{recall}} = \frac{\sum_{S \in \{\text{Reference Summaries}\}} \sum_{\text{gram}_n \in S} \text{Count}_{\text{match}}(\text{gram}_n)}{\sum_{S \in \{\text{Reference Summaries}\}} \sum_{\text{gram}_n \in S} \text{Count}(\text{gram}_n)}
 $$
-
 Where:
-* $n$ is the length of the n-gram (e.g., 1 for unigrams, 2 for bigrams).
-* $\{\text{Reference Summaries}\}$ is the set of reference summaries.
-* $\text{gram}_n$ is an n-gram.
-* $\text{Count}_{\text{match}}(\text{gram}_n)$ is the maximum number of times an n-gram occurs in both the generated summary and a reference summary.
-* $\text{Count}(\text{gram}_n)$ is the number of times the n-gram occurs in the reference summary.
+* $n$ is the length of the n-gram (e.g., 1 for ROUGE-1, 2 for ROUGE-2).
+* $\text{Count}_{\text{match}}(\text{gram}_n)$ is the number of times an n-gram from the reference appears in the candidate.
+* $\text{Count}(\text{gram}_n)$ is the total number of n-grams in the reference summary.
 
-[cite_start]This formula calculates the ratio of the number of overlapping n-grams between the system and reference summaries to the total number of n-grams in the reference summaries [cite: 6559-6560].
+## Purpose
+To evaluate the quality of generated text/code by measuring the recall of n-grams or LCS compared to reference(s). Often used to assess content overlap, especially in summarization tasks.
+
+## Domains
+* Automatic Summarization  (Primary use)
+* Machine Translation
+* Code Generation
+* Code Summarization
+* Commit Message Generation
+* Documentation Generation
+* Text Generation
+
+## Benchmarks
+* CodeXGLUE
+* CNN/DailyMail, XSUM
+* TL-CodeSum
+* CodeSearchNet
+* BIG-bench
+* GEM, GLGE
+* PubMed, PMC, BioMedSumm
+* (Various NLP benchmarks)
+
+## Advantages
+* Standard metric, especially for summarization tasks.
+* Correlates reasonably well with human judgments of content overlap (recall).
+* Relatively simple to compute.
+
+## Limitations
+* Like BLEU, has **low semantic sensitivity**; focuses on exact word/token matches, not meaning.
+* Does not directly assess fluency, coherence, or factual correctness.
+* For code, **does not reflect functional correctness** or buildability. High ROUGE doesn't mean the code works.
+* ROUGE-L (LCS) can reward sequences in the correct order but doesn't require contiguity, which might be less relevant for code structure than n-grams.
+
+## Key References
+* Lin, C.-Y., 2004  (Original ROUGE paper)
+* File: Evaluating Large Language Models for Functional.pdf
+* (Excel Data: Papers 1, 2, 3, 4, 6, 7, 9, 11, 12, 18, 19, 25, 40, 48)
