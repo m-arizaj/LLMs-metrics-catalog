@@ -1,74 +1,72 @@
 ---
-id: f1-score
-title: F1-Score
-sidebar_label: F1-Score
+id: precision
+title: Precision
+sidebar_label: Precision
 ---
 
 ## Definition
-The **F1-Score** (also known as F-score or F-measure) is a metric commonly used in classification, information retrieval, and other tasks where both **Precision** and **Recall** are important. It calculates the **harmonic mean** of Precision and Recall, providing a single score that balances both concerns.
+**Precision**, also known as **positive predictive value**, is a metric used in classification, information retrieval, and increasingly in evaluating generative models. It measures the proportion of instances predicted as positive (or generated items) that are actually correct (or relevant/high-fidelity). In essence, it answers the question: "Of all the items the model identified as positive, how many were actually positive?"
 
-It's particularly useful when dealing with **imbalanced datasets**, where accuracy alone might be misleading because a model could achieve high accuracy by simply predicting the majority class.
+In generative models, Precision is often adapted to measure **fidelity**—how realistic or close the generated samples are to the real data distribution . It assesses whether the generated samples fall within the distribution of real samples in a feature space.
 
 ***
 
 ## Formula (General Idea)
-The F1-Score is calculated as:
+The standard formula for precision in classification/detection is:
 $$
-\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
 $$
-Alternatively, using True Positives (TP), False Positives (FP), and False Negatives (FN):
-$$
-\text{F1} = \frac{\text{TP}}{\text{TP} + \frac{1}{2}(\text{FP} + \text{FN})}
-$$
+* **TP:** Items correctly identified as positive (e.g., actual bugs found, relevant documents retrieved, high-fidelity generated samples identified as "real").
+* **FP:** Items incorrectly identified as positive (e.g., non-bugs flagged as bugs, irrelevant documents retrieved, low-fidelity generated samples identified as "real").
+
+In the context of generative model evaluation (e.g., using the Precision and Recall metric framework):
+* It measures the fraction of the *generated* distribution that falls within the manifold of the *real* data distribution, often estimated using nearest-neighbor methods in a feature space .
 
 ***
 
 ## Purpose
-To provide a single, balanced measure of a model's performance by considering both its ability to avoid false positives (Precision) and its ability to find all true positives (Recall). It is often preferred over accuracy when class distribution is uneven or when the cost of false positives and false negatives differs significantly.
+* **Classification/Detection:** To measure the model's exactness or ability to avoid making incorrect positive predictions (false positives). Crucial when the cost of a false positive is high (e.g., spam detection, medical diagnosis).
+* **Generative Models:** To evaluate the **fidelity** or **quality** of the generated samples. High precision suggests that most generated samples are realistic or similar to real data .
 
 ***
 
 ## Domains
 * Classification (General ML)
 * Information Retrieval
-* Biomedical NLP (Multiple-Classification)
+* Generative Models (Image/Text/Code Generation - Fidelity Evaluation)
 * Bug Fixing / Bug Detection / Code Repair
-* LLM Evaluation / Question Answering
-* Code Generation (as a correctness measure in specific benchmarks like CodeXGLUE)
+* Biomedical NLP (Multiple-Classification)
+* Security Evaluation (Code Generation)
 * Multimodal LLMs (Hallucination Evaluation - Discriminative Task)
 
 ***
 
 ## Benchmarks
-* BC5CDR, NCBI Disease, MedNLI, CHEMPROT
 * Defects4J, QuixBugs
-* NaturalQuestions, NarrativeQA, QuAC
+* BC5CDR, NCBI Disease, MedNLI, CHEMPROT
+* CIFAR10, ImageNet1k, FFHQ, LSUN-Bedroom (for generative model evaluation)
 * AMBER
-* CodeXGLUE (e.g., Clone Detection)
-* KoLA (Knowledge Completion)
-* Synthetic reasoning datasets
-* SELU (Non-Code SE Tasks)
-* (Various classification benchmarks)
+* CYBERSECEVAL
+* (Various classification/IR benchmarks)
 
 ***
 
 ## Advantages
-* **Balances Precision and Recall:** Provides a single score that reflects both aspects, unlike accuracy which can be skewed by class imbalance.
-* **Effective for Imbalanced Classes:** Gives a better indication of model performance when one class significantly outnumbers others.
-* **Widely Used:** A standard metric for many classification and evaluation tasks.
+* Directly measures the correctness of positive predictions/generations.
+* Useful when minimizing false positives is critical.
+* When used alongside Recall for generative models, helps disentangle fidelity (Precision) from diversity (Recall).
 
 ***
 
 ## Limitations
-* **Less Intuitive than Accuracy:** The harmonic mean is not as straightforward to interpret as a simple percentage of correct predictions.
-* **Treats Precision and Recall Equally:** The standard F1-score gives equal weight to Precision and Recall. Variants like F-beta scores exist to weigh one more heavily if needed, but the basic F1 doesn't capture this nuance.
-* **Doesn't Consider True Negatives:** The score is calculated based on TP, FP, and FN, ignoring True Negatives (correctly identified negative instances). This might be a limitation depending on the specific application.
+* **Does not account for False Negatives:** A model can achieve high precision by being very conservative and only making positive predictions when extremely confident, potentially missing many actual positive instances (low recall).
+* **Can be misleading in isolation:** High precision alone doesn't guarantee the model finds most positive instances.
+* **Sensitive to Implementation:** Like Recall for generative models, its estimation using feature space overlaps depends on the encoder and hyperparameters (e.g., k in k-NN) .
 
 ***
 
 ## Key References
-* (Standard ML metric, widely cited across provided papers implicitly or explicitly)
-* File: class level -c.pdf
+* Sajjadi et al., 2018 (Precision and Recall for Generative Models paper)
+* Kynkäänniemi et al., 2019 (Improved Precision and Recall metric)
 * File: exposing flaws.pdf
-* File: human centric.pdf
-* (Excel Data: Papers 2, 3, 4, 5, 6, 7, 8, 10, 11, 43, 50, 55, 61)
+* (Excel Data: Papers 2, 3, 6, 7, 8, 18, 67)
