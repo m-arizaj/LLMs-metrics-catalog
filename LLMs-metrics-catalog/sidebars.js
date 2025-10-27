@@ -3,7 +3,7 @@ module.exports = {
     'intro',
     {
       type: 'category',
-      label: 'Clásicas ML',
+      label: 'ML',
       collapsed: false,
       items: [
         'metrics/clasicas-ml/accuracy',
@@ -46,5 +46,6 @@ module.exports = {
         'metrics/fairness/toxicity',
       ],
     },
+    'references',
   ],
 };
