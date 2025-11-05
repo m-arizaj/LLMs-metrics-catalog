@@ -3,6 +3,14 @@ module.exports = {
     'intro',
     {
       type: 'category',
+      label: 'Core Accuracy & Overlap Metrics',
+      collapsed: false,
+      items: [
+        'metrics/accuracy-overlap/bleu',
+      ],
+    },
+    {
+      type: 'category',
       label: 'ML',
       collapsed: false,
       items: [
@@ -17,7 +25,6 @@ module.exports = {
       label: 'NLG',
       collapsed: false,
       items: [
-        'metrics/nlg/bleu',
         'metrics/nlg/rouge',
       ],
     },
