@@ -7,50 +7,108 @@ module.exports = {
       collapsed: false,
       items: [
         'metrics/accuracy-overlap/bleu',
+        'metrics/accuracy-overlap/accuracy',
+        'metrics/accuracy-overlap/pass-at-k',
+        'metrics/accuracy-overlap/f1-score',
+        'metrics/accuracy-overlap/rouge',
+        'metrics/accuracy-overlap/recall',
+        'metrics/accuracy-overlap/precision',
       ],
     },
     {
       type: 'category',
-      label: 'ML',
+      label: 'Statistical & Correlation Metrics',
       collapsed: false,
       items: [
-        'metrics/clasicas-ml/accuracy',
-        'metrics/clasicas-ml/f1-score',
-        'metrics/clasicas-ml/precision',
-        'metrics/clasicas-ml/recall',
+        'metrics/statistical/ice-score',
       ],
     },
     {
       type: 'category',
-      label: 'NLG',
+      label: 'Code Quality & Structural Metrics',
       collapsed: false,
       items: [
-        'metrics/nlg/rouge',
+        'metrics/code-structural/ast-metrics',
       ],
     },
     {
       type: 'category',
-      label: 'Code-specific',
+      label: 'Functional & Test-based Evaluation',
       collapsed: false,
       items: [
-        'metrics/code-specific/codebleu',
-        'metrics/code-specific/pass-at-k',
+        'metrics/functional-test/error',
       ],
     },
     {
       type: 'category',
-      label: 'Robustness',
+      label: 'Human & Subjective Evaluation',
       collapsed: true,
       items: [
-        'metrics/robustness/adversarial-robustness',
+        'metrics/human/toxicity',
       ],
     },
     {
       type: 'category',
-      label: 'Fairness / Toxicidad',
+      label: 'Generative & Distribution Metrics',
       collapsed: true,
       items: [
-        'metrics/fairness/toxicity',
+        'metrics/generative/amber-score',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Logical Reasoning & Verification',
+      collapsed: true,
+      items: [
+        'metrics/logical/cog-metric',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Robustness, Security & Reliability',
+      collapsed: true,
+      items: [
+        'metrics/robustness/ct-score',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Efficiency & Resource Usage',
+      collapsed: true,
+      items: [
+        'metrics/efficiency/time',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Architectural & System-level Metrics',
+      collapsed: true,
+      items: [
+        'metrics/architectural/composite',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Creativity, Diversity & Novelty',
+      collapsed: true,
+      items: [
+        'metrics/creativity/dialogue',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Ranking, Reward & Optimization',
+      collapsed: true,
+      items: [
+        'metrics/ranking/elo-score',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Semantic, Coherence & Hallucination',
+      collapsed: true,
+      items: [
+        'metrics/semantic/hallucination',
       ],
     },
     'references',
