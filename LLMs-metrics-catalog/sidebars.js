@@ -10,6 +10,7 @@ module.exports = {
         'metrics/accuracy-overlap/accuracy',
         'metrics/accuracy-overlap/pass-at-k',
         'metrics/accuracy-overlap/f1-score',
+        'metrics/accuracy-overlap/exact-match',
         'metrics/accuracy-overlap/rouge',
         'metrics/accuracy-overlap/recall',
         'metrics/accuracy-overlap/precision',
