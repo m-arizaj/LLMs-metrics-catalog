@@ -14,6 +14,15 @@ module.exports = {
         'metrics/accuracy-overlap/rouge',
         'metrics/accuracy-overlap/recall',
         'metrics/accuracy-overlap/precision',
+        'metrics/accuracy-overlap/meteor',
+        'metrics/accuracy-overlap/edit-distance',
+        'metrics/accuracy-overlap/mrr',
+        'metrics/accuracy-overlap/swe',
+        'metrics/accuracy-overlap/bertscore',
+        'metrics/accuracy-overlap/coverage',
+        'metrics/accuracy-overlap/chrf',
+        'metrics/accuracy-overlap/codescore',
+
       ],
     },
     {
@@ -22,6 +31,10 @@ module.exports = {
       collapsed: false,
       items: [
         'metrics/statistical/ice-score',
+        'metrics/statistical/kendall',
+        'metrics/statistical/spearman',
+        'metrics/statistical/pearson',
+        
       ],
     },
     {
@@ -45,7 +58,9 @@ module.exports = {
       label: 'Human & Subjective Evaluation',
       collapsed: true,
       items: [
+        'metrics/human/human',
         'metrics/human/toxicity',
+
       ],
     },
     {
@@ -78,6 +93,7 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/efficiency/time',
+        'metrics/efficiency/memory',
       ],
     },
     {

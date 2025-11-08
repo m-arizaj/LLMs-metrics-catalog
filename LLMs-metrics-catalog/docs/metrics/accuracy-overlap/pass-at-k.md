@@ -75,6 +75,23 @@ Introduced in *ClassEval (2024)* to evaluate hierarchical code correctness.
 Used in *LeetCode (2024)*, this variant measures the proportion of partially correct or subtask-passing solutions 
 at varying granularities ($n$). It bridges the gap between binary correctness and incremental success.
 
+## Extended Variants and Applications
+
+Although Pass@k and Pass Rate share the same conceptual foundation, the proportion of generated outputs that successfully pass all test cases, numerous variants have emerged to evaluate different granularities and contexts within software engineering and LLM-based code generation.
+
+### Granularity of Evaluation
+- Pass Rate per Test Case and Average Test Pass Rate measure partial correctness, indicating how many individual tests succeed rather than requiring full program success.  
+  This is especially valuable for evaluating models in unit test generation and partial code repair tasks.  
+- Unit Test Pass Rate applies this principle at the test suite level, averaging pass ratios across multiple unit tests for each sample.  
+- Code Pass Rate and Simulation Pass Rate extend the metric to specific execution contexts such as hardware simulation or domain-specific compilers.
+
+### Application Contexts
+- **Functional Correctness:** Used in benchmarks like *HumanEval*, *MBPP*, *DevQualityEval*, and *APPS*, measuring whether generated code passes the functional requirements.  
+- **Test Case Generation:** Applied in *DevEval* and similar setups to validate automatically generated tests against expected outputs.  
+- **Environment Setup:** In *DevEval*, Pass Rate measures whether the generated setup scripts lead to a successful configuration.  
+- **Task Completion:** Within *ToolBench*, Pass Rate evaluates the correctness of multi-step task execution by LLM agents.  
+- **Execution-based CEM:** Average Pass Ratio in *APPS-Eval* and *MBPP-Eval* adapts Pass Rate for cumulative execution metrics (Code Execution Metrics).
+
 
 ## Applications in Software Engineering and LLM Evaluation
 
@@ -110,6 +127,6 @@ at varying granularities ($n$). It bridges the gap between binary correctness an
 - *Top Pass: Improve Code Generation by Pass@k-Maximized Code Ranking.*  
   (2024). [arXiv:2408.05715](https://arxiv.org/html/2408.05715v1)
 
-### Additional References  
-- 3, 6, 7, 10, 18, 19, 20, 21, 22, 23, 25, 27, 31, 33, 35, 36, 37, 38, 40, 41, 44, 45, 46, 51, 63, 68
+### Additional References in Dataset 
+- 3, 6, 7, 10, 13, 17, 18, 19, 20, 21, 22, 23, 25, 27, 28, 31, 33, 35, 36, 37, 38, 40, 41, 44, 45, 46, 48, 51, 58, 63, 68
 
