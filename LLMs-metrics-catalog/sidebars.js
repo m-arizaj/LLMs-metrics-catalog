@@ -29,6 +29,7 @@ module.exports = {
       collapsed: false,
       items: [
         'metrics/code-structural/ast-metrics',
+        'metrics/code-structural/edition-metrics',
       ],
     },
     {
@@ -45,6 +46,10 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/human/toxicity',
+        'metrics/human/fairness',
+        'metrics/human/harmlessness',
+        'metrics/human/helpfulness',
+        'metrics/human/honesty',
       ],
     },
     {
@@ -53,6 +58,11 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/generative/amber-score',
+        'metrics/generative/density',
+        'metrics/generative/fd',
+        'metrics/generative/fls',
+        'metrics/generative/inception',
+        'metrics/generative/kernel-distance',
       ],
     },
     {
@@ -61,6 +71,11 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/logical/cog-metric',
+        'metrics/logical/difference-automata',
+        'metrics/logical/exam',
+        'metrics/logical/equivalent',
+        'metrics/logical/idealized',
+
       ],
     },
     {
@@ -69,6 +84,8 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/robustness/ct-score',
+        'metrics/robustness/fitness',
+        'metrics/robustness/performance',
       ],
     },
     {
@@ -77,6 +94,7 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/efficiency/time',
+        'metrics/efficiency/cost-metrics',
       ],
     },
     {
@@ -85,6 +103,10 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/architectural/composite',
+        'metrics/architectural/design-performance',
+        'metrics/architectural/incremental',
+        'metrics/architectural/planning-metrics',
+
       ],
     },
     {
@@ -92,7 +114,9 @@ module.exports = {
       label: 'Creativity, Diversity & Novelty',
       collapsed: true,
       items: [
-        'metrics/creativity/dialogue',
+        'metrics/creativity/dialogue-similarities',
+        'metrics/creativity/innovation-score',
+
       ],
     },
     {
@@ -101,6 +125,10 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/ranking/elo-score',
+        'metrics/ranking/hit-n',
+        'metrics/ranking/llm-evaluation-metrics',
+        'metrics/ranking/language-model-score',
+        'metrics/ranking/locobench-score',
       ],
     },
     {
@@ -109,6 +137,10 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/semantic/hallucination',
+        'metrics/semantic/distinguishability',
+        'metrics/semantic/factuality',
+        'metrics/semantic/faithfulness',
+        'metrics/semantic/gpt-metrics',
       ],
     },
     'references',
