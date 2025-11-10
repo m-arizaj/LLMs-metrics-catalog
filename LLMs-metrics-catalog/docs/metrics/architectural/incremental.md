@@ -1,5 +1,5 @@
 ---
-id: incremental-development-capability-idc
+id: incremental
 title: Incremental Development Capability (IDC)
 sidebar_label: IDC
 ---
