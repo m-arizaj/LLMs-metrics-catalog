@@ -22,6 +22,7 @@ module.exports = {
         'metrics/accuracy-overlap/coverage',
         'metrics/accuracy-overlap/chrf',
         'metrics/accuracy-overlap/codescore',
+        'metrics/accuracy-overlap/moverscore',
 
       ],
     },
@@ -34,6 +35,10 @@ module.exports = {
         'metrics/statistical/kendall',
         'metrics/statistical/spearman',
         'metrics/statistical/pearson',
+        'metrics/statistical/cohen',
+        'metrics/statistical/smape',
+        'metrics/statistical/rate',
+        'metrics/statistical/average',
         
       ],
     },
@@ -51,6 +56,10 @@ module.exports = {
       collapsed: false,
       items: [
         'metrics/functional-test/error',
+        'metrics/functional-test/percentage',
+        'metrics/functional-test/number',
+        'metrics/functional-test/test',
+
       ],
     },
     {
@@ -94,6 +103,7 @@ module.exports = {
       items: [
         'metrics/efficiency/time',
         'metrics/efficiency/memory',
+        'metrics/efficiency/perplexity',
       ],
     },
     {
@@ -126,6 +136,7 @@ module.exports = {
       collapsed: true,
       items: [
         'metrics/semantic/hallucination',
+        'metrics/semantic/coherence',
       ],
     },
     'references',

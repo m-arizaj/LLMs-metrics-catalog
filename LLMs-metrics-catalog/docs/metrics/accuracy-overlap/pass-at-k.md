@@ -75,6 +75,37 @@ Introduced in *ClassEval (2024)* to evaluate hierarchical code correctness.
 Used in *LeetCode (2024)*, this variant measures the proportion of partially correct or subtask-passing solutions 
 at varying granularities ($n$). It bridges the gap between binary correctness and incremental success.
 
+---
+
+## #Attemptk (Attempts@k)
+
+While Pass@k measures the probability that a correct solution appears within k generated attempts,  
+#Attemptk quantifies the *expected number of attempts needed* for a model to produce a correct output.  
+It serves as an inverse or complementary interpretation of Pass@k and reflects *realistic user interaction* patterns.
+
+Formally, the expected number of attempts to success can be approximated as:
+
+$$
+\#Attempt = \mathbb{E}[k \mid \text{first successful output}]
+$$
+
+This metric better captures developer experience in interactive coding environments,  
+where users typically generate one or a few outputs rather than large batches.
+
+### Relationship with Pass@k
+- Pass@k emphasizes *success probability given limited attempts*.  
+- #Attemptk emphasizes *effort required to achieve success*.  
+Both are correlated: higher Pass@k usually implies lower #Attemptk,  
+but #Attemptk provides a more practical measure of efficiency and usability.
+
+### Motivation
+Ghosh Paul et al. (2024) highlight that while Pass@k is suitable for large-scale benchmarks,  
+it may not reflect real developer workflows, since users do not commonly sample $k$ times.  
+The #Attemptk metric, in contrast, quantifies the model’s reliability in achieving correctness  
+within as few trials as possible.
+
+---
+
 ## Extended Variants and Applications
 
 Although Pass@k and Pass Rate share the same conceptual foundation, the proportion of generated outputs that successfully pass all test cases, numerous variants have emerged to evaluate different granularities and contexts within software engineering and LLM-based code generation.
@@ -126,6 +157,11 @@ Although Pass@k and Pass Rate share the same conceptual foundation, the proporti
 
 - *Top Pass: Improve Code Generation by Pass@k-Maximized Code Ranking.*  
   (2024). [arXiv:2408.05715](https://arxiv.org/html/2408.05715v1)
+
+- - Ghosh Paul, S., Miah, R., & Zhu, H. (2024). Benchmarks and Metrics for Evaluations of Code Generation: A Critical Review.  
+  Oxford Brookes University. (Also listed in the references database)
+  [PDF](https://radar.brookes.ac.uk/radar/file/9fbc107d-f24d-40d1-b42f-106c61c97bab/1/SurveyCodeGenEval-final.pdf)
+
 
 ### Additional References in Dataset 
 - 3, 6, 7, 10, 13, 17, 18, 19, 20, 21, 22, 23, 25, 27, 28, 31, 33, 35, 36, 37, 38, 40, 41, 44, 45, 46, 48, 51, 58, 63, 68

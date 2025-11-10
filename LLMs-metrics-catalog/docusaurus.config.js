@@ -23,8 +23,23 @@ const config = {
       },
     ],
   ],
+   plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,              
+        indexDocs: true,
+        indexBlog: false,          
+        indexPages: false,
+        docsRouteBasePath: '/',    
+        language: ['en', 'es'],    
+        highlightSearchTermsOnTargetPage: true,
+      },
+    ],
+  ],
   stylesheets: [],
 };
+
 
 
 module.exports = config;
