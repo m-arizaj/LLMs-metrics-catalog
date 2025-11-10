@@ -49,6 +49,8 @@ module.exports = {
       items: [
         'metrics/code-structural/ast-metrics',
         'metrics/code-structural/edition-metrics',
+        'metrics/code-structural/bugs',
+        'metrics/code-structural/codejudge',
       ],
     },
     {
@@ -170,6 +172,7 @@ module.exports = {
         'metrics/semantic/faithfulness',
         'metrics/semantic/gpt-metrics',
         'metrics/semantic/coherence',
+        'metrics/semantic/chair',
       ],
     },
     'references',
