@@ -15,8 +15,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [[rehypeKatex, { output: 'mathml', throwOnError: false, strict: false }]],
+          remarkPlugins: [remarkMath.default],
+          rehypePlugins: [[rehypeKatex.default, { output: 'mathml', throwOnError: false, strict: false }]],
         },
         blog: false,
         theme: { customCss: require.resolve('./src/css/custom.css') },
