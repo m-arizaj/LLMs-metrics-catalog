@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkll_ms_metrics_catalog=self.webpackChunkll_ms_metrics_catalog||[]).push([[9647],{7121:(e,s,r)=>{r.r(s),r.d(s,{default:()=>i});r(6540);var a=r(4164),c=r(7559),l=r(5500),t=r(2831),u=r(1656),n=r(4848);function i(e){return(0,n.jsx)(l.e3,{className:(0,a.A)(c.G.wrapper.docsPages),children:(0,n.jsx)(u.A,{children:(0,t.v)(e.route.routes)})})}}}]);
