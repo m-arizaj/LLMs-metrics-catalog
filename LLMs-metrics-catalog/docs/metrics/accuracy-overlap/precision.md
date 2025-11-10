@@ -4,69 +4,72 @@ title: Precision
 sidebar_label: Precision
 ---
 
-## Definition
-**Precision**, also known as **positive predictive value**, is a metric used in classification, information retrieval, and increasingly in evaluating generative models. It measures the proportion of instances predicted as positive (or generated items) that are actually correct (or relevant/high-fidelity). In essence, it answers the question: "Of all the items the model identified as positive, how many were actually positive?"
+## Introduction
 
-In generative models, Precision is often adapted to measure **fidelity**—how realistic or close the generated samples are to the real data distribution . It assesses whether the generated samples fall within the distribution of real samples in a feature space.
+Precision is a fundamental metric for evaluating classification and generation tasks, measuring the proportion of correctly predicted positive instances out of all instances predicted as positive. It focuses on minimizing false positives, thus quantifying the model’s ability to produce accurate positive outputs.  
+In Software Engineering, precision is widely used in defect prediction, bug detection, classification, and security evaluation tasks to assess the reliability of model predictions. When applied to code intelligence and generative models, precision reflects how well the model avoids generating incorrect outputs or irrelevant tokens.
 
-***
+The mathematical definition of precision is:
 
-## Formula (General Idea)
-The standard formula for precision in classification/detection is:
 $$
-\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+\text{Precision} = \frac{TP}{TP + FP}
 $$
-* **TP:** Items correctly identified as positive (e.g., actual bugs found, relevant documents retrieved, high-fidelity generated samples identified as "real").
-* **FP:** Items incorrectly identified as positive (e.g., non-bugs flagged as bugs, irrelevant documents retrieved, low-fidelity generated samples identified as "real").
 
-In the context of generative model evaluation (e.g., using the Precision and Recall metric framework):
-* It measures the fraction of the *generated* distribution that falls within the manifold of the *real* data distribution, often estimated using nearest-neighbor methods in a feature space .
+where:
+- **TP (True Positives):** Correctly identified positive cases  
+- **FP (False Positives):** Incorrectly predicted positive cases  
 
-***
+Precision is closely related to Recall and F1-score. While recall measures coverage of the actual positives, precision measures correctness of the predicted positives. Together, they help evaluate trade-offs between strict accuracy and sensitivity to errors.
 
-## Purpose
-* **Classification/Detection:** To measure the model's exactness or ability to avoid making incorrect positive predictions (false positives). Crucial when the cost of a false positive is high (e.g., spam detection, medical diagnosis).
-* **Generative Models:** To evaluate the **fidelity** or **quality** of the generated samples. High precision suggests that most generated samples are realistic or similar to real data .
 
-***
 
-## Domains
-* Classification (General ML)
-* Information Retrieval
-* Generative Models (Image/Text/Code Generation - Fidelity Evaluation)
-* Bug Fixing / Bug Detection / Code Repair
-* Biomedical NLP (Multiple-Classification)
-* Security Evaluation (Code Generation)
-* Multimodal LLMs (Hallucination Evaluation - Discriminative Task)
+## Variants
 
-***
+| Variant | Description | Typical Use Cases |
+|----------|--------------|------------------|
+| Precision | Standard precision metric used in binary/multiclass classification. | Bug detection, defect prediction, and security evaluation. |
+| Mean Average Precision (mAP) | Computes the mean of precision values across multiple recall levels, providing a single measure of retrieval performance. | Retrieval and ranking tasks, code clone detection, fault localization. |
+| Classification Precision (Discriminative Task) | Used in discriminative classification scenarios, such as hallucination detection in multimodal LLMs. | Evaluates fine-grained correctness under classification settings. |
 
-## Benchmarks
-* Defects4J, QuixBugs
-* BC5CDR, NCBI Disease, MedNLI, CHEMPROT
-* CIFAR10, ImageNet1k, FFHQ, LSUN-Bedroom (for generative model evaluation)
-* AMBER
-* CYBERSECEVAL
-* (Various classification/IR benchmarks)
+---
 
-***
+## Applications in Software Engineering
 
-## Advantages
-* Directly measures the correctness of positive predictions/generations.
-* Useful when minimizing false positives is critical.
-* When used alongside Recall for generative models, helps disentangle fidelity (Precision) from diversity (Recall).
+Precision is extensively reported across SE benchmarks and studies:  
 
-***
+- **Bug Detection / Repair:** *Defects4J* and *QuixBugs* employ Precision to evaluate how effectively models detect or fix bugs without overpredicting faulty code.  
+- **Classification and Security Evaluation:** Datasets like *CYBERSECEVAL* and *PII Benchmark* use Precision to measure system robustness against vulnerabilities and privacy breaches.  
+- **Generative Model Evaluation:** Precision is used as a fidelity indicator, assessing the similarity between generated and real data distributions.  
+- **Code Clone Detection:** mAP  is applied to assess retrieval accuracy, ranking predicted code clones based on their relevance.  
+- **Fault Localization:** mAP is employed to evaluate the ranking quality of faulty lines or components identified by LLMs.  
 
-## Limitations
-* **Does not account for False Negatives:** A model can achieve high precision by being very conservative and only making positive predictions when extremely confident, potentially missing many actual positive instances (low recall).
-* **Can be misleading in isolation:** High precision alone doesn't guarantee the model finds most positive instances.
-* **Sensitive to Implementation:** Like Recall for generative models, its estimation using feature space overlaps depends on the encoder and hyperparameters (e.g., k in k-NN) .
 
-***
+## Mathematical Insight
 
-## Key References
-* Sajjadi et al., 2018 (Precision and Recall for Generative Models paper)
-* Kynkäänniemi et al., 2019 (Improved Precision and Recall metric)
-* File: exposing flaws.pdf
-* (Excel Data: Papers 2, 3, 6, 7, 8, 18, 67)
+Precision can also be expressed as an integral part of information retrieval metrics. The Mean Average Precision variant is formally defined as:
+
+$$
+\text{mAP} = \frac{1}{N} \sum_{i=1}^{N} \text{AP}_i
+$$
+
+where $ \text{AP}_i $ is the area under the Precision-Recall curve for the *i-th* query.  
+
+This generalization enables evaluating models that output ranked lists—common in retrieval-based or fault localization tasks in SE.
+
+
+## Related Metrics
+
+- **Recall:** Measures coverage of relevant elements among all true positives.
+- **F1-Score:** Harmonic mean of precision and recall.
+- **AUC-ROC:** Measures the trade-off between true positive and false positive rates.
+
+
+## References
+
+1. Hossin, M., & Sulaiman, M. N. (2015). *A Review on Evaluation Metrics for Data Classification Evaluations.* *International Journal of Data Mining & Knowledge Management Process*, 5(2), 1–11. [https://doi.org/10.5121/ijdkp.2015.5201](https://doi.org/10.5121/ijdkp.2015.5201)  
+2. Beam, C. S. (2023). *Resolving Power: A General Approach to Compare the Distinguishing Ability of Threshold-Free Evaluation Metrics.* *arXiv:2304.00059.* [https://arxiv.org/abs/2304.00059](https://arxiv.org/abs/2304.00059)  
+3. Kang, H., & Do, S. (2024). *ML-Based Software Defect Prediction in Embedded Software for Telecommunication Systems (Focusing on the Case of SAMSUNG ELECTRONICS).* *Electronics,* 13(9), 1690. [https://doi.org/10.3390/electronics13091690](https://doi.org/10.3390/electronics13091690)  
+
+## Additional References in Dataset
+
+- 2, 3, 6, 7, 8, 18, 26, 32, 45, 50, 67

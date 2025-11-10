@@ -10,9 +10,20 @@ module.exports = {
         'metrics/accuracy-overlap/accuracy',
         'metrics/accuracy-overlap/pass-at-k',
         'metrics/accuracy-overlap/f1-score',
+        'metrics/accuracy-overlap/exact-match',
         'metrics/accuracy-overlap/rouge',
         'metrics/accuracy-overlap/recall',
         'metrics/accuracy-overlap/precision',
+        'metrics/accuracy-overlap/meteor',
+        'metrics/accuracy-overlap/edit-distance',
+        'metrics/accuracy-overlap/mrr',
+        'metrics/accuracy-overlap/swe',
+        'metrics/accuracy-overlap/bertscore',
+        'metrics/accuracy-overlap/coverage',
+        'metrics/accuracy-overlap/chrf',
+        'metrics/accuracy-overlap/codescore',
+        'metrics/accuracy-overlap/moverscore',
+
       ],
     },
     {
@@ -21,6 +32,14 @@ module.exports = {
       collapsed: false,
       items: [
         'metrics/statistical/ice-score',
+        'metrics/statistical/kendall',
+        'metrics/statistical/spearman',
+        'metrics/statistical/pearson',
+        'metrics/statistical/cohen',
+        'metrics/statistical/smape',
+        'metrics/statistical/rate',
+        'metrics/statistical/average',
+        
       ],
     },
     {
@@ -38,6 +57,10 @@ module.exports = {
       collapsed: false,
       items: [
         'metrics/functional-test/error',
+        'metrics/functional-test/percentage',
+        'metrics/functional-test/number',
+        'metrics/functional-test/test',
+
       ],
     },
     {
@@ -45,11 +68,13 @@ module.exports = {
       label: 'Human & Subjective Evaluation',
       collapsed: true,
       items: [
+        'metrics/human/human',
         'metrics/human/toxicity',
         'metrics/human/fairness',
         'metrics/human/harmlessness',
         'metrics/human/helpfulness',
         'metrics/human/honesty',
+
       ],
     },
     {
@@ -95,6 +120,8 @@ module.exports = {
       items: [
         'metrics/efficiency/time',
         'metrics/efficiency/cost-metrics',
+        'metrics/efficiency/memory',
+        'metrics/efficiency/perplexity',
       ],
     },
     {
@@ -141,6 +168,7 @@ module.exports = {
         'metrics/semantic/factuality',
         'metrics/semantic/faithfulness',
         'metrics/semantic/gpt-metrics',
+        'metrics/semantic/coherence',
       ],
     },
     'references',

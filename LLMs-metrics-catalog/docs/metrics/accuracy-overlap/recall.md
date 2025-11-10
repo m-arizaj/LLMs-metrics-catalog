@@ -4,68 +4,78 @@ title: Recall
 sidebar_label: Recall
 ---
 
-## Definition
-Recall, also known as **sensitivity** or **true positive rate**, is a fundamental metric used in various machine learning tasks, including classification, information retrieval, and the evaluation of generative models. In the context of generative models for images or text/code, it is often adapted to measure **diversity** or **coverage**—how well the generated samples capture the breadth and variety present in the real data distribution or reference set . For tasks like bug detection/repair, it measures the proportion of actual bugs that were correctly identified or fixed.
+## Introduction
 
-***
+Recall (also known as Sensitivity or True Positive Rate) measures the proportion of relevant instances that are successfully retrieved by a model. It is particularly important in contexts where false negatives are costly, such as defect detection, security vulnerability identification, or code correctness prediction in software engineering.
 
-## Formula (General Idea)
-The standard formula for recall in classification/detection is:
+The general formula is:
+
 $$
-\text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}
+\text{Recall} = \frac{TP}{TP + FN}
 $$
-* **TP:** Items correctly identified as positive (e.g., actual bugs found, relevant documents retrieved).
-* **FN:** Items incorrectly identified as negative (e.g., actual bugs missed, relevant documents not retrieved).
 
-In the context of generative model evaluation (e.g., using the Precision and Recall metric framework for distributions):
-* It measures the fraction of the *real* data distribution that is covered by the *generated* distribution, often estimated using nearest-neighbor methods in a feature space.
+where:
+- $TP$ = True Positives (correctly identified positive instances)  
+- $FN$ = False Negatives (missed positive instances)
 
-***
+Recall emphasizes the completeness of a model’s predictions, how well it captures all relevant items, rather than just the precision of those retrieved.
 
-## Purpose
-* **Classification/Detection:** To measure the model's ability to find all relevant positive instances (e.g., find all bugs, identify all patients with a disease).
-* **Generative Models:** To evaluate the **diversity** or **coverage** of the generated samples compared to the real data distribution. A high recall suggests the model can generate varied outputs covering most modes of the true distribution
-.
+## Theoretical Context
 
-***
+In software engineering, recall has become a fundamental measure for evaluating model performance in bug detection, defect prediction, classification robustness, and code understanding.  
+It helps determine whether a model can identify as many true issues or relevant entities as possible, which is critical when omissions (false negatives) are more harmful than false alarms (false positives).
 
-## Domains
-* Classification (General ML)
-* Information Retrieval
-* Generative Models (Image/Text/Code Generation - Diversity Evaluation)
-* Bug Fixing / Bug Detection
-* Biomedical NLP
-* Security Evaluation (Code Generation)
+- **Tantithamthavorn et al. (2018)** emphasize that recall is highly sensitive to class imbalance, a common issue in defect prediction datasets. When the majority of cases are non-defective, optimizing recall ensures that minority (defective) cases are not ignored — an insight that translates directly to LLM evaluations where rare but critical cases (e.g., security vulnerabilities or logical failures) exist.  
 
-***
+- **Wattanakriengkrai et al. (2020)** extend this perspective by applying recall to line-level code defect prediction, demonstrating that a higher recall reflects a model’s capacity to detect all potentially defective lines. This parallels LLM-based code generation or repair tasks, where missing a single error can compromise functional correctness.  
 
-## Benchmarks
-* Defects4J, QuixBugs
-* CodeSearchNet
-* BC5CDR, NCBI Disease, MedNLI, CHEMPROT
-* CIFAR10, ImageNet1k, FFHQ, LSUN-Bedroom (for generative model evaluation)
-* AMBER (for Multimodal LLMs)
-* CYBERSECEVAL
-* (Various classification/IR benchmarks)
+- **Díaz, Ekstrand & Mitra (2023)** discuss recall from a broader evaluation theory perspective, connecting it to robustness and lexicographic evaluation in large-scale model assessment. They propose that recall is not only a detection measure but also a lens to evaluate models’ stability and reliability across edge cases, which aligns with LLM robustness testing in software engineering and NLP.
 
-***
+## Variants of Recall
 
-## Advantages
-* Directly measures how well a model captures all positive/relevant instances or the diversity of a target distribution.
-* Crucial in applications where missing positives is costly (e.g., medical diagnosis, bug detection).
-* When used alongside Precision for generative models, helps disentangle fidelity (Precision) from diversity (Recall).
+Across software engineering benchmarks and LLM evaluations, Recall appears in multiple specialized forms to adapt to context-specific needs:
 
-***
+### 1. **Standard Recall**
+Measures the proportion of correctly identified positive instances.  
+Common in bug detection, classification, and security evaluation tasks.
+- Examples:  
+  - `Defects4J`, `QuixBugs`, `CYBERSECEVAL`, `AMBER`, `PII Benchmark`  
+  - Domains: Bug Repair, Classification, Security, Hallucination Detection  
 
-## Limitations
-* Does not account for False Positives (measured by Precision). A model can achieve high recall by simply classifying/generating everything as positive, leading to low precision.
-* The implementation for generative models (based on feature space overlaps) can be sensitive to the choice of feature extractor (encoder) and hyperparameters (like k in k-NN).
-* High recall in generation doesn't guarantee high fidelity (realism/correctness) of individual samples.
+### 2. **Recall@k**
+Evaluates recall when considering the *top-k* predictions generated by the model — useful in ranking or multi-output settings such as code generation** or retrieval tasks.
 
-***
+- Examples:  
+  - `DevEval`, `EvoCodeBench`  
+  - Measures model’s ability to include the correct solution among its k-best outputs.  
+  - Often expressed as:
+    $$
+    \text{Recall@k} = \frac{|\text{Relevant items in top-k}|}{|\text{All relevant items}|}
+    $$
 
-## Key References
-* Sajjadi et al., 2018 (Precision and Recall for Generative Models paper)
-* Kynkäänniemi et al., 2019 (Improved Precision and Recall metric)
-* File: exposing flaws.pdf
-* (Excel Data: Papers 2, 3, 6, 7, 8, 18, 48, 67)
+### 3. **Dependency Recall (DEP)**
+Used in structural code evaluation tasks such as `ClassEval`, focusing on how well a model preserves field** or method dependencies in generated code.
+
+- **DEP(F)** — *Field Dependency Recall*: Evaluates if the generated code retains the correct field-level relationships between variables.  
+- **DEP(M)** — *Method Dependency Recall*: Measures preservation of logical or functional dependencies between methods.  
+
+These variants extend the idea of recall beyond classification to structural and contextual understanding, assessing LLMs’ ability to maintain internal code consistency.
+
+## Applications in Software Engineering
+
+- **Bug Detection / Repair**: Ensures that the model detects as many defective components or code lines as possible.  
+- **Classification Tasks**: Measures the completeness of predictions in multi-class or discriminative models.  
+- **Security Evaluation**: Assesses the detection rate of vulnerabilities.  
+- **Dependency Understanding**: Evaluates structural correctness and code context maintenance.  
+- **Hallucination and Robustness Testing**: Monitors how consistently models recall true facts or relevant entities.
+
+## References
+
+1. Tantithamthavorn, C., McIntosh, S., Hassan, A. E., & Matsumoto, K. (2018). *The Impact of Class Rebalancing Techniques on the Performance and Interpretation of Defect Prediction Models.* [https://arxiv.org/abs/1801.10269](https://arxiv.org/abs/1801.10269)
+
+2. Wattanakriengkrai, S., Tantithamthavorn, C., Matsumoto, K., & Hassan, A. E. (2020). *Predicting Defective Lines Using a Model-Agnostic Technique.* [https://arxiv.org/abs/2009.03612](https://arxiv.org/abs/2009.03612)
+
+3. Díaz, F., Ekstrand, M. D., & Mitra, B. (2023). *Recall, Robustness, and Lexicographic Evaluation.* [https://doi.org/10.48550/arXiv.2302.11370](https://doi.org/10.48550/arXiv.2302.11370)
+
+### Additional References in Dataset
+-2, 3, 6, 7, 8, 18, 22, 26, 36, 45, 48, 50, 63, 67
