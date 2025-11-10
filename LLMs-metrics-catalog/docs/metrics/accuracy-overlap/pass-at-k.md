@@ -158,7 +158,7 @@ Although Pass@k and Pass Rate share the same conceptual foundation, the proporti
 - *Top Pass: Improve Code Generation by Pass@k-Maximized Code Ranking.*  
   (2024). [arXiv:2408.05715](https://arxiv.org/html/2408.05715v1)
 
-- - Ghosh Paul, S., Miah, R., & Zhu, H. (2024). Benchmarks and Metrics for Evaluations of Code Generation: A Critical Review.  
+- Ghosh Paul, S., Miah, R., & Zhu, H. (2024). Benchmarks and Metrics for Evaluations of Code Generation: A Critical Review.  
   Oxford Brookes University. (Also listed in the references database)
   [PDF](https://radar.brookes.ac.uk/radar/file/9fbc107d-f24d-40d1-b42f-106c61c97bab/1/SurveyCodeGenEval-final.pdf)
 

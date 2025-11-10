@@ -74,6 +74,7 @@ module.exports = {
         'metrics/human/harmlessness',
         'metrics/human/helpfulness',
         'metrics/human/honesty',
+        'metrics/human/bias',
 
       ],
     },
