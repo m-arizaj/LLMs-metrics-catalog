@@ -3,6 +3,7 @@ id: bertscore
 title: BERTScore
 sidebar_label: BERTScore
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 BERTScore is an embedding-based evaluation metric that measures the similarity between a generated text and a reference by leveraging contextual embeddings from pretrained models like BERT.  
@@ -88,4 +89,4 @@ In practice, BERTScore and CodeBERTScore are most effective when combined with e
    [https://aclanthology.org/2023.emnlp-main.859.pdf](https://aclanthology.org/2023.emnlp-main.859.pdf)
 
 ### Additional References in Dataset 
-- 1, 2, 11, 12, 24, 25, 26, 37, 40
+- <ReferencesIndex ids={['1','2','11','12','24','25','26','37','40']} />

@@ -46,6 +46,8 @@ In practice, CT Score can:
 - Serve as a cross-domain evaluation measure for both text and image generation, given its general contrastive foundation.
 
 ## Reference
-Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E. T., & Loaiza-Ganem, G. (2023).  
-Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models.  
-[arXiv:2306.04675](https://arxiv.org/abs/2306.04675)
+1. Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E.   T., & Loaiza-Ganem, G. (2023).  
+   Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models.  
+   [arXiv:2306.04675](https://arxiv.org/abs/2306.04675)
+
+   
