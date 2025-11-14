@@ -45,4 +45,4 @@ This metric is used for **Migration Error Detection**. The logic is direct: "Any
 | **Nonempty Difference Automaton Indicator** | Difference Automata | Migration Error Detection | A binary signal indicating if an error was found  | Software Migration / Validation  |
 
 ## References
-- Busch, D., Bainczyk, A., Smyth, S. et al. LLM-based code generation and system migration in language-driven engineering. Int J Softw Tools Technol Transfer 27, 137–147 (2025). https://doi-org.ezproxy.uniandes.edu.co/10.1007/s10009-025-00798-x
+- Busch, D., Bainczyk, A., Smyth, S. et al. LLM-based code generation and system migration in language-driven engineering. Int J Softw Tools Technol Transfer 27, 137–147 (2025). https://doi.org/10.1007/s10009-025-00798-x

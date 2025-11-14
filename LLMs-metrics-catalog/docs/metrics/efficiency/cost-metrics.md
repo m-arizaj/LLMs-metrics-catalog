@@ -59,7 +59,7 @@ In the context of evolutionary algorithms using LLMs (like LLM_GP), "Total Cost"
 ## References
 - Alhanahnah, M., Rashedul Hasan, M., Xu, L. et al. An empirical evaluation of pre-trained large language models for repairing declarative formal specifications. Empir Software Eng 30, 149 (2025). https://doi.org/10.1007/s10664-025-10687-1
 - Hemberg, E., Moskal, S. & O’Reilly, UM. Evolving code with a large language model. Genet Program Evolvable Mach 25, 21 (2024). https://doi.org/10.1007/s10710-024-09494-2
-- Wang, L., Ma, C., Feng, X. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi-org.ezproxy.uniandes.edu.co/10.1007/s11704-024-40231-1
+- Wang, L., Ma, C., Feng, X. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi.org/10.1007/s11704-024-40231-1
 
 ## Additional References
 
