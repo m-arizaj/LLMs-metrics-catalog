@@ -51,6 +51,16 @@ module.exports = {
         'metrics/code-structural/edition-metrics',
         'metrics/code-structural/bugs',
         'metrics/code-structural/codejudge',
+        'metrics/code-structural/compilation',
+        'metrics/code-structural/complexity',
+        'metrics/code-structural/code-style',
+        'metrics/code-structural/cohesion',
+        'metrics/code-structural/correctness',
+        'metrics/code-structural/count',
+        'metrics/code-structural/build',
+        'metrics/code-structural/ranked-retrieval',
+        'metrics/code-structural/dataflow',
+
       ],
     },
     {
@@ -62,6 +72,7 @@ module.exports = {
         'metrics/functional-test/percentage',
         'metrics/functional-test/number',
         'metrics/functional-test/test',
+        'metrics/functional-test/reasoning-depth',
 
       ],
     },
@@ -77,6 +88,7 @@ module.exports = {
         'metrics/human/helpfulness',
         'metrics/human/honesty',
         'metrics/human/bias',
+        'metrics/human/general-principles',
 
       ],
     },
@@ -114,6 +126,7 @@ module.exports = {
         'metrics/robustness/ct-score',
         'metrics/robustness/fitness',
         'metrics/robustness/performance',
+        'metrics/robustness/reliability',
       ],
     },
     {
@@ -125,6 +138,7 @@ module.exports = {
         'metrics/efficiency/cost-metrics',
         'metrics/efficiency/memory',
         'metrics/efficiency/perplexity',
+        'metrics/efficiency/cpu',
       ],
     },
     {
@@ -136,6 +150,7 @@ module.exports = {
         'metrics/architectural/design-performance',
         'metrics/architectural/incremental',
         'metrics/architectural/planning-metrics',
+        'metrics/architectural/comprehensiveness',
 
       ],
     },
