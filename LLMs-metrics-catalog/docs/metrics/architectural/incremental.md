@@ -6,7 +6,7 @@ sidebar_label: IDC
 
 ## Definition
 
-The **Incremental Development Capability (IDC)** is a novel metric introduced by Qiu et al. (2025) as part of the LoCoBench benchmark[cite: 322, 343]. It is designed to evaluate a Large Language Model's (LLM) ability to **build effectively on previous development work across multiple sessions**.
+The **Incremental Development Capability (IDC)** is a novel metric introduced by Qiu et al. (2025) as part of the LoCoBench benchmark. It is designed to evaluate a Large Language Model's (LLM) ability to **build effectively on previous development work across multiple sessions**.
 
 This metric addresses a critical gap in traditional evaluations by measuring how well a model handles incremental tasks, a crucial capability for realistic, long-context software development that is often overlooked by other benchmarks. It falls under the "Functional Correctness" dimension of the LoCoBench framework.
 
@@ -15,7 +15,7 @@ This metric addresses a critical gap in traditional evaluations by measuring how
 ## Formula (General Idea)
 The IDC score is calculated based on a sequence of incremental development tasks $\mathcal{T}$ applied to a codebase across multiple states $\mathcal{S}$.
 
-For a sequence of tasks $\mathcal{T}=\{t_{1},t_{2},...,t_{k}\}$ that cause codebase state transitions $\mathcal{S}_{0}\rightarrow\mathcal{S}_{1}\rightarrow\cdot\cdot\cdot\rightarrow\mathcal{S}_{k}$, the IDC is defined as[cite: 369, 370]:
+For a sequence of tasks $\mathcal{T}=\{t_{1},t_{2},...,t_{k}\}$ that cause codebase state transitions $\mathcal{S}_{0}\rightarrow\mathcal{S}_{1}\rightarrow\cdot\cdot\cdot\rightarrow\mathcal{S}_{k}$, the IDC is defined as:
 
 $$
 IDC(\mathcal{T})=\frac{1}{|\mathcal{T}|}\sum_{i=1}^{|\mathcal{T}|}\frac{\xi(t_{i},\mathcal{S}_{i-1})\cdot\sigma(t_{i},\mathcal{S}_{i})}{\beta(t_{i},\mathcal{S}_{i-1},\mathcal{S}_{i})+1}
@@ -42,10 +42,7 @@ The primary purpose of the IDC metric is to assess an LLM's performance in reali
 
 ***
 
-## Benchmarks
-* **LoCoBench**: IDC is a novel metric introduced as a key component of the LoCoBench benchmark.
 
-***
 
 ## Advantages
 * **Realistic Evaluation:** It measures a capability that is crucial for practical, long-term software development but is not captured by metrics focused on single, isolated tasks.

@@ -40,14 +40,6 @@ The primary purpose of KD/KID is to serve as a **ranking metric** for the overal
 
 ***
 
-## Benchmarks
-
-The metric is used to evaluate models trained on various image datasets, including:
-* CIFAR10
-* ImageNet1k
-* FFHQ
-* LSUN-Bedroom
-
 ***
 
 ## Advantages
@@ -59,7 +51,7 @@ The metric is used to evaluate models trained on various image datasets, includi
 
 ## Limitations
 
-* **High Correlation with FD:** Despite its different theoretical basis, KD is found to be **very highly correlated** with Fréchet Distance (FD) and $FD_{\infty}$ across various encoders[cite: 4738]. This means it results in "essentially the same model rankings" as FD.
+* **High Correlation with FD:** Despite its different theoretical basis, KD is found to be **very highly correlated** with Fréchet Distance (FD) and $FD_{\infty}$ across various encoders. This means it results in "essentially the same model rankings" as FD.
 * **Encoder-Dependent:** Like FD, its correlation with human perception of quality is highly dependent on the feature extractor (encoder) used.
 * **Poor Inception-V3 Correlation:** When used with the standard Inception-V3 network (as KID), the metric does **not** correlate well with human evaluations of image realism, particularly on complex datasets.
 

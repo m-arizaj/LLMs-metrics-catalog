@@ -29,8 +29,4 @@ The EXAM benchmark uses the following metrics to score a model's performance :
 
 ## References
 
-- Chen, X., Hu, X., Huang, Y. et al. Deep learning-based software engineering: progress, challenges, and opportunities. Sci. China Inf. Sci. 68, 111102 (2025). https://doi-org.ezproxy.uniandes.edu.co/10.1007/s11432-023-4127-5
-
-- Tran, L. H., Le, T., & Nguyen, A. T. (2022). *EXAM: a benchmark for explainable automated debugging*. In: Proc IEEE/ACM 44th International Conference on Software Engineering.
-
-- Zhang, Z., Chen, J., Wu, D., et al. (2025). *A survey of large language models for code: generation, augmentation, and verification*. Sci Sin Inform.
+- Chen, X., Hu, X., Huang, Y. et al. Deep learning-based software engineering: progress, challenges, and opportunities. Sci. China Inf. Sci. 68, 111102 (2025). https://doi.org/10.1007/s11432-023-4127-5

@@ -30,4 +30,4 @@ As a form of objective evaluation, "Dialogue Similarities" provides quantitative
 
 ## References
 
-- Wang, L., Ma, C., Feng, X. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi-org.ezproxy.uniandes.edu.co/10.1007/s11704-024-40231-1
+- Wang, L., Ma, C., Feng, X. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi.org/10.1007/s11704-024-40231-1

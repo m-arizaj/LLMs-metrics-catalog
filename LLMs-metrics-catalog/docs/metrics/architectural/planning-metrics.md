@@ -35,9 +35,9 @@ The primary purpose of this metric is to quantify the efficiency of an agent's r
 
 ### Definition
 
-**Plan Score** is an objective metric introduced in the **T-Eval** benchmark [cite: 1170] to evaluate the **output quality** of an agent's plan. It measures the **similarity between the agent's predicted plan and a "gold answer"** (a correct plan, often from human annotators).
+**Plan Score** is an objective metric introduced in the **T-Eval** benchmark  to evaluate the **output quality** of an agent's plan. It measures the **similarity between the agent's predicted plan and a "gold answer"** (a correct plan, often from human annotators).
 
-The score is calculated based on the F1-score (harmonic mean) of precision and recall, which are derived from the longest common subsequence of actions between the predicted and gold plans[cite: 972, 973, 975].
+The score is calculated based on the F1-score (harmonic mean) of precision and recall, which are derived from the longest common subsequence of actions between the predicted and gold plans.
 
 ### Formula (General Idea)
 

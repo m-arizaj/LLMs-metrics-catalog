@@ -23,6 +23,7 @@ module.exports = {
         'metrics/accuracy-overlap/chrf',
         'metrics/accuracy-overlap/codescore',
         'metrics/accuracy-overlap/moverscore',
+        'metrics/accuracy-overlap/comet',
 
       ],
     },
@@ -39,6 +40,7 @@ module.exports = {
         'metrics/statistical/smape',
         'metrics/statistical/rate',
         'metrics/statistical/average',
+        'metrics/statistical/fault-localization-rank',
         
       ],
     },
@@ -72,6 +74,8 @@ module.exports = {
         'metrics/functional-test/percentage',
         'metrics/functional-test/number',
         'metrics/functional-test/test',
+        'metrics/functional-test/mutant-killings',
+        'metrics/functional-test/solution-metrics',
         'metrics/functional-test/reasoning-depth',
 
       ],
@@ -88,6 +92,10 @@ module.exports = {
         'metrics/human/helpfulness',
         'metrics/human/honesty',
         'metrics/human/bias',
+        'metrics/human/stereotype-score',
+        'metrics/human/subjective-score',
+        'metrics/human/usefulness-score',
+        'metrics/human/user-related-metrics',
         'metrics/human/general-principles',
 
       ],
@@ -103,6 +111,9 @@ module.exports = {
         'metrics/generative/fls',
         'metrics/generative/inception',
         'metrics/generative/kernel-distance',
+        'metrics/generative/mauve',
+        'metrics/generative/side',
+        'metrics/generative/spatial-fid',
       ],
     },
     {
@@ -115,6 +126,7 @@ module.exports = {
         'metrics/logical/exam',
         'metrics/logical/equivalent',
         'metrics/logical/idealized',
+        'metrics/logical/model-checking-ctl',
 
       ],
     },
@@ -126,6 +138,10 @@ module.exports = {
         'metrics/robustness/ct-score',
         'metrics/robustness/fitness',
         'metrics/robustness/performance',
+        'metrics/robustness/robustness',
+        'metrics/robustness/security-analysis-score',
+
+
         'metrics/robustness/reliability',
       ],
     },
@@ -138,6 +154,9 @@ module.exports = {
         'metrics/efficiency/cost-metrics',
         'metrics/efficiency/memory',
         'metrics/efficiency/perplexity',
+        'metrics/efficiency/energy-metrics',
+        'metrics/efficiency/inference',
+        'metrics/efficiency/verbosity',
         'metrics/efficiency/cpu',
       ],
     },
@@ -150,6 +169,7 @@ module.exports = {
         'metrics/architectural/design-performance',
         'metrics/architectural/incremental',
         'metrics/architectural/planning-metrics',
+        'metrics/architectural/system-thinking-score',
         'metrics/architectural/comprehensiveness',
 
       ],
@@ -161,6 +181,10 @@ module.exports = {
       items: [
         'metrics/creativity/dialogue-similarities',
         'metrics/creativity/innovation-score',
+        'metrics/creativity/rarity-score',
+        'metrics/creativity/readability',
+        'metrics/creativity/vendi-score',
+   
 
       ],
     },
@@ -174,6 +198,10 @@ module.exports = {
         'metrics/ranking/llm-evaluation-metrics',
         'metrics/ranking/language-model-score',
         'metrics/ranking/locobench-score',
+        'metrics/ranking/multiple-choice-brier-score',
+        'metrics/ranking/relative-improvement',
+        'metrics/ranking/reward-score',
+
       ],
     },
     {
@@ -188,6 +216,11 @@ module.exports = {
         'metrics/semantic/gpt-metrics',
         'metrics/semantic/coherence',
         'metrics/semantic/chair',
+        'metrics/semantic/semantic-metrics',
+        'metrics/semantic/sentiment-polarity-shift',
+        'metrics/semantic/similarity',
+        'metrics/semantic/surface-form-constraints',
+
       ],
     },
     'references',

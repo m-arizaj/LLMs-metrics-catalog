@@ -32,7 +32,7 @@ The calculation follows a multi-step process:
 
 3.  **Final Score:** The final LCBS is the weighted sum of the four dimension scores, scaled by 5 to produce the final 0-5 point score.
     $$LCBS = 5 \cdot (w_{SE} \cdot SE + w_{FC} \cdot FC + w_{CQ} \cdot CQ + w_{LCU} \cdot LCU)$$
-    Substituting the defined weights gives the final formula[cite: 3537]:
+    Substituting the defined weights gives the final formula:
     $$LCBS = 5 \cdot (0.4 \cdot SE + 0.3 \cdot FC + 0.2 \cdot CQ + 0.1 \cdot LCU)$$
 
 ***
@@ -50,11 +50,6 @@ The primary purpose of the LCBS is to provide a single, unified scalar score tha
 
 ***
 
-## Benchmarks
-
-* **LoCoBench**
-
-***
 
 ## Advantages
 
