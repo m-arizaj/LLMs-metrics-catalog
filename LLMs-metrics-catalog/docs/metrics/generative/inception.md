@@ -3,6 +3,7 @@ id: inception
 title: Inception Score (IS)
 sidebar_label: Inception Score (IS)
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
