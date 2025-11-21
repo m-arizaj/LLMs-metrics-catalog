@@ -3,6 +3,7 @@ id: fairness
 title: Fairness
 sidebar_label: Fairness
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 **Fairness** is a critical category of ethical evaluation for Large Language Models (LLMs). It is concerned with assessing whether a model's outputs and behaviors result in **disparate treatment or outcomes between different social groups**.
@@ -95,10 +96,13 @@ The primary purpose of fairness evaluation is to **identify, measure, and ultima
 
 ## Key References
 
-* Gallegos, I. O., Rossi, R. A., Barrow, J., et al. (2024). *Bias and Fairness in Large Language Models: A Survey*. [https://doi.org/10.1162/coli_a_00524](https://doi.org/10.1162/coli_a_00524)
-* Chang, Y., Wang, X., Wang, J., et al. (2023). *A Survey on Evaluation of Large Language Models*. [https://doi.org/10.48550/arXiv.2307.03109](https://doi.org/10.48550/arXiv.2307.03109)
-* Blodgett, S. L., Barocas, S., Daumé III, H., & Wallach, H. (2020). *Language (technology) is power: A critical survey of "bias" in NLP*.
-* Parrish, A., Chen, A., Nangia, N., et al. (2022). *BBQ: A hand-built bias benchmark for question answering*.  
-* Nangia, N., Vania, C., Bhalerao, R., & Bowman, S. R. (2020). *CrowS-Pairs: A challenge dataset for measuring social biases in masked language models*.
-* Nadeem, M., Bethke, A., & Reddy, S. (2021). *StereoSet: Measuring stereotypical bias in pretrained language models*.
-* (Excel Data: Papers 9, 16)
+* Blodgett, S. L., Barocas, S., Daumé III, H., & Wallach, H. (2020). Language (technology) is power: A critical survey of “bias” in NLP. En Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (pp. 5454–5476). Association for Computational Linguistics. https://doi.org/10.18653/v1/2020.acl-main.485
+
+* Parrish, A., Chen, A., Nangia, N., Padmakumar, V., Phang, J., Thompson, J., Htut, P. M., & Bowman, S. R. (2022). BBQ: A hand-built bias benchmark for question answering. En Findings of the Association for Computational Linguistics: ACL 2022 (pp. 2086–2105). Association for Computational Linguistics. https://doi.org/10.18653/v1/2022.findings-acl.165
+
+* Nangia, N., Vania, C., Bhalerao, R., & Bowman, S. R. (2020). CrowS-Pairs: A challenge dataset for measuring social biases in masked language models. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP) (pp. 1953–1967). Association for Computational Linguistics. https://doi.org/10.18653/v1/2020.emnlp-main.154
+
+* Nadeem, M., Bethke, A., & Reddy, S. (2021). StereoSet: Measuring stereotypical bias in pretrained language models. arXiv. https://doi.org/10.48550/arXiv.2004.09456
+
+### Additional References in Dataset 
+- <ReferencesIndex ids={['9','16']} />

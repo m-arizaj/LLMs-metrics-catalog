@@ -29,4 +29,4 @@ The EXAM benchmark uses the following metrics to score a model's performance :
 
 ## References
 
-- Chen, X., Hu, X., Huang, Y. et al. Deep learning-based software engineering: progress, challenges, and opportunities. Sci. China Inf. Sci. 68, 111102 (2025). https://doi.org/10.1007/s11432-023-4127-5
+- Chen, X., Hu, X., Huang, Y., Xia, X., Yin, H., Li, G., Liu, X., & Mei, H. (2025). Deep learning-based software engineering: Progress, challenges, and opportunities. Science China Information Sciences, 68, Artículo 111102. https://doi.org/10.1007/s11432-023-4127-5

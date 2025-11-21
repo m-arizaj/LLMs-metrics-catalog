@@ -57,13 +57,10 @@ Esto ayuda a detectar daños representacionales como la **estereotipación** (do
 ***
 
 ## Key References
-* Gallegos, I. O., Rossi, R. A., Barrow, J., Tanjim, M. M., et al. (2024). *Bias and Fairness in Large Language Models: A Survey*. https://doi.org/10.1162/coli_a_00524
+* Gallegos, I. O., Rossi, R. A., Barrow, J., Tanjim, M. M., Kim, S., Dernoncourt, F., Yu, T., Zhang, R., & Ahmed, N. K. (2024). Bias and fairness in large language models: A survey. Computational Linguistics, 50(3), 1043–1108. https://doi.org/10.1162/coli_a_00524
 
-* Dhamala, J., Sun, T., Kumar, V., Krishna, S., et al. (2021). *BOLD: Dataset and metrics for measuring biases in open-ended language generation*. 
-https://doi.org/10.48550/arXiv.2101.11718
+* Dhamala, J., Sun, T., Kumar, V., Krishna, S., Pruksachatkun, Y., Chang, K.-W., & Gupta, R. (2021). BOLD: Dataset and metrics for measuring biases in open-ended language generation. arXiv. https://doi.org/10.48550/arXiv.2101.11718
 
-* Sheng, E., Chang, K.-W., Natarajan, P., & Peng, N. (2019). *The woman worked as a babysitter: On biases in language generation*. 
-https://doi.org/10.48550/arXiv.1909.01326
+* Sheng, E., Chang, K.-W., Natarajan, P., & Peng, N. (2019). The woman worked as a babysitter: On biases in language generation. arXiv. https://doi.org/10.48550/arXiv.1909.01326
 
-* Huang, P. S., Zhang, H., Jiang, R., Stanforth, R., et al. (2020). *Reducing sentiment bias in language models via counterfactual evaluation*. https://doi.org/10.18653/v1/2020.findings-emnlp.7
-* (Excel Data: Paper 16)
+* Huang, P.-S., Zhang, H., Jiang, R., Stanforth, R., Welbl, J., Rae, J., Maini, V., Yogatama, D., & Kohli, P. (2020). Reducing sentiment bias in language models via counterfactual evaluation. En Findings of the Association for Computational Linguistics: EMNLP 2020 (pp. 65–83). Association for Computational Linguistics. https://doi.org/10.18653/v1/2020.findings-emnlp.7

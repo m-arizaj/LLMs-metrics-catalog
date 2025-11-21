@@ -46,6 +46,6 @@ To assess an LLM's robustness and its ability to handle nuanced changes in a pro
 
 ## References
 
-* Black, G., Vaidyan, V. M., & Comert, G. (2024). *Evaluating Large Language Models for Enhanced Fuzzing: An Analysis Framework for LLM-Driven Seed Generation*. IEEE Access. https://doi.org/10.1109/ACCESS.2024.3484947
-* Anand, A., Chopra, S., & Arora, M. (2025). *Analysis of LLM Code Synthesis in Software Productivity*. In M. Saraswat & R. Kumari (eds.), Applied Intelligence and Computing. https://doi.org/10.56155/978-81-955020-9-7-24
-* (Excel Data: Papers 59, 18)
+* Black, G., Vaidyan, V. M., & Comert, G. (2024). Evaluating large language models for enhanced fuzzing: An analysis framework for LLM-driven seed generation. IEEE Access, 12, 156094–156108. https://doi.org/10.1109/ACCESS.2024.3484947
+
+* Anand, A., Chopra, S., & Arora, M. (2025). Analysis of LLM code synthesis in software productivity. En M. Saraswat & R. Kumari (Eds.), Applied intelligence and computing (pp. 235–243). Universal Inovators. https://doi.org/10.56155/978-81-955020-9-7-24

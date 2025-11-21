@@ -61,5 +61,4 @@ The purpose of the Stereotype Score is to explicitly measure a model's stereotyp
 
 ## Key References
 
-* Nadeem, M., Bethke, A., & Reddy, S. (2021). *StereoSet: Measuring stereotypical bias in pretrained language models. https://doi.org/10.1162/coli_a_00524
-* (Excel Data: Paper 16)
+* Nadeem, M., Bethke, A., & Reddy, S. (2021). StereoSet: Measuring stereotypical bias in pretrained language models. Computational Linguistics, 47(1), 103–142. https://doi.org/10.1162/coli_a_00524

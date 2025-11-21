@@ -87,5 +87,5 @@ The purpose of the Plan Score is to quantify the quality of a generated plan, re
 
 ### Additional References
 
-* Wang, L., Ma, C., Feng, X. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi-org.ezproxy.uniandes.edu.co/10.1007/s11704-024-40231-1 (Paper 49)
-* Xu, W., Huang, C., Gao, S. et al. LLM-Based Agents for Tool Learning: A Survey. Data Sci. Eng. (2025). https://doi-org.ezproxy.uniandes.edu.co/10.1007/s41019-025-00296-9 (Paper 48)
+* Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., Zhang, J., Chen, Z., Tang, J., Chen, X., Lin, Y., Zhao, W. X., Wei, Z., & Wen, J.-R. (2024). A survey on large language model based autonomous agents. Frontiers of Computer Science, 18, Artículo 186345. https://doi.org/10.1007/s11704-024-40231-1
+* Xu, W., Huang, C., Gao, S., Lu, L., Zhang, Z., Liu, J., & Li, W. (2025). LLM-based agents for tool learning: A survey. Data Science and Engineering. https://doi.org/10.1007/s41019-025-00296-9

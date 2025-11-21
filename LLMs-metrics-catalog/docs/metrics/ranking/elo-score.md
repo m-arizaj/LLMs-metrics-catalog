@@ -3,6 +3,7 @@ id: elo-score
 title: ELO Score
 sidebar_label: ELO Score
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -38,6 +39,7 @@ The primary purpose of the ELO score is to serve as the core metric for **Human 
 
 ## References
 
-- Lin, L., Zhu, D., & Shang, J. (2024). *Overview of the Comprehensive Evaluation of Large Language Models*. 2024 IEEE Smart World Congress (SWC). [10.1109/SWC62898.2024.00231](https://doi.org/10.1109/SWC62898.2024.00231).
-- Guo, Z., Jin, R., Liu, C., Huang, Y., Shi, D., Supryadi, ... & Xiong, D. (2023). *Evaluating Large Language Models: A Comprehensive Survey*. arXiv:2310.19736v3 [cs.CL].
-- Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., ... & Stoica, I. (2023). *Judging LLM-as-a-judge with MT-Bench and chatbot arena*.
+- Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E. P., Zhang, H., Gonzalez, J. E., & Stoica, I. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. arXiv. https://doi.org/10.48550/arXiv.2306.05685
+
+### Additional References in Dataset 
+- <ReferencesIndex ids={['1','5']} />

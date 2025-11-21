@@ -3,6 +3,7 @@ id: helpfulness
 title: Helpfulness
 sidebar_label: Helpfulness
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
@@ -63,7 +64,12 @@ The purpose of measuring helpfulness is to **quantify the utility and performanc
 
 ## Key References
 
-* Chang, Y., Wang, X., Wang, J., et al. (2023). *A Survey on Evaluation of Large Language Models*. [https://doi.org/10.48550/arXiv.2307.03109](https://doi.org/10.48550/arXiv.2307.03109)
-* Zheng, L., Chiang, W. L., Sheng, Y., et al. (2023). *Judging LLM-as-a-judge with MT-Bench and Chatbot Arena*.
-* Liang, P., Bommasani, R., Lee, T., et al. (2022). *Holistic evaluation of language models*.
-* (Excel Data: Paper 9)
+* Liang, P., Bommasani, R., Lee, T., et al. (2022). *Holistic evaluation of language models*. 
+https://doi.org/10.48550/arXiv.2211.09110
+
+* Zheng, L., Chiang, W. L., Sheng, Y., et al. (2023). *Judging LLM-as-a-judge with MT-Bench and Chatbot Arena*. 
+https://doi.org/10.48550/arXiv.2306.05685
+
+
+### Additional References in Dataset 
+- <ReferencesIndex ids={['9']} />

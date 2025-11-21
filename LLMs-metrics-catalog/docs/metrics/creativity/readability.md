@@ -3,6 +3,7 @@ id: readability
 title: Readability
 sidebar_label: Readability
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
@@ -58,7 +59,6 @@ The primary purpose of evaluating Readability (as part of Fluency) is to assess 
 
 ## Key References
 
-* **Primary Source (Application):**
-    * Chang, Y., Wang, X., Wang, J., Wu, Y., Yang, L., Zhu, K., Chen, H., Yi, X., Wang, C., Wang, Y., Ye, W., Zhang, Y., Chang, Y., Yu, P. S., Yang, Q., & Xie, X. (2024). *A Survey on Evaluation of Large Language Models*. https://doi.org/10.48550/arXiv.2307.03109
-* **Cited for Fluency/Readability Definition:**
-    * Van Der Lee, C., Gatt, A., Van Miltenburg, E., Wubben, S., & Krahmer, E. (2019). *Best practices for the human evaluation of automatically generated text*. Proceedings of the 12th International Conference on Natural Language Generation. https://doi.org/10.18653/v1/W19-8643
+- Chang, Y., Wang, X., Wang, J., Wu, Y., Yang, L., Zhu, K., Chen, H., Yi, X., Wang, C., Wang, Y., Ye, W., Zhang, Y., Chang, Y., Yu, P. S., Yang, Q., & Xie, X. (2024). A survey on evaluation of large language models. ACM Transactions on Intelligent Systems and Technology, 15(3), 1–45. https://doi.org/10.1145/3641289
+
+- Van der Lee, C., Gatt, A., Van Miltenburg, E., Wubben, S., & Krahmer, E. (2019). Best practices for the human evaluation of automatically generated text. Proceedings of the 12th International Conference on Natural Language Generation, 355–368. Association for Computational Linguistics. https://doi.org/10.18653/v1/W19-8643

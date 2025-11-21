@@ -92,6 +92,4 @@ A common metric used for evaluating and comparing spectrum-based and deep learni
 | **EXAM** | Rank | Measures the expected rank of the *first* fault found. |FL Evaluation  |
 
 ## Key References
-- Chen, X. P., Hu, X., Huang, Y., et al. (2025). *Deep learning-based software engineering: progress, challenges, and opportunities.* *Sci China Inf Sci, 68(1): 111102.* https://doi.org/10.1007/s11432-023-4127-5
-- (Standard FL evaluation metrics, cited in Table 15) 
-- (Excel Data: Paper 50)
+- Chen, Z., Hu, X., Huang, Y., Zhang, H., Zhou, Y., & Xie, T. (2025). Deep learning-based software engineering: Progress, challenges, and opportunities. Science China Information Sciences, 68(1), Artículo 111102. https://doi.org/10.1007/s11432-023-4127-5

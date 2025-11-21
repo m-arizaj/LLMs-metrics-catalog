@@ -3,6 +3,7 @@ id: distinguishability
 title: Distinguishability (d)
 sidebar_label: Distinguishability (d)
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -38,5 +39,6 @@ The paper (Zhou et al., 2023) presents a significant critique of the distinguish
 - The authors conclude that the reliable way to compare metrics is by their *ranking* of different examples, "rather than the exact scores".
 
 ## References
-- Zhou, S., Alon, U., Agarwal, S., & Neubig, G. (2023). *CodeBERTScore: Evaluating Code Generation with Pretrained Models of Code*. [https://doi.org/10.48550/arXiv.2302.05527](https://doi.org/10.48550/arXiv.2302.05527).
 - Eghbali, A., & Pradel, M. (2022). *Crystalbleu: precisely and efficiently measuring the similarity of code*. In 37th IEEE/ACM International Conference on Automated Software Engineering. [https://doi.org/10.1145/3551349.3556903](https://doi.org/10.1145/3551349.3556903)
+
+- <ReferencesIndex ids={['24']} />

@@ -52,7 +52,6 @@ This metric is used to quantify **intra-class diversity** , also referred to as 
 | **Vendi Score (Per-Class)** | Averaged scores from *within* each class (e.g., 100 images per class) | **Intra-class diversity** (semantic variety within one class) | Recommended as a robust and meaningful measure of diversity. |
 
 ## References
-- Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., ... & Loaiza-Ganem, G. (2023). *Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models*. https://doi.org/10.48550/arXiv.2306.04675
-- Friedman, D., & Dieng, A. B. (2022). *The Vendi Score: A diversity evaluation metric for machine learning*. https://doi.org/10.48550/arXiv.2210.02410
+- Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E. T., & Loaiza-Ganem, G. (2023). Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models. arXiv. https://doi.org/10.48550/arXiv.2306.04675
 
-- (Excel Data: Paper 67)
+- Friedman, D., & Dieng, A. B. (2022). The Vendi Score: A diversity evaluation metric for machine learning. arXiv. https://doi.org/10.48550/arXiv.2210.02410

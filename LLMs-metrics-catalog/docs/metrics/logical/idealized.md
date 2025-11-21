@@ -67,6 +67,4 @@ The purpose of iCAT is to provide a single, consolidated metric that evaluates a
 
 ## Key References
 
-* Nadeem, M., Bethke, A., & Reddy, S. (2021, August). StereoSet: Measuring stereotypical bias in pretrained language models. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) (pp. 5356–5371). Online. Association for Computational Linguistics. https://doi.org/10.18653/v1/2021.acl-long.416
-
-* (Excel Data: Paper 16)
+Nadeem, M., Bethke, A., & Reddy, S. (2021). StereoSet: Measuring stereotypical bias in pretrained language models. En Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) (pp. 5356–5371). Association for Computational Linguistics. https://doi.org/10.18653/v1/2021.acl-long.416

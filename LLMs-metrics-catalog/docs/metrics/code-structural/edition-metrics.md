@@ -63,4 +63,4 @@ For instance, the reference solutions in SWE-bench edit an average of **1.7 file
 ## Key References
 
 * Jimenez, C. E., Yang, J., Wettig, A., et al. (2024). *SWE-BENCH: CAN LANGUAGE MODELS RESOLVE REAL-WORLD GITHUB ISSUES?* [https://doi.org/10.48550/arXiv.2310.06770](https://doi.org/10.48550/arXiv.2310.06770)
-* (Excel Data: Paper 14)
+ 

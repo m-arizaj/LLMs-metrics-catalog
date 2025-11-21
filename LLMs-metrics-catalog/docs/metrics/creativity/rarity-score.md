@@ -3,6 +3,7 @@ id: rarity-score
 title: Rarity Score
 sidebar_label: Rarity Score
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
@@ -60,8 +61,7 @@ In the context of generative model evaluation, it is used to investigate whether
 
 ## Key References
 
-* **Primary Source:**
-    * Han, J., Choi, H., Choi, Y., Kim, J., Ha, J.-W., & Choi, J. (2022). *Rarity score: A new metric to evaluate the uncommonness of synthesized images*. The Eleventh International Conference on Learning Representations.https://doi.org/10.48550/arXiv.2206.08549
+- Han, J., Choi, H., Choi, Y., Kim, J., Ha, J.-W., & Choi, J. (2022). Rarity score: A new metric to evaluate the uncommonness of synthesized images. arXiv. https://doi.org/10.48550/arXiv.2206.08549
     
-* **Application & Analysis (Source 67):**
-    * Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E. T., & Loaiza-Ganem, G. (2023). *Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models*. 37th Conference on Neural Information Processing Systems (NeurIPS 2023). https://doi.org/10.48550/arXiv.2306.04675
+### Additional References in Dataset 
+- <ReferencesIndex ids={['67']} />

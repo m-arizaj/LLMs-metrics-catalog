@@ -3,6 +3,7 @@ id: density
 title: Density
 sidebar_label: Density
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -39,10 +40,8 @@ Density is used as a proxy to measure sample **fidelity** (quality or realism).
 - The paper finds that other metrics, like Fréchet Distance (FD) with a robust encoder (e.g., DINOv2), correlate better with human judgments of fidelity than k-NN metrics like Precision (and by extension, Density). 
 
 ## References
-- Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E. T., & Loaiza-Ganem, G. (2023). *Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models*. [arXiv:2306.04675v2](https://arxiv.org/abs/2306.04675v2)
-
-- Naeem, M. F., Oh, S. J., Uh, Y., Choi, Y., & Yoo, J. (2020). *Reliable fidelity and diversity metrics for generative models*. In International Conference on Machine Learning (ICML). [	arXiv:2002.09797](https://arxiv.org/abs/2002.09797)
+- Naeem, M. F., Jeon, S., Uh, Y., Choi, Y., & Yoo, J. (2020). Reliable fidelity and diversity metrics for generative models. arXiv. https://arxiv.org/abs/2002.09797
 
 
 ## Additional References
-- 67
+- <ReferencesIndex ids={['67']} />

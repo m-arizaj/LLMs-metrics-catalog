@@ -3,6 +3,7 @@ id: innovation-score
 title: Innovation Score (IS)
 sidebar_label: IS
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
@@ -55,6 +56,7 @@ The purpose of the Innovation Score is to quantify the "creativity" of an LLM's 
 
 ## Key References
 
-* Qiu, J., Liu, Z., Liu, Z., Murthy, R., Zhang, J., Chen, H., Wang, S., Zhu, M., Yang, L., Tan, J., Cen, Z., Qian, C., Heinecke, S., Yao, W., Savarese, S., Xiong, C., & Wang, H. (2025). LoCoBench: A benchmark for long-context large language models in complex software engineering (arXiv:2509.09614). arXiv. https://doi.org/10.48550/arXiv.2509.09614
-* Glass, R. L. (2002). *Facts and Fallacies of Software Engineering*.
-* (Excel Data: Paper 54)
+* Glass, R. L. (2002). Facts and fallacies of software engineering. Addison-Wesley.
+
+* ### Additional References in Dataset 
+- <ReferencesIndex ids={['54']} />

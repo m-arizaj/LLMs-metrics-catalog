@@ -59,7 +59,4 @@ The Brier Score is a **proper scoring rule** used to measure the accuracy and ca
 
 ## Key References
 
-* Srivastava, A., Rastogi, A., Rao, A., et al. (2023). *Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models.* arXiv:2206.04615v3. https://doi.org/10.48550/arXiv.2206.04615
-
-* File: 15.pdf
-* (Excel Data: Paper 15)
+* Srivastava, A., Rastogi, A., Rao, A., Shoeb, A. A. M., Abid, A., Fisch, A., Brown, A. R., Santoro, A., Gupta, A., Garriga-Alonso, A., Kluska, A., Lewkowycz, A., Agarwal, A., Power, A., Ray, A., Warstadt, A., Kocurek, A. W., Safaya, A., Tazarv, A., … Wu, Z. (2023). Beyond the imitation game: Quantifying and extrapolating the capabilities of language models. arXiv. https://doi.org/10.48550/arXiv.2206.04615
