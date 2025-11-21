@@ -3,6 +3,7 @@ id: precision
 title: Precision
 sidebar_label: Precision
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -29,16 +30,14 @@ Precision is closely related to Recall and F1-score. While recall measures cover
 |----------|--------------|------------------|
 | Precision | Standard precision metric used in binary/multiclass classification. | Bug detection, defect prediction, and security evaluation. |
 | Mean Average Precision (mAP) | Computes the mean of precision values across multiple recall levels, providing a single measure of retrieval performance. | Retrieval and ranking tasks, code clone detection, fault localization. |
-| Classification Precision (Discriminative Task) | Used in discriminative classification scenarios, such as hallucination detection in multimodal LLMs. | Evaluates fine-grained correctness under classification settings. |
 
----
 
 ## Applications in Software Engineering
 
 Precision is extensively reported across SE benchmarks and studies:  
 
 - **Bug Detection / Repair:** *Defects4J* and *QuixBugs* employ Precision to evaluate how effectively models detect or fix bugs without overpredicting faulty code.  
-- **Classification and Security Evaluation:** Datasets like *CYBERSECEVAL* and *PII Benchmark* use Precision to measure system robustness against vulnerabilities and privacy breaches.  
+- **Classification and Security Evaluation:** Benchmarks like *CYBERSECEVAL* use Precision to measure system robustness against vulnerabilities and privacy breaches.  
 - **Generative Model Evaluation:** Precision is used as a fidelity indicator, assessing the similarity between generated and real data distributions.  
 - **Code Clone Detection:** mAP  is applied to assess retrieval accuracy, ranking predicted code clones based on their relevance.  
 - **Fault Localization:** mAP is employed to evaluate the ranking quality of faulty lines or components identified by LLMs.  
@@ -61,15 +60,13 @@ This generalization enables evaluating models that output ranked lists—common 
 
 - **Recall:** Measures coverage of relevant elements among all true positives.
 - **F1-Score:** Harmonic mean of precision and recall.
-- **AUC-ROC:** Measures the trade-off between true positive and false positive rates.
 
 
 ## References
 
-1. Hossin, M., & Sulaiman, M. N. (2015). *A Review on Evaluation Metrics for Data Classification Evaluations.* *International Journal of Data Mining & Knowledge Management Process*, 5(2), 1–11. [https://doi.org/10.5121/ijdkp.2015.5201](https://doi.org/10.5121/ijdkp.2015.5201)  
-2. Beam, C. S. (2023). *Resolving Power: A General Approach to Compare the Distinguishing Ability of Threshold-Free Evaluation Metrics.* *arXiv:2304.00059.* [https://arxiv.org/abs/2304.00059](https://arxiv.org/abs/2304.00059)  
-3. Kang, H., & Do, S. (2024). *ML-Based Software Defect Prediction in Embedded Software for Telecommunication Systems (Focusing on the Case of SAMSUNG ELECTRONICS).* *Electronics,* 13(9), 1690. [https://doi.org/10.3390/electronics13091690](https://doi.org/10.3390/electronics13091690)  
+1. Hossin, M., & Sulaiman, M. N. (2015). A Review on Evaluation Metrics for Data Classification Evaluations. International Journal of Data Mining & Knowledge Management Process, 5(2), 1–11. [https://doi.org/10.5121/ijdkp.2015.5201](https://doi.org/10.5121/ijdkp.2015.5201)  
+2. Beam, C. S. (2023). Resolving Power: A General Approach to Compare the Distinguishing Ability of Threshold-Free Evaluation Metrics. [https://arxiv.org/abs/2304.00059](https://arxiv.org/abs/2304.00059)  
+3. Kang, H., & Do, S. (2024). ML-Based Software Defect Prediction in Embedded Software for Telecommunication Systems (Focusing on the Case of SAMSUNG ELECTRONICS). Electronics, 13(9), 1690. [https://doi.org/10.3390/electronics13091690](https://doi.org/10.3390/electronics13091690)  
 
 ## Additional References in Dataset
-
-- 2, 3, 6, 7, 8, 18, 26, 32, 45, 50, 67
+- <ReferencesIndex ids={['2','3','6','7','8','18','26','32','45','50','67']} />

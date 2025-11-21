@@ -3,52 +3,52 @@ id: percentage
 title: Percentage Metrics
 sidebar_label: Percentage Metrics
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
-Percentage-based metrics quantify evaluation results as proportions or rates, representing the share of successful, applied, or authentic outputs relative to all generated samples. They are frequently used in program repair, robustness evaluation, and generative authenticity assessment to provide interpretable success ratios.
+Percentage-based metrics quantify evaluation outcomes as proportions or rates, expressing the share of successful, applicable, or authentic outputs relative to all evaluated samples. These metrics appear widely in software engineering tasks—especially program repair, robustness evaluation, and generative model analysis—because they provide interpretable ratios that summarize how often a system behaves correctly or reliably.
 
 ## Key Metrics
 
 ### 1. %Resolved
-Measures the proportion of tasks correctly fixed by a model in program repair benchmarks such as SWE-bench and SWE-bench Lite.  
+Used in program-repair benchmarks such as *SWE-bench* and *SWE-bench Lite*, %Resolved measures the proportion of problems for which the generated patch passes all tests.  
 $$
 \%Resolved = \frac{N_{resolved}}{N_{total}} \times 100
 $$
-It reflects execution-based functional success—whether the generated patch resolves all failing tests.
+This metric captures functional correctness, as a task is only counted as resolved when all target behaviors are satisfied.
 
 ### 2. %Apply
-Indicates the applicability of generated patches or code edits.  
+Represents the proportion of generated patches that can be applied without breaking compilation or dependencies.  
 $$
 \%Apply = \frac{N_{applicable}}{N_{total}} \times 100
 $$
-Used to track if candidate fixes can be integrated without breaking compilation or dependencies.
+It reflects structural validity and integration feasibility, distinguishing syntactically valid patches from those that cannot be applied.
 
-### 3. %Breaking Resolved / %Partially Resolved
-Represents finer-grained repair success, differentiating between fully and partially fixed issues.  
-Useful for analyzing intermediate improvements in patch quality.
-
-### 4. Drop%
-Adopted in ReCode (2024), Drop% quantifies robustness degradation — the proportion of performance lost under perturbation.  
+### 3. Drop%
+In robustness evaluation—such as *ReCode* and *CodeFort*—Drop% quantifies the relative performance degradation under semantic-preserving perturbations.  
 $$
 Drop\% = \frac{Score_{baseline} - Score_{perturbed}}{Score_{baseline}} \times 100
 $$
+This metric is used to report robustness drop rates, particularly under code-syntax perturbations that strongly affect code-generation models.
 
-### 5. AuthPct (Percentage of Authentic Samples)
-Used in generative image or text models (CIFAR10, ImageNet1k, FFHQ, LSUN-Bedroom).  
-Measures how many outputs are classified as authentic or human-like by a discriminator.  
+### 4. AuthPct (Percentage of Authentic Samples)
+Derived from generative-model evaluation literature, including large-scale perceptual studies, AuthPct measures the proportion of generated samples classified as authentic or realistic by a discriminator or by human-aligned evaluators.  
 $$
 AuthPct = \frac{N_{authentic}}{N_{generated}} \times 100
 $$
-
+It captures perceptual realism: how often generated images (or text/code variants) resemble genuine samples from the target distribution.
 
 ## Interpretation
-Percentage metrics provide direct interpretability and task-specific flexibility:  
-- In software repair, %Resolved reflects the model’s functional reliability.  
-- In robustness testing, Drop% captures resilience under noise or perturbations.  
-- In generative evaluation, AuthPct represents realism or fidelity.  
+Percentage metrics provide directly interpretable, task-specific measures of model performance:
 
-They are complementary to absolute metrics like Accuracy or BLEU, since they express performance as a relative share, easily comparable across tasks and datasets.
+- In *software repair*, %Resolved indicates functional reliability, while %Apply measures whether outputs can even be used.  
+- In *robustness evaluation*, Drop% quantifies how severely perturbations degrade performance.  
+- In *generative evaluation*, AuthPct reflects the realism and authenticity of produced samples.
+
+Because these metrics express outcomes as ratios, they facilitate comparison across heterogeneous tasks, datasets, and models, complementing absolute metrics such as accuracy or distance-based similarity scores.
 
 
-## References in Database
-- 14, 27, 67
+## References
+- <ReferencesIndex ids={['14']} />: Jimenez et al. (2023). SWE-bench: A Benchmark for Systematic Evaluation of Code Generation Systems. 
+- <ReferencesIndex ids={['27']} />: Zhang et al. (2024). CodeFort: Robust Training for Code Generation Models. EMNLP Findings 2024.
+- <ReferencesIndex ids={['67']} />: Stein et al. (2023). Exposing Flaws of Generative Model Evaluation Metrics and Their Unfair Treatment of Diffusion Models. NeurIPS 2023.

@@ -3,6 +3,7 @@ id: correctness
 title: Correctness
 sidebar_label: Correctness
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 In software engineering evaluation, correctness captures whether an LLM-produced artifact (code, repair, selection, or workflow) satisfies its required specification. Across the analysed papers, correctness consistently appears as:
@@ -179,21 +180,21 @@ Across all, correctness remains the most essential indicator of SE task success.
 
 ## References (Also in the Dataset)
 
-1. 11. SE-Jury  
+1. SE-Jury (<ReferencesIndex ids={['11']} />)  
 An LLM-as-Judge Metric for Bridging the Gap with Human Evaluation in SE Tasks. (2025). arXiv:2505.20854.
 
-2. 12. ICE-Score  
+2. ICE-Score (<ReferencesIndex ids={['12']} />) 
 ICE-Score: Instructing Large Language Models to Evaluate Code. (2023). arXiv:2304.14317.
 
-3. 18. Analysis of LLM Code Synthesis in Software Productivity  
+3. Analysis of LLM Code Synthesis in Software Productivity (<ReferencesIndex ids={['18']} />)
 Anand, A., Chopra, S., & Arora, M. Applied Intelligence and Computing (2024).
 
-4. 48. LLM-Based Agents for Tool Learning: A Survey  
+4. LLM-Based Agents for Tool Learning: A Survey (<ReferencesIndex ids={['48']} />)
 (2025). Journal of Intelligent Information Systems (s41019-025-00296-9).
 
-5. 52. Rethinking AI Code Generation: A One-Shot Correction Approach Based on User Feedback  
+5. Rethinking AI Code Generation: A One-Shot Correction Approach Based on User Feedback (<ReferencesIndex ids={['52']} />)  
 (2024). Automated Software Engineering (s10515-024-00451-y).
 
-6. 65. An Empirical Evaluation of Pre-trained LLMs for Repairing Declarative Formal Specifications  
+6. An Empirical Evaluation of Pre-trained LLMs for Repairing Declarative Formal Specifications (<ReferencesIndex ids={['65']} />) 
 (2025). Empirical Software Engineering (s10664-025-10687-1).
 

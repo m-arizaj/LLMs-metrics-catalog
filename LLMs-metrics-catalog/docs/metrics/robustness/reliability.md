@@ -11,7 +11,7 @@ Reliability is one of the core evaluation dimensions discussed in Overview of th
 The authors describe Reliability as the integration of five critical sub-qualities:
 
 > *“Reliability… including accuracy, hallucination, consistency, interpretability, and calibration error.”*  
-> (Author(s), 2024, p. X)
+> (Lin et al, 2024, P. 1506)
 
 This definition positions Reliability as a composite behavioral property, capturing both correctness and stability of a model's outputs. It evaluates whether the model behaves predictably, avoids fabrications, maintains coherence, and expresses its confidence appropriately.
 
@@ -52,7 +52,7 @@ Lower hallucination improves Reliability.
 Defined explicitly as:
 
 > *“Consistency measures the stability and predictability of a model’s output under the same or similar conditions.”*  
-> (Author(s), 2024, p. X)
+> (Lin et al, 2024, P. 1506)
 
 Consistency ensures the model produces repeatable responses across identical prompts.
 

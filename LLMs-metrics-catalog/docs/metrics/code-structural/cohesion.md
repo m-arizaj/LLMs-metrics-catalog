@@ -9,19 +9,14 @@ sidebar_label: Cohesion and Decoupling
 Cohesion and Decoupling are foundational principles for assessing the structural quality of software designs. In DevEval, these principles are explicitly used to evaluate LLM-generated software design artifacts — including UML class diagrams, sequence diagrams, and architecture designs. The authors describe these principles as core criteria shared across all design subtasks:
 
 > “For all the subtasks, principles like cohesion and decoupling, and practicability are fundamental. Cohesion and decoupling emphasize the importance of clarity and functionality within individual elements (classes or sequences) and reducing dependencies between different components.”  
-> (Li et al., 2024)
+> (Li et al, 2024, P. 3)
 
 Cohesion measures how well the responsibilities within a module belong together, while decoupling (low coupling) measures the independence of modules from one another. Together, they form a structural assessment of how well a model can produce modular, maintainable, and well-organized designs during the early phases of the software development lifecycle.
 
 
 ## Formula
 
-DevEval does not introduce explicit numerical formulas for cohesion or coupling. Instead, these principles function as qualitative evaluation criteria used by an LLM-as-a-judge framework to compare design quality. The paper clarifies that these principles guide structural reasoning:
-
-> “Cohesion and decoupling emphasize the importance of clarity and functionality within individual elements... and reducing dependencies between different components.”  
-> (Li et al., 2024)
-
-Because DevEval uses pairwise LLM-based judgments rather than static numerical computation, the metric is conceptual rather than algebraic.
+DevEval does not introduce explicit numerical formulas for cohesion or coupling. Instead, these principles function as qualitative evaluation criteria used by an LLM-as-a-judge framework to compare design quality. The paper clarifies that these principles guide structural reasoning. Because DevEval uses pairwise LLM-based judgments rather than static numerical computation, the metric is conceptual rather than algebraic.
 
 However, cohesion and coupling can be understood using traditional software engineering theory:
 
@@ -117,11 +112,11 @@ Thus, cohesion and decoupling indirectly support later DevEval tasks (implementa
 ### *Limitations*
 - DevEval uses qualitative LLM-as-a-judge scoring, not numerical formulas  
 - Evaluating cohesion and coupling can involve subjective judgment  
-- No automated parser-based metrics (e.g., LCOM, CBO) are provided in the paper  
+- No automated parser-based metrics are provided in the paper  
 - Quality may depend on prompt wording and model biases in the judge  
 
 Even with these limitations, cohesion and decoupling provide an essential view of design quality that complements implementation-based evaluation.
 
 ## References
 
-Li, B., Wu, W., Tang, Z., Shi, L., Yang, J., Li, J., Yao, S., Qian, C., Hui, B., Zhang, Q., Yu, Z., Du, H., Yang, P., Lin, D., Peng, C., & Chen, K. (2024). Prompting large language models to tackle the full software development lifecycle: A case study. https://doi.org/10.48550/arXiv.2403.08604
+1. Li, B., Wu, W., Tang, Z., Shi, L., Yang, J., Li, J., Yao, S., Qian, C., Hui, B., Zhang, Q., Yu, Z., Du, H., Yang, P., Lin, D., Peng, C., & Chen, K. (2024). Prompting large language models to tackle the full software development lifecycle: A case study. https://doi.org/10.48550/arXiv.2403.08604

@@ -3,6 +3,7 @@ id: coherence
 title: Coherence
 sidebar_label: Coherence
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 Coherence measures the internal consistency and logical organization of model outputs. In natural language processing, it evaluates how smoothly sentences or ideas connect to form a unified text. In software engineering, coherence captures the consistency of architectural principles and dependencies across complex systems.  
@@ -58,7 +59,7 @@ High coherence indicates that a model maintains consistent logic and structure a
 Low coherence reflects fragmented reasoning or violations of design integrity — for example, missing dependencies, cyclic module references, or inconsistent abstractions.
 
 ## References
-1. *Qiu, Z., Zhang, Y., Lin, X., Liu, Z., & Sun, M. (2025).* LoCoBench: Evaluating Long-Context Capabilities of Large Language Models in Software Engineering. (Also listed in the references database)
+1. *Qiu, Z., Zhang, Y., Lin, X., Liu, Z., & Sun, M. (2025).* LoCoBench: Evaluating Long-Context Capabilities of Large Language Models in Software Engineering. (<ReferencesIndex ids={['54']} />)
    [https://arxiv.org/abs/2509.09614](https://arxiv.org/abs/2509.09614)
 
 2. *Zhao, W., et al. (2022).* DiscoScore: Evaluating Text Generation with BERT and Discourse Coherence.  
@@ -68,4 +69,4 @@ Low coherence reflects fragmented reasoning or violations of design integrity �
    [https://arxiv.org/abs/2312.16893](https://arxiv.org/abs/2312.16893)
 
 ### Additional References in Database
-- 9, 54
+- <ReferencesIndex ids={['9','54']} />

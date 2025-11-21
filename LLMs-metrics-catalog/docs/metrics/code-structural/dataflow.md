@@ -138,11 +138,9 @@ Indicates:
 - Dynamic features (reflection, dynamic typing) complicate analysis  
 
 ## References
-
-*Survey on code evaluation & CodeBLEU/data-flow*  
+ 
 1. A Survey on Evaluating Large Language Models in Code Generation Tasks. (2024).  
 Data-flow matching and semantic similarity discussion (CodeBLEU component and “other similarity methods”).  
 [https://doi.org/10.48550/arXiv.2408.16498](https://doi.org/10.48550/arXiv.2408.16498)
 
-*One-shot correction & data-flow integrity*  
 2. Rethinking AI Code Generation: A One-Shot Correction Approach Based on User Feedback. (2024). Automated Software Engineering [https://doi.org/10.1007/s10515-024-00451-y](https://doi.org/10.1007/s10515-024-00451-y)

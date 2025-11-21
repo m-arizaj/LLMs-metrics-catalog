@@ -3,6 +3,7 @@ id: recall
 title: Recall
 sidebar_label: Recall
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -78,4 +79,4 @@ These variants extend the idea of recall beyond classification to structural and
 3. Díaz, F., Ekstrand, M. D., & Mitra, B. (2023). *Recall, Robustness, and Lexicographic Evaluation.* [https://doi.org/10.48550/arXiv.2302.11370](https://doi.org/10.48550/arXiv.2302.11370)
 
 ### Additional References in Dataset
--2, 3, 6, 7, 8, 18, 22, 26, 36, 45, 48, 50, 63, 67
+- <ReferencesIndex ids={['2','3','6','7','8','18','22','26','36','45','48','50','63','67']} />

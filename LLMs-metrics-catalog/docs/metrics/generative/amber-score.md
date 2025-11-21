@@ -3,12 +3,12 @@ id: amber-score
 title: AMBER Score
 sidebar_label: AMBER Score
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
 The AMBER Score is a composite metric designed to evaluate hallucination behavior in Multi-modal Large Language Models (MLLMs).  
-It was introduced by Wang et al. (2023) in the benchmark AMBER: An LLM-Free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation, providing a unified and low-cost method for assessing hallucinations in both generative and discriminative multimodal tasks.
-Unlike previous evaluation methods that rely on large models or human raters, AMBER provides an LLM-free, automatic, and multidimensional approach.  
+It was introduced by Wang et al. (2023) in the benchmark AMBER: An LLM-Free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation, providing a unified and low-cost method for assessing hallucinations in both generative and discriminative multimodal tasks. Unlike previous evaluation methods that rely on large models or human raters, AMBER provides an LLM-free, automatic, and multidimensional approach.  
 It measures hallucinations across three key dimensions:
 1. *Existence* — objects falsely introduced or omitted in model output,  
 2. *Attribute* — hallucinations related to color, number, or action,  
@@ -110,7 +110,7 @@ A high AMBER Score implies:
 
 ## Limitations
 
-- The benchmark focuses mainly on *visual hallucination* and may not generalize to pure text-based settings.  
+- The benchmark focuses mainly on visual hallucination and may not generalize to pure text-based settings.  
 - Object extraction errors from NLP toolkits (e.g., NLTK) can occasionally misclassify terms as hallucinated.  
 - Evaluations of attribute and relation hallucinations remain limited to discriminative tasks.  
 - The annotation of rare or uncommon objects may still be incomplete.
@@ -119,7 +119,7 @@ A high AMBER Score implies:
 ## References
 
 - *Wang, J., Wang, Y., Xu, G., Zhang, J., Gu, Y., Jia, H., Wang, J., Xu, H., Yan, M., Zhang, J., & Sang, J. (2023).*  
-  AMBER: An LLM-Free Multi-Dimensional Benchmark for MLLMs Hallucination Evaluation. (Also listed in the references database)
+  AMBER: An LLM-Free Multi-Dimensional Benchmark for MLLMs Hallucination Evaluation. (<ReferencesIndex ids={['8']} />)
  [https://arxiv.org/abs/2311.07397](https://arxiv.org/abs/2311.07397)
 
 

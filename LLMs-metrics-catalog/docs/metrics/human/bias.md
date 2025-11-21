@@ -5,69 +5,177 @@ sidebar_label: Bias
 ---
 
 ## Introduction
-Bias represents the systematic and unfair deviation in model behavior toward specific groups, attributes, or contexts.  
-In the evaluation of large language models (LLMs), bias metrics assess ethical reliability, stereotypical associations, and unequal treatment across demographic or linguistic categories. These metrics can be applied to textual, code, or reasoning tasks to ensure fairness, inclusivity, and transparency in model outputs.
+Bias metrics quantify systematic differences in how a model represents, associates, or describes different social groups. Unlike fairness metrics that measure disparities in task accuracy, bias metrics focus on asymmetries in language behavior, internal representations, or generated text (Liang et al., 2022). The four papers emphasize that bias arises from social and historical inequalities and may surface in embeddings, probability distributions, or text produced by the model (Gallegos et al., 2024; Mehrabi et al., 2021). Although these works focus on NLP, the same metrics extend naturally to software-engineering contexts such as code-comment generation, documentation synthesis, developer Q&A, and issue summarization.
 
-The seminal work by Mehrabi et al. (2019) categorizes bias sources into three main stages of the machine learning lifecycle:
-1. *Data Bias* – Arising from sampling imbalance, labeling inconsistency, or historical representation gaps.  
-2. *Algorithmic Bias* – Emerging from model design, optimization objectives, or embedding propagation.  
-3. *User Interaction Bias* – Introduced during deployment, user feedback, or societal reinforcement cycles.
-In software and LLM evaluation, bias metrics are critical to ensure ethical compliance and alignment with responsible AI principles.
+## Formula
 
-## Formula and Structure
+### 1. Demographic Representation Bias
+HELM defines demographic representation bias by comparing the observed distribution of group references in model outputs with a reference (usually uniform) distribution (Liang et al., 2022).
 
-Bias can be quantified by measuring the asymmetric association between sensitive attributes and model predictions or word representations.  
-A common statistical formulation, used in linguistic or representational bias analysis, is:
-
+Observed distribution:
 $$
-Bias(w) = \log \left( \frac{P(w|f)}{P(w|m)} \right)
+P_{\text{obs}}(i) = \frac{C(i)}{\sum_j C(j)}
 $$
 
-where:
-- $P(w|f)$ and $P(w|m)$ denote the conditional probabilities of word $w$ appearing in female-associated and male-associated contexts, respectively.  
-- A positive score indicates a bias toward the female context, while a negative value indicates male-associated bias.  
-- A value near zero suggests neutrality.
-
-Other forms of bias detection rely on comparing performance or prediction rates across groups:
+Bias score (Total Variation Distance):
 $$
-Bias_{rate} = |Metric_{group_1} - Metric_{group_2}|
+\text{RepresentationBias} = \frac{1}{2} \sum_i \left| P_{\text{obs}}(i) - P_{\text{ref}}(i) \right|
 $$
-where $Metric$ can represent accuracy, precision, or generation rate for each demographic category.  
-This structure underlies most fairness-based evaluations such as Equal Opportunity, Equalized Odds, or Demographic Parity.
 
-## Variants and Contexts of Use
+Higher scores indicate uneven representation of demographic groups in generations.
 
-### 1. Bias (Category)
-Defined in HELM and Chatbot Arena (2024) as a *meta-category* that groups multiple sub-metrics capturing social, cultural, and ethical biases in LLMs. It includes measures of representational fairness, stereotype association, and output neutrality across demographic groups.
 
-### 2. Bias in Gender Representation Rate
-Quantifies gender skew in generated content by comparing the frequency of gendered terms or roles (e.g., “he” vs. “she”) in model outputs. Used to evaluate how balanced model responses are in gender-relevant contexts, particularly in summarization or conversational generation tasks.
+### 2. Stereotypical Association Bias
+For each target concept $t$ (e.g., a profession), the model’s distribution of demographic group mentions is compared to a reference distribution (Liang et al., 2022).
 
-### 3. Bias Score
-Introduced in BBQ (2023) — Bias Benchmark for Question Answering — this metric measures contextual bias in question answering tasks. It evaluates whether a model prefers biased or neutral responses by comparing accuracy across ambiguous and unambiguous question types.
+Per-target association:
+$$
+\text{Assoc}t = \frac{1}{2} \sum_i \left| P{\text{obs}}^{t}(i) - P_{\text{ref}}(i) \right|
+$$
+
+Overall association:
+$$
+\text{StereotypicalAssociation} = \frac{1}{|T|} \sum_{t \in T} \text{Assoc}_t
+$$
+
+
+### 3. Embedding-Based Bias (WEAT, CEAT, etc.)
+Embedding-level bias measures asymmetric associations between group-word sets and attribute-word sets (Gallegos et al., 2024).
+
+WEAT effect size:
+$$
+f(A,W) =
+\frac{
+\operatorname{mean}_{a \in A_1}s(a,W_1,W_2)
+-
+\operatorname{mean}_{a \in A_2}s(a,W_1,W_2)
+}{
+\operatorname{std}_{a \in A_1 \cup A_2}s(a,W_1,W_2)
+}
+$$
+
+Meta-analytic CEAT:
+$$
+\text{CEAT} =
+\frac{
+\sum_{i=1}^{N} v_i \cdot \text{WEAT}_i
+}{
+\sum_{i=1}^{N} v_i
+}
+$$
+
+Sentence-level embedding bias:
+$$
+\text{SentenceBias}(S) = 
+\sum_{s \in S}
+\left| \cos(s, v_{\text{gender}}) \cdot \alpha_s \right|
+$$
+
+
+### 4. Probability-Based Bias
+These metrics compare likelihoods assigned to stereotypical vs. counter-stereotypical sentence pairs (Gallegos et al., 2024).
+
+Directional preference:
+$$
+\text{bias}(S_1,S_2) = \mathbf{I}\left(f(S_1) > f(S_2)\right)
+$$
+
+Language Model Bias (LMB) uses a t-statistic over perplexities:
+$$
+\text{LMB} = t\big(\text{PP}(S_{\text{stereotype}}), \text{PP}(S_{\text{anti}})\big)
+$$
+
+
+### 5. Generated-Text Bias Metrics (Gallegos et al., 2024)
+
+*HONEST (hurtful completions):*
+$$
+\text{HONEST} = 
+\frac{
+\displaystyle \sum_{\hat y \in \hat Y} \mathbf{I}_{\text{HurtLex}}(\hat y)
+}{
+|\hat Y|
+}
+$$
+
+*Psycholinguistic norms:*
+$$
+\text{PsychNorms} =
+\frac{
+\sum_{\hat y} \text{sign}(\text{affect}(\hat y))\,\text{affect}(\hat y)^2
+}{
+\sum_{\hat y} |\text{affect}(\hat y)|
+}
+$$
+
+*Gender polarity:*
+$$
+\text{GenderPolarity} =
+\frac{
+\sum_{\hat y} \text{sign}(\text{bias}(\hat y))\,\text{bias}(\hat y)^2
+}{
+\sum_{\hat y} |\text{bias}(\hat y)|
+}
+$$
+
+
+### 6. Word-Level Language Model Bias
+Mehrabi et al. (2021) measure directional bias using log-odds under different demographic conditions:
+
+$$
+\text{bias}(w) = \log \frac{P(w \mid \text{female})}{P(w \mid \text{male})}
+$$
+
+Aggregate statistics (mean, variance) provide corpus-level bias.
+
+
+## Variants
+
+Across the four papers, bias metrics cluster into distinct families:
+
+1. *Representation bias* — Compares mention/usage rates of groups against a reference distribution (Liang et al., 2022).  
+2. *Association bias* — Measures how strongly groups are linked to target concepts using TVD or embedding distances (Liang et al., 2022; Gallegos et al., 2024).  
+3. *Embedding-based bias* — WEAT, SEAT, CEAT, and sentence-level projections assess representational asymmetries (Gallegos et al., 2024).  
+4. *Probability-based bias* — Compares log-likelihoods or perplexities of paired sentences (Gallegos et al., 2024).  
+5. *Generated-text bias* — Detects harmful, affective, or gendered content in model outputs (Gallegos et al., 2024).  
+6. *Word-level LM bias* — Log-odds differences in word probabilities under demographic prompts (Mehrabi et al., 2021).  
+7. *Holistic evaluation taxonomies* — LLM surveys classify bias as one dimension of broader evaluation frameworks (Chang et al., 2023).
+
+
+## Applications in Software Engineering
+
+Although originally designed for general NLP, these metrics transfer directly to SE contexts:
+
+- *Documentation and comment generation*  
+  Use representation and association metrics to identify skewed portrayals in generated comments or docstrings.
+
+- *Developer Q&A assistants*  
+  Generated-text metrics detect harmful phrasing or gendered explanations in LLM support responses.
+
+- *Code-review explanations*  
+  Embedding-based bias can reveal stereotypical associations encoded in the representations used to generate explanations.
+
+- *Issue summarization and commit messages*  
+  Probability-based invariance metrics evaluate whether demographic substitutions produce different summaries or interpretations.
+
+- *End-to-end LLM evaluation pipelines*  
+  As in HELM, bias should be assessed alongside accuracy, robustness, and calibration (Liang et al., 2022).
+
 
 ## Interpretation
-Bias metrics collectively assess how balanced and fair a model’s decisions or generations are with respect to sensitive attributes such as gender, race, religion, or profession. A low bias score or small inter-group difference implies fairer and more equitable behavior, while higher values signal stronger systemic bias or stereotyping tendencies.
+High representation or association bias values indicate systematic asymmetry in how the model describes different groups (Liang et al., 2022). Embedding-based metrics quantify representational biases that may or may not surface in downstream text (Gallegos et al., 2024). Probability-based metrics evaluate whether the model’s likelihood function treats demographic substitutions differently, but may correlate weakly with real harms (Gallegos et al., 2024). Generated-text metrics directly capture observable harmful or gendered language. Mehrabi et al. (2021) stress that bias metrics inherently reflect normative goals, and interpretation should be grounded in specific contexts of harm.
 
-In the context of software engineering, bias analysis helps ensure:
-- Ethical compliance in documentation and code suggestions.  
-- Neutral representation in developer-assisting LLMs.  
-- Fair performance across tasks, datasets, or languages.
-
-However, bias evaluation remains complex:
-- It is sensitive to the dataset’s inherent skew.  
-- Metrics may conflict (e.g., improving demographic parity might reduce accuracy).  
-- Contextual interpretation is crucial, as not all disparities imply unfairness.
 
 ## References
-1. *Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., & Galstyan, A. (2019).* A Survey on Bias and Fairness in Machine Learning.  
-   [https://arxiv.org/abs/1908.09635](https://arxiv.org/abs/1908.09635)
 
-2. *Parrish, A., et al. (2023).* BBQ: A Benchmark for Bias in Question Answering.  
-   [https://github.com/nyu-mll/BBQ](https://github.com/nyu-mll/BBQ)
+1. Chang, Y., et al. (2023). A survey on evaluation of large language models. 
+   [https://doi.org/10.48550/arXiv.2307.03109](https://doi.org/10.48550/arXiv.2307.03109)
 
-3. *HELM (2024).* Holistic Evaluation of Language Models – Bias Category.  
-   [https://crfm.stanford.edu/helm/latest/](https://crfm.stanford.edu/helm/latest/)
+2. Gallegos, I., et al. (2024). Bias and fairness in large language models: A survey. Computational Linguistics, 50(3).
+   [https://aclanthology.org/2024.cl-3.8/](https://aclanthology.org/2024.cl-3.8/)
 
-### Additional References in Database
-- 4, 9, 16
+3. Liang, P., et al. (2022). Holistic evaluation of language models (HELM).
+   [https://doi.org/10.48550/arXiv.2211.09110][https://doi.org/10.48550/arXiv.2211.09110]
+
+4. Mehrabi, N., et al. (2021). A survey on bias and fairness in machine learning. arXiv:1908.09635.
+   [https://doi.org/10.48550/arXiv.1908.09635](https://doi.org/10.48550/arXiv.1908.09635)

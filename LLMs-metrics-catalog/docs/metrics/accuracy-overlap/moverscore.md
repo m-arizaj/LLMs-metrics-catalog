@@ -3,49 +3,71 @@ id: moverscore
 title: MoverScore
 sidebar_label: MoverScore
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
-MoverScore is a semantic similarity metric that evaluates the quality of generated text by comparing it with reference outputs using contextualized embeddings (e.g., BERT, ELMo) and Earth Mover’s Distance (EMD).Unlike purely lexical measures such as BLEU or ROUGE, MoverScore captures semantic meaning and contextual alignment between sentences by computing the minimal cost required to "move" semantic information from the candidate text to the reference.  
-This metric has proven highly correlated with human judgments across various natural language generation tasks including machine translation, summarization, and dialogue generation, and has been recently adopted in software engineering contexts to evaluate embedding-based similarity between generated and reference code snippets.
+MoverScore is a semantic similarity metric designed to evaluate the quality of generated text by comparing it with reference outputs using contextualized embeddings and Earth Mover’s Distance (EMD). Unlike lexical metrics such as BLEU or ROUGE, MoverScore captures deeper semantic and contextual relationships by modeling the minimal “transport cost” required to align semantic content between texts.  
+It has demonstrated strong correlation with human judgments across natural language generation tasks including summarization, machine translation, and captioning. MoverScore and its sentence-level extensions have also been adopted in software engineering contexts to assess semantic similarity between generated and reference code snippets or documentation, where surface-form differences are common.
 
 ## Formula and Structure
 
-MoverScore is derived from the concept of Word Mover’s Distance (WMD), applied to contextualized embeddings. For a generated text $x$ and a reference text $y$, the metric minimizes the cost to align the two distributions of word embeddings:
+MoverScore is rooted in Word Mover’s Distance (WMD), extended to contextualized embeddings (e.g., BERT, ELMo).  
+For a candidate text $x$ and reference text $y$, let $\{w_i\}$ and $\{v_j\}$ denote their contextual token embeddings, and let $p_i$ and $q_j$ denote their normalized IDF-based weights.
+
+The semantic transport cost is computed via:
 
 $$
-\text{MoverScore}(x, y) = 1 - \min_{T \ge 0} \sum_{i,j} T_{ij} \, c(w_i, w_j)
+\min_{T \ge 0} \sum_{i,j} T_{ij}\,c(w_i, v_j)
 $$
 
 subject to:
 
 $$
-\sum_j T_{ij} = p_i, \quad \sum_i T_{ij} = q_j
+\sum_j T_{ij} = p_i, \qquad \sum_i T_{ij} = q_j
 $$
 
-where:
-- $T_{ij}$ represents the flow of semantic "mass" from token $i$ in $x$ to token $j$ in $y$,  
-- $c(w_i, w_j)$ is the semantic cost, typically computed as $1 - \cos(w_i, w_j)$,  
-- $p_i$ and $q_j$ are normalized weights for each token, often proportional to their inverse document frequency (IDF).  
+where  
+- $T_{ij}$ is the amount of “semantic mass” to transport from token $i$ to token $j$,  
+- $c(w_i, v_j)$ is the semantic distance, typically $c = 1 - \cos(w_i, v_j)$,  
+- $p_i$ and $q_j$ are token weights based on inverse document frequency.
 
-The metric outputs a value between 0 and 1, where higher values indicate stronger semantic similarity.
+MoverScore converts this distance into a similarity measure, commonly implemented as:
 
+$$
+\text{MoverScore}(x,y) = 1 - \text{EMD}(x,y)
+$$
 
+with scores in $[0,1]$, where larger values indicate stronger semantic alignment.
 
 ## Variants and Implementations
 
-### 1. Standard MoverScore
-The original formulation proposed by Zhao et al. (2019) computes a semantic transport distance using contextual embeddings.  
-It measures how well generated outputs semantically align with references, even when lexical overlap is low.
+### 1. Word MoverScore (WMD-1)
+The original form computes semantic distance between individual contextualized token embeddings. It is robust to paraphrasing and low lexical overlap.
 
-### 3. IDF-Weighted MoverScore
-Weights embeddings using inverse document frequency to emphasize rare and meaningful tokens.  
-This variant helps reduce the influence of common or trivial words in both text and code.
+### 2. Bigram MoverScore (WMD-2)
+An extension incorporating bigram embeddings to capture local compositional structure beyond unigram-level semantics.
 
+### 3. Sentence MoverScore (SMD)
+A higher-level variant aligning sentence embeddings rather than tokens, improving robustness for long or complex texts.
+
+### 4. IDF-Weighted MoverScore
+The widely used weighting scheme where token importance is normalized via inverse document frequency to down-weight common words and emphasize informative tokens in both natural language and code.
+
+## Application in Software Engineering
+MoverScore has practical utility in SE-related LLM evaluation, where semantic similarity often matters more than syntactic matching. Applications include:
+
+- evaluating similarity of generated and reference code summaries,  
+- comparing documentation or comment generation outputs,  
+- assessing functional equivalence between code snippets expressed with different naming conventions or structures,  
+- measuring semantic adequacy in requirement rewriting or issue summarization tasks.
+
+By operating on contextualized embeddings rather than token surface forms, MoverScore provides a semantically grounded signal useful for analyzing the quality of generative models applied to software artifacts.
 
 ## Interpretation
-MoverScore provides a fine-grained and semantically aware similarity assessment. A higher MoverScore indicates stronger contextual alignment between generated and reference outputs. In software engineering, it serves as a semantic analog to BLEU or CodeBLEU, allowing evaluators to measure whether two code snippets perform similar functions, even with differing syntax or variable names.
+A higher MoverScore indicates stronger semantic and contextual correspondence between generated and reference outputs. Its use of contextual embeddings and optimal transport enables the metric to capture deep semantic relationships, making it robust to rephrasing, stylistic variation, token ordering differences, and syntactic divergence.
 
-Because it incorporates contextual embeddings and distance-based matching, MoverScore is robust to paraphrasing, lexical variation, and syntactic transformations, making it a powerful tool for evaluating both natural language and code generation models.
+MoverScore is therefore particularly valuable in settings where semantic fidelity is more important than literal string overlap—both in natural language generation and in code-oriented or documentation-oriented software engineering evaluations.
+
 
 ## References
 1. *Zhao, W., Peyrard, M., Liu, F., Gao, Y., Meyer, C. M., & Eger, S. (2019).*  
@@ -53,4 +75,4 @@ Because it incorporates contextual embeddings and distance-based matching, Mover
    [https://arxiv.org/abs/1909.02622](https://arxiv.org/abs/1909.02622)
 
 ### Additional References in Dataset
-- 1, 11
+- <ReferencesIndex ids={['1','11']} />

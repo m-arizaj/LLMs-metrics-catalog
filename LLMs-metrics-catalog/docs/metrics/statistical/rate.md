@@ -3,6 +3,7 @@ id: rate
 title: Rate Metrics
 sidebar_label: Rate Metrics
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 Rate-based metrics capture how frequently a model achieves success, correctness, or completion relative to the total number of attempts or evaluations. They provide a clear, interpretable measure of task-level performance across diverse evaluation contexts in software engineering, including functional correctness, vulnerability detection, compilation, and efficiency.
@@ -27,7 +28,7 @@ This formulation underlies a family of specialized metrics, each adapting the de
 
 ## Main Variants and Interpretations
 
-### 1. Success Rate
+### 1. Success Rate 
 Measures the proportion of model outputs that meet functional or syntactic correctness criteria.  
 It is one of the most universal metrics in both LLM and software-engineering contexts.
 
@@ -38,6 +39,7 @@ $$
 - *Interpretation:* Reflects general correctness and execution reliability.  
 - *Usage:* Common in code generation, autonomous agents, and benchmark evaluations to assess whether outputs compile or execute successfully.  
 - *Example:* Measuring how many generated Python solutions pass all unit tests.
+- *Used in:* <ReferencesIndex ids={['42','49']} />
 
 
 ### 2. Acceptance Rate
@@ -49,7 +51,7 @@ $$
 
 - *Interpretation:* Serves as a proxy for productivity and quality of code suggestions or patches.  
 - *Application:* Often used in software generation systems or IDE-based evaluations where human or system approval defines success.
-
+- *Used in:* <ReferencesIndex ids={['19']} />
 
 ### 3. Insecure Code Detection Rate
 Evaluates how effectively a system identifies insecure or vulnerable code snippets.
@@ -60,7 +62,7 @@ $$
 
 - *Interpretation:* Analogous to recall for the “insecure” class; high values indicate strong detection coverage.  
 - *Relevance:* Fundamental for LLMs designed for *security evaluation, static analysis, and **vulnerability repair* tasks.
-
+- *Used in:* <ReferencesIndex ids={['18']} />
 
 
 ### 4. Parsing Success Rate
@@ -71,7 +73,7 @@ $$
 $$
 
 - *Interpretation:* A structural correctness measure capturing syntactic validity independently of semantic correctness.  
-- *Used For:* Assessing model robustness to syntax generation errors, especially in large code completion or generation tasks.
+- *Used For:* Assessing model robustness to syntax generation errors, especially in large code completion or generation tasks (<ReferencesIndex ids={['33']} />).
 
 
 ### 5. Speedup Rate
@@ -89,6 +91,7 @@ $$
 
 - *Interpretation:* Quantifies runtime efficiency gains; higher values indicate faster or more efficient computation.  
 - *Context:* Useful in evaluating optimization algorithms, code compilation efficiency, or hardware-specific performance.
+- *Used in:* <ReferencesIndex ids={['38']} />
 
 ### 6. Synthesis Success Rate
 Applies primarily to hardware or compiled code generation tasks, measuring how often generated artifacts successfully synthesize or compile.
@@ -100,6 +103,7 @@ $$
 - *Interpretation:* Combines both functional and hardware correctness; crucial for evaluating domain-specific synthesis tasks 
 (e.g., VerilogEval).  
 - *Significance:* Ensures generated solutions are not only syntactically correct but executable and operational.
+- *Used in:* <ReferencesIndex ids={['10']} />
 
 
 ### 7. Win Rate
@@ -111,6 +115,7 @@ $$
 
 - *Interpretation:* Used in multi-agent and tool-use settings to measure task completion, decision accuracy, or reward-based performance.  
 - *Context:* Commonly applied in tool-learning and autonomous LLM agent evaluations where success is goal-oriented (e.g., task solved vs. failed).
+- *Used in:* <ReferencesIndex ids={['48']} />
 
 
 ## Broader Interpretation
@@ -121,8 +126,8 @@ They form the foundation of *task-level functional evaluation*, allowing researc
 However:
 - They do not capture the degree of partial correctness (only binary outcomes).  
 - High rates may obscure subtle quality differences among correct outputs.  
-- Complementary metrics like *F1, **Precision, or **Execution Time* can add nuance in such cases.
+- Complementary metrics like F1, Precision, or Execution Time can add nuance in such cases.
 
 
 ## References in Database
-- 10, 18, 19, 33, 38, 42, 48, 49
+- <ReferencesIndex ids={['10','18','19','33','38','42','48','49']} />

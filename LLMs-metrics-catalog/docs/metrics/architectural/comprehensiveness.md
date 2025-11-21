@@ -8,8 +8,8 @@ sidebar_label: Comprehensiveness Score
 
 The Comprehensiveness Score (CS) is one of the eight metrics in the Software Engineering Excellence dimension of LoCoBench. It evaluates how complete, thorough, and requirement-aligned an LLM’s solution is when performing complex software engineering tasks. The authors define CS as:
 
-> “Comprehensiveness Score (CS): Derived from software completeness metrics in quality assurance literature (Kan, 2002), assessing solution coverage, documentation quality, and requirement fulfillment.”  
-> (Qiu et al., 2025)
+> “Comprehensiveness Score (CS): Derived from software completeness metrics in quality assurance literature (Kan, 2002), assessing solution coverage, documentation quality, and requirement fulfillment.” (Qiu et al., 2025)
+
 This makes CS a high-level semantic metric that captures not only whether a solution works, but whether it fully satisfies all instructions, produces complete code artifacts, and includes adequate explanation or documentation. Unlike correctness-oriented metrics that focus on execution, CS evaluates holistic completeness.
 
 
@@ -98,8 +98,6 @@ CS sits between correctness (UTP, ITP, CCS) and design excellence (ACS, CRS, STS
 
 This makes it important for evaluating LLMs in tasks that resemble real-world engineering workflows.
 
----
-
 ## Interpretation
 
 ### *What a high CS means*
@@ -128,5 +126,5 @@ Nevertheless, CS fills an important gap by evaluating thoroughness and requireme
 
 ## References
 
-Qiu, J., Liu, Z., Liu, Z., Murthy, R., Zhang, J., Chen, H., Wang, S., Zhu, M., Yang, L., Tan, J., Cen, Z., Qian, C., Heinecke, S., Yao, W., Savarese, S., Xiong, C., & Wang, H. (2025). LoCoBench: A benchmark for long-context large language models in complex software engineering. 
+1. Qiu, J., Liu, Z., Liu, Z., Murthy, R., Zhang, J., Chen, H., Wang, S., Zhu, M., Yang, L., Tan, J., Cen, Z., Qian, C., Heinecke, S., Yao, W., Savarese, S., Xiong, C., & Wang, H. (2025). LoCoBench: A benchmark for long-context large language models in complex software engineering. 
 [https://doi.org/10.48550/arXiv.2509.09614](https://doi.org/10.48550/arXiv.2509.09614)

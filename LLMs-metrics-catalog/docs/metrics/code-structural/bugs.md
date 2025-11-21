@@ -5,60 +5,89 @@ sidebar_label: Bug Metrics
 ---
 
 ## Introduction
-Bug Metrics are a group of software quality evaluation indicators used to measure the capability of a system or model to detect, localize, or predict software defects. They are essential in assessing software reliability, testing effectiveness, and code quality in both traditional and AI-assisted development pipelines.
-In the context of Large Language Models (LLMs) and automated software engineering, these metrics quantify how effectively models identify or fix defects in generated or existing code bases. They have been applied to open-source benchmarks to evaluate code robustness and debugging capabilities.
+Bug Metrics, in the context of this study, refer to software attributes used to predict whether a class will contain defects. Rather than capturing detection or localization accuracy, the paper used as reference evaluates a set of static source-code metrics that statistically correlate with defect occurrence in large software systems.  
+These metrics quantify class characteristics such as size (LOC), complexity (WMC, NLE), inheritance structure (DIT, NOC), data and method exposure (NPA, NPM), coupling (CBO, CBOI), cohesion (LCOM5), and documentation quality (CD).  
+The authors analyze 12 such metrics over 275 versions of 39 Java projects, linking them to class-level defect labels extracted from GitHub commits. Together, these metrics serve as bug metrics in the sense that they help identify which classes are most defect-prone.
 
 ## Formula and Structure
+The paper does not define a general mathematical formula. Instead, each metric is computed directly from its structural definition. For example:
 
-While different variants exist, the general form of bug detection or localization accuracy is expressed as:
+- **LOC:**  
+  Number of code lines excluding nested, anonymous, and local classes.
 
-$$
-Bug\ Metric = \frac{TP}{TP + FN}
-$$
+- **DIT (Depth of Inheritance Tree):**  
+  Distance to the farthest ancestor.
 
-Where:  
-- $TP$ = True Positives (correctly identified bugs).  
-- $FN$ = False Negatives (missed bugs).  
+- **NOC (Number of Children):**  
+  Count of all direct subclasses, interfaces, enums, and annotations.
 
-This formulation evaluates how many true defects were successfully found relative to all existing ones. When models perform ranking-based localization (e.g., predicting buggy lines or files), performance is often measured using mean average precision (MAP) or recall@k.
+- **LCOM5 (Lack of Cohesion in Methods):**  
+  Number of distinct functionalities represented by the class’s methods.
 
-An additional formulation for Bug Localization Effectiveness considers positional weighting:
+- **CBO / CBOI (Coupling):**  
+  Outgoing vs. incoming coupling based on referenced or referencing classes.
 
-$$
-BLE = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{rank_i}
-$$
+- **CD (Comment Density):**  
+  Ratio of comment lines to total logical lines.
 
-Where $rank_i$ represents the position of the first correctly localized bug in the ranked candidate list for each instance.
+The metrics are then used as features in a binary classification model predicting whether each class is defective or not defective. Prediction performance is evaluated using standard classification metrics (F-measure, AUC-ROC) at the class level.
 
 ## Variants and Applications
 
-- *Bug Detection Abilities*  
-  Quantifies the accuracy of models in identifying buggy code segments or functions within a software project.  
-  Often combined with static analysis or neural-based prediction methods.  
-  Referenced in: Twelve Open-Source Projects (2025).
+### Metric Suites
+The paper evaluates three structured groups of bug-related metrics:
 
-- *Bug Localization*  
-  Measures the ability of models to pinpoint the exact line, method, or class containing the bug.  
-  Used for evaluating debugging-oriented LLMs or code repair systems.  
-  Referenced in: Twelve Open-Source Projects (2025).
+1. **Baseline Metric**
+   - **LOC:** Serves as a simple defect indicator due to correlation between class size and fault-proneness.
 
-### Related Contexts
-- *Bug Prediction:* Estimates the likelihood of future defects based on historical commits or code metrics.  
-- *Bug Repair Evaluation:* Assesses correctness and precision of automated patch generation.  
-- *Fault-proneness Metrics:* Derived from software attributes (complexity, size, coupling, cohesion).
+2. **CK Metric Suite (Chidamber & Kemerer)**
+   - **DIT, NOC, LCOM5, CBO**  
+     Widely used in defect prediction literature; designed to capture structural aspects of OO classes such as complexity, inheritance, cohesion, and coupling.
+
+3. **OTHER Metrics Suite**
+   - **NPA, NPM, NLE, CBOI, CD**  
+     Additional metrics selected because they introduce information not strongly correlated with the CK suite.
+
+### Use in Defect Prediction
+- Metrics are computed at the class level using static analysis.  
+- Defects are linked to classes using commit messages and code diff analysis.  
+- Models evaluated: Naive Bayes, Decision Tree, Random Forest.  
+- Prediction is performed using 10-fold cross-validation.  
+- Metrics with high multicollinearity (RFC, WMC) are removed from feature-importance analysis via the Variation Inflation Factor (VIF) threshold of 2.5.
+
+These applications allow assessing which aspects of the codebase are most informative for predicting defects, and which provide little added value.
 
 ## Interpretation
-Bug Metrics are central to understanding the diagnostic and corrective capabilities of automated systems.  
-A high detection rate or effective localization score indicates that the model accurately identifies potential defects, reducing maintenance time and improving software reliability. Conversely, poor performance on these metrics may reflect limited understanding of code semantics or inadequate reasoning over execution context.
-These measures are especially relevant in:
-- LLM-based code review and repair.
-- Software testing and debugging automation.
-- Empirical studies on defect prediction in large repositories.
+The analysis reveals strong, consistent trends in how different structural metrics contribute to predicting defects:
+
+### Strong Predictors of Defect-Proneness
+- **NOC (Number of Children):**  
+  *Most consistently top-ranked.* High inheritance branching correlates with higher defect likelihood.
+- **NPA (Number of Public Attributes):**  
+  Suggests that high data exposure increases the chance of faulty behavior.
+- **DIT (Depth of Inheritance Tree):**  
+  Deep hierarchies can increase complexity and error propagation.
+- **LCOM5 (Lack of Cohesion):**  
+  Poor cohesion typically reflects scattered responsibilities and higher fault risk.
+
+These metrics tend to capture structural complexity and encapsulation quality, which strongly influence defect incidence.
+
+### Weak Predictors
+- **CBO (Coupling):**  
+  Surprisingly performs the worst in most projects.
+- **CD (Comment Density):**  
+  Documentation level does not reliably correlate with defects in this dataset.
+- **NPM (Number of Public Methods):**  
+  Larger APIs appear less predictive of faults than expected.
+
+### Model Behavior
+- Decision Tree (DT) and Random Forest (RF) consistently outperform Naive Bayes in both F-measure and AUC-ROC.  
+- The combination of CK + OTHER metrics produces the most stable prediction performance.  
+- LOC alone is a weak predictor, confirming that structural complexity beyond size is essential for accurate defect prediction.
+
+Overall, the study demonstrates that inheritance-related metrics (NOC, DIT), encapsulation metrics (NPA), and cohesion (LCOM5) carry the highest diagnostic value for identifying defect-prone classes in Java projects.
 
 ## References
+1. Rebro, D. A., Rossi, B., & Chren, S. (2023). *Source Code Metrics for Software Defects Prediction.*  
+   [https://doi.org/10.48550/arXiv.2301.08022](https://doi.org/10.48550/arXiv.2301.08022)
 
-1. *Rebro, R., Rossi, B., & Chren, S. (2023).* Source Code Metrics for Software Defects Prediction.  
-   [https://arxiv.org/abs/2301.08022](https://arxiv.org/abs/2301.08022)
-
-### Additional References in Database
-- 62

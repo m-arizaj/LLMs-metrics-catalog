@@ -140,6 +140,6 @@ Indicates:
 
 ## References
 
-Evaluating Large Language Models for Functional and Maintainable Code in Industrial Settings: A Case Study at ASML. (2025).  
+1. Evaluating Large Language Models for Functional and Maintainable Code in Industrial Settings: A Case Study at ASML. (2025).  
 [https://doi.org/10.48550/arXiv.2509.12395](https://doi.org/10.48550/arXiv.2509.12395)
 

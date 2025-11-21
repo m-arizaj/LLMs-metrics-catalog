@@ -3,6 +3,7 @@ id: pearson
 title: Pearson’s r
 sidebar_label: Pearson’s r
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 Pearson’s r is a statistical correlation metric that quantifies the linear relationship between two continuous variables.  
@@ -41,18 +42,16 @@ Recent research (Hrishikesh et al., 2025) used Pearson’s r to analyze correlat
 
 In LLM evaluation for code generation, Pearson’s r complements other correlation metrics (Spearman’s ρ, Kendall’s τ) by specifically revealing linear consistency between model outputs and human preferences.
 
-## Contextual Examples from the Database
+## Contextual Examples
 This metric appears in multiple SE and LLM evaluation settings:
-
-- Correlation with Human Judgment: Used in datasets such as CoNaLa, HumanEval, Card2Code, and Summary-Assess to validate metric alignment with expert evaluations.  
-- Correlation with Human Preference: Measures how predicted rankings or scores correspond to human-preferred solutions.  
-- Correlation Evaluation (General): Applied to test whether automatic metrics track performance consistency across models and benchmarks.  
-
+- Correlation with Human Judgment: Used in datasets such as HumanEval to validate metric alignment with expert evaluations. [12]  
+- Correlation with Human Preference: Measures how predicted rankings or scores correspond to human-preferred solutions. [24] 
+- Correlation Evaluation (General): Applied to test whether automatic metrics track performance consistency across models and benchmarks.  [37]
 These uses highlight its role as a baseline measure of metric reliability and evaluation robustness in multi-metric LLM assessment pipelines.
 
 ## References
 1. *Hrishikesh, E., Kumar, A., Bhardwaj, M., & Agarwal, S. (2025).* Co-Change Graph Entropy: A New Process Metric for Defect Prediction.  
-[https://arxiv.org/abs/2504.18511](https://arxiv.org/abs/2504.18511) 
+[https://doi.org/10.48550/arXiv.2504.18511](https://doi.org/10.48550/arXiv.2504.18511) 
 
 ### Additional References in Dataset
-- 11, 12, 24, 37
+- <ReferencesIndex ids={['12','24','37']} />

@@ -3,6 +3,7 @@ id: rouge
 title: ROUGE
 sidebar_label: ROUGE
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -29,10 +30,10 @@ The most common implementations use recall-based ROUGE-N or Longest Common Subse
 
 ### **1. ROUGE (Base)**
 The general recall-oriented formulation applied to evaluate text generation quality and textual similarity.  
-Used in *GEM*, *GLGE*, *BIG-bench*, and general *LLM comparison* benchmarks. Also adapted in SE tasks like code documentation and review generation.
+Used in BIG-bench, and general LLM comparison benchmarks. Also adapted in SE tasks like code documentation and review generation.
 
 ### **2. ROUGE-1**
-Measures unigram overlap, focusing on token-level similarity. Used for code summarization (*TL-CodeSum*) to assess lexical accuracy.
+Measures unigram overlap, focusing on token-level similarity. Used for code summarization to assess lexical accuracy.
 
 ### **3. ROUGE-2**
 Measures bigram overlap, capturing short phrase fluency and contextual accuracy. Employed in code and general summarization.
@@ -40,22 +41,12 @@ Measures bigram overlap, capturing short phrase fluency and contextual accuracy.
 ### **4. ROUGE-L**
 Based on the Longest Common Subsequence (LCS) between candidate and reference, providing a measure of sequence-level similarity.  
 This variant is the most common in Software Engineering, where sequence order and structure matter.  
-Used in *CodeXGLUE*, *TL-CodeSum*, *CodeSearchNet*, *HumanEval*, *CoNaLa*, and *Summary-Assess* for evaluating code summarization, structural similarity, and functional correctness.
-
-## Applications in Software Engineering
-
-| Context | Example Datasets | Purpose |
-|----------|------------------|----------|
-| **Code Summarization** | TL-CodeSum, CodeSearchNet | Evaluate similarity between generated and reference summaries |
-| **Commit Message Generation** | CoNaLa, Card2Code, APR-Assess | Assess sequence-based summarization quality |
-| **Documentation Generation** | General, HumanEval | Measure recall and coverage of documentation or comments |
-| **Code Generation & Translation** | CodeXGLUE | Evaluate structural and syntactic similarity between code outputs |
-| **General LLM Evaluation** | GEM, GLGE, BIG-bench | Evaluate NLG quality, recall, and textual coverage |
+Used in *HumanEval*, *CoNaLa*, and *Summary-Assess* for evaluating code summarization, structural similarity, and functional correctness.
 
 ## Interpretation and Limitations
 
 ROUGE offers a robust way to evaluate recall-oriented quality and is less sensitive to token order than BLEU.  
-However, it can still miss semantic equivalence when outputs are paraphrased or use different variable names in code-related tasks. Recent studies (e.g., Glushkova et al., 2023; Agrawal et al., 2024) suggest combining ROUGE with semantic metrics like COMET or neural embeddings to capture meaning beyond surface overlap.
+However, it can still miss semantic equivalence when outputs are paraphrased or use different variable names in code-related tasks. Recent studies (e.g., Glushkova et al., 2023; Agrawal et al., 2024) suggest combining ROUGE with semantic metrics like COMET or neural embeddings to capture meaning beyond surface overlap. 
 In SE contexts, ROUGE-L remains the most appropriate variant, as it better accounts for sequence alignment and structure, which are crucial for summarizing and translating code.
 
 ## References
@@ -69,4 +60,4 @@ In SE contexts, ROUGE-L remains the most appropriate variant, as it better accou
 
 ### Additional References in Dataset
 
--1, 2, 3, 4, 6, 7, 9, 11, 12, 15, 18, 19, 25, 26, 40, 48, 68
+- <ReferencesIndex ids={['2','3','4','6','7','9','11','12','15','18','19','25','26','40','48','68']} />

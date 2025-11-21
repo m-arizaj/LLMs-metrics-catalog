@@ -3,6 +3,7 @@ id: edit-distance
 title: Edit Distance
 sidebar_label: Edit Distance
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 Edit Distance (also known as Levenshtein Distance) is a string-based similarity metric that measures how many basic operations are required to transform one sequence into another. These operations typically include insertions, deletions, and substitutions of characters or tokens.  
@@ -125,13 +126,13 @@ Together, they provide a more holistic view of code generation quality—balanci
  [https://doi.org/10.48550/arXiv.2404.08817](https://doi.org/10.48550/arXiv.2404.08817)
 
 - Montahaei, E., Alihosseini, D., & Soleymani Baghshah, M. (2019). Jointly Measuring Diversity and Quality in Text Generation Models.  
- [https://arxiv.org/abs/1904.03971](https://arxiv.org/abs/1904.03971)  
+ [https://doi.org/10.48550/arXiv.1904.03971](https://doi.org/10.48550/arXiv.1904.03971)  
 
 - Tevet, G., & Berant, J. (2020). Evaluating the Evaluation of Diversity in Natural Language Generation.  
- [https://arxiv.org/abs/2004.02990](https://arxiv.org/abs/2004.02990)  
+ [https://doi.org/10.48550/arXiv.2004.02990](https://doi.org/10.48550/arXiv.2004.02990)  
 
 - Pinzger, M., et al. (2006). Matching Source Code Using Abstract Syntax Trees in Version History.  
  [https://pinzger.github.io/papers/Sager2006-treesimilarity.pdf](https://pinzger.github.io/papers/Sager2006-treesimilarity.pdf)
 
 ### Additional References in Dataset
-- 3, 6, 7, 10, 19, 26, 48, 51, 58, 59
+- <ReferencesIndex ids={['3','6','7','10','19','26','48','51','58','59']} />
