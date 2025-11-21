@@ -74,4 +74,3 @@ To evaluate the correctness of visualization tasks, where the code itself is a m
 https://doi.org/10.48550/arXiv.2102.04664
 * Li, Z., Qian, H., Yang, C., Wang, Z., et al. (2022). *ReCode: Robustness Evaluation of Code Generation Models*. https://doi.org/10.48550/arXiv.2212.10264
 * Nascimento, N., Guimaraes, E., Chintakunta, S., & Boominathan, A. (2024). *LLM4DS: Evaluating Large Language Models for Data Science Code Generation*. https://doi.org/10.48550/arXiv.2411.11908
-* (Excel Data: Papers 32, 23, 42)

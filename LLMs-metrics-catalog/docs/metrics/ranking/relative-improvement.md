@@ -19,13 +19,12 @@ The metric is a prose-based comparison rather than a strict formula in the provi
 A common calculation for relative improvement (though not explicitly written as a formula in the source) would be:
 
 $$
-\text{RImp} = \frac{\text{Statements}_{\text{baseline}} - \text{Statements}_{\text{FL_technique}}}{\text{Statements}_{\text{baseline}}}
+\text{RImp} = \frac{\text{Statements}_{\text{baseline}} - \text{Statements}_{\text{FL\_technique}}}{\text{Statements}_{\text{baseline}}}
 $$
 
 Where:
 * $\text{Statements}_{\text{baseline}}$ = Total statements examined to find all faults without the FL approach.
-* $\text{Statements}_{\text{FL_technique}}$ = Total statements examined to find all faults using the FL approach.
-
+* $\text{Statements}_{\text{FL\_technique}}$ = Total statements examined to find all faults using the FL approach.
 ***
 
 ## Purpose
