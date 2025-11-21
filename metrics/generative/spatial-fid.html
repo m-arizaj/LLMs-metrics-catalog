@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">Spatial FID (sFID) | LLM Metrics Catalog</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://m-arizaj.github.io/LLMs-metrics-catalog/metrics/generative/spatial-fid"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Spatial FID (sFID) | LLM Metrics Catalog"><meta data-rh="true" name="description" content="Definition"><meta data-rh="true" property="og:description" content="Definition"><link data-rh="true" rel="canonical" href="https://m-arizaj.github.io/LLMs-metrics-catalog/metrics/generative/spatial-fid"><link data-rh="true" rel="alternate" href="https://m-arizaj.github.io/LLMs-metrics-catalog/metrics/generative/spatial-fid" hreflang="en"><link data-rh="true" rel="alternate" href="https://m-arizaj.github.io/LLMs-metrics-catalog/metrics/generative/spatial-fid" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spatial FID (sFID)","item":"https://m-arizaj.github.io/LLMs-metrics-catalog/metrics/generative/spatial-fid"}]}</script><link rel="stylesheet" href="/LLMs-metrics-catalog/assets/css/styles.422c2d42.css">
-<script src="/LLMs-metrics-catalog/assets/js/runtime~main.7a4316d4.js" defer="defer"></script>
-<script src="/LLMs-metrics-catalog/assets/js/main.c8db4983.js" defer="defer"></script>
+<script src="/LLMs-metrics-catalog/assets/js/runtime~main.2f83b99d.js" defer="defer"></script>
+<script src="/LLMs-metrics-catalog/assets/js/main.b6316d61.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -34,12 +34,6 @@
 <li>Generative Models / Image Generation</li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="benchmarks">Benchmarks<a href="#benchmarks" class="hash-link" aria-label="Direct link to Benchmarks" title="Direct link to Benchmarks" translate="no">​</a></h2>
-<ul>
-<li>sFID evaluation is dependent on the <strong>Inception-V3</strong> model.</li>
-<li>The Inception-V3 model used is the one trained on <strong>ImageNet1k</strong>.</li>
-</ul>
-<hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="advantages">Advantages<a href="#advantages" class="hash-link" aria-label="Direct link to Advantages" title="Direct link to Advantages" translate="no">​</a></h2>
 <ul>
 <li>(Source 67 identifies sFID as an alternative ranking metric  but does not explicitly state its advantages over the standard FID.)</li>
@@ -53,9 +47,13 @@
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-references">Key References<a href="#key-references" class="hash-link" aria-label="Direct link to Key References" title="Direct link to Key References" translate="no">​</a></h2>
 <ul>
-<li>Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., ... &amp; Loaiza-Ganem, G. (2023). <em>Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models</em>. <a href="https://doi.org/10.48550/arXiv.2306.04675" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2306.04675</a></li>
-<li>(Excel Data: Paper 67)</li>
-<li>Nash, C., Menick, J., Dieleman, S., &amp; Battaglia, P. W. (2021). <em>Generating images with sparse representations</em>. <a href="https://doi.org/10.48550/arXiv.2103.03841" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2103.03841</a></li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/LLMs-metrics-catalog/metrics/generative/side"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">SIDE</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/LLMs-metrics-catalog/metrics/logical/difference-automata"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Difference Automata</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#definition" class="table-of-contents__link toc-highlight">Definition</a></li><li><a href="#formula-general-idea" class="table-of-contents__link toc-highlight">Formula (General Idea)</a></li><li><a href="#purpose" class="table-of-contents__link toc-highlight">Purpose</a></li><li><a href="#domains" class="table-of-contents__link toc-highlight">Domains</a></li><li><a href="#benchmarks" class="table-of-contents__link toc-highlight">Benchmarks</a></li><li><a href="#advantages" class="table-of-contents__link toc-highlight">Advantages</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li><li><a href="#key-references" class="table-of-contents__link toc-highlight">Key References</a></li></ul></div></div></div></div></main></div></div></div></div>
+<li>Nash, C., Menick, J., Dieleman, S., &amp; Battaglia, P. W. (2021). Generating images with sparse representations. arXiv. <a href="https://doi.org/10.48550/arXiv.2103.03841" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2103.03841</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="additional-references-in-dataset">Additional References in Dataset<a href="#additional-references-in-dataset" class="hash-link" aria-label="Direct link to Additional References in Dataset" title="Direct link to Additional References in Dataset" translate="no">​</a></h3>
+<ul>
+<li>
+<p><a href="https://doi.org/10.48550/arXiv.2306.04675" target="_blank" rel="noreferrer">67</a>    </p>
+</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/LLMs-metrics-catalog/metrics/generative/side"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">SIDE</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/LLMs-metrics-catalog/metrics/logical/difference-automata"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Difference Automata</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#definition" class="table-of-contents__link toc-highlight">Definition</a></li><li><a href="#formula-general-idea" class="table-of-contents__link toc-highlight">Formula (General Idea)</a></li><li><a href="#purpose" class="table-of-contents__link toc-highlight">Purpose</a></li><li><a href="#domains" class="table-of-contents__link toc-highlight">Domains</a></li><li><a href="#advantages" class="table-of-contents__link toc-highlight">Advantages</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li><li><a href="#key-references" class="table-of-contents__link toc-highlight">Key References</a><ul><li><a href="#additional-references-in-dataset" class="table-of-contents__link toc-highlight">Additional References in Dataset</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
