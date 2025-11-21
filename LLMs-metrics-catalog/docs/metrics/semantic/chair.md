@@ -51,16 +51,15 @@ $$
 
 This unified formulation rewards models that both minimize hallucinations and maintain high discriminative accuracy.
 
----
 
 ## Variants and Dimensions  
 
 | Variant | Description | Context of Use |
 |----------|--------------|----------------|
-| *CHAIR\_i* | Instance-level hallucination rate — ratio of false object mentions to all mentioned objects. | Image Captioning (MSCOCO, Flickr30k) |
-| *CHAIR\_s* | Sentence-level hallucination rate — fraction of captions with any hallucinated object. | Captioning Quality Evaluation |
+| $*CHAIR\_i*$ | Instance-level hallucination rate — ratio of false object mentions to all mentioned objects. | Image Captioning (MSCOCO, Flickr30k) |
+| $*CHAIR\_s*$ | Sentence-level hallucination rate — fraction of captions with any hallucinated object. | Captioning Quality Evaluation |
 | *AMBER–CHAIR* | Modernized variant incorporated in AMBER; measures visual hallucination across both generative and discriminative tasks. | MLLMs (GPT-4V, LLaVA, InstructBLIP, etc.) |
-| *OpenCHAIR (2024+)* | Open-vocabulary version extending CHAIR to free-form object categories. | Vision-Language Evaluation Benchmarks |
+
 
 
 ## Interpretation  
@@ -78,22 +77,9 @@ The metric was later generalized in AMBER to quantify hallucinations of:
 - *Attribute* (incorrect states, numbers, or actions)  
 - *Relation* (incorrect spatial or interaction relations)
 
-
-## Example (from AMBER Benchmark)
-
-| Model | CHAIR ↓ | Cover ↑ | Hal ↓ | Cog ↓ | AMBER Score ↑ |
-|--------|----------|---------|-------|-------|----------------|
-| GPT-4V | 4.6 | 67.1 | 30.7 | 2.6 | 91.4 |
-| Qwen-VL | 5.5 | 49.4 | 23.6 | 1.9 | 89.7 |
-| InstructBLIP | 8.8 | 52.2 | 38.2 | 4.4 | 86.5 |
-| LLaVA-1.5 | 7.8 | 51.0 | 36.4 | 4.2 | 83.5 |
-
-
-## Interpretation Summary  
-
-CHAIR quantifies *faithfulness*, not fluency.  
-It serves as a critical complement to text-based metrics (CIDEr, SPICE, METEOR), allowing researchers to evaluate *visual hallucinations* and *semantic grounding* simultaneously.  
-Its integration into AMBER (2024) demonstrates how hallucination metrics evolve from *image captioning* to *multi-modal reasoning* for LLMs.
+CHAIR quantifies faithfulness, not fluency.  
+It serves as a critical complement to text-based metrics (CIDEr, SPICE, METEOR), allowing researchers to evaluate visual hallucinations and semantic grounding simultaneously.  
+Its integration into AMBER (2024) demonstrates how hallucination metrics evolve from image captioning to multi-modal reasoning for LLMs.
 
 
 ## References  

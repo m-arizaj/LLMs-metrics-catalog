@@ -121,7 +121,6 @@ module.exports = {
       label: 'Logical Reasoning & Verification',
       collapsed: true,
       items: [
-        'metrics/logical/cog-metric',
         'metrics/logical/difference-automata',
         'metrics/logical/exam',
         'metrics/logical/equivalent',

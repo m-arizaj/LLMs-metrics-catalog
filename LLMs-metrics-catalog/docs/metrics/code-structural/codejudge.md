@@ -72,21 +72,6 @@ The score ranges from 0 to 1, where 1 indicates a fully correct solution and val
 | *Few-Shot & CoT Variants* | Incorporate examples or chain-of-thought reasoning, but found less effective than A.S. | Research extensions |
 
 
-## Evaluation and Results  
-
-Across multiple benchmarks (HumanEval-X, CoNaLa, APPS, BigCodeBench), CodeJudge consistently outperformed existing methods such as ICE-Score, CodeBLEU, and CodeBERTScore, achieving higher correlation with human judgment.
-
-### Example Results (GPT-3.5-Turbo-1106)
-| Dataset | Kendall’s τ | Spearman’s ρ | Accuracy (%) |
-|----------|--------------|---------------|---------------|
-| HumanEval-X | 0.612 | 0.612 | 80.56 |
-| CoNaLa | 0.478 | 0.562 | — |
-| APPS | 0.354 | 0.354 | 68.33 |
-| BigCodeBench | 0.392 | 0.392 | 74.56 |
-
-Even without reference code, CodeJudge maintained strong correlation (τ = 0.502) and 73% accuracy, demonstrating its ability to evaluate code semantically rather than syntactically.
-
-
 ## Interpretation  
 
 CodeJudge redefines automated code evaluation by simulating human-like review reasoning.  
@@ -99,17 +84,6 @@ Key interpretative strengths:
 - *LLM adaptability:* Works with GPT-3.5, Llama-3 (8B, 70B), CodeLlama, etc.  
 
 Limitations include occasional overemphasis on error handling and misinterpretation of complex logic in advanced benchmarks like APPS.
-
-
-## Comparison with ICE-Score  
-
-| Feature | ICE-Score | CodeJudge |
-|----------|------------|------------|
-| Test-case independence | ✓ | ✓ |
-| Partial correctness scoring | ✗ | ✓ |
-| Reasoning process | Single-step | Slow thinking (multi-step) |
-| Reference-free evaluation | Limited | Supported |
-| Correlation with ground truth | Moderate | High (>0.6) |
 
 
 ## Applications in Software Engineering  
@@ -134,12 +108,8 @@ Future work involves integrating dynamic execution tracing and improving the wei
 
 1. *Tong, W., & Zhang, T. (2024).* CodeJudge: Evaluating Code Generation with Large Language Models.  
    arXiv:2410.02184 [cs.LG].  
-   [https://arxiv.org/abs/2410.02184](https://arxiv.org/abs/2410.02184)
+   [https://doi.org/10.48550/arXiv.2410.02184](https://doi.org/10.48550/arXiv.2410.02184)
 
-2. *Zhuo, T. Y. (2024).* ICE-Score: Instructing Large Language Models to Evaluate Code.  
-   Findings of the Association for Computational Linguistics: EACL 2024.  
-   [https://aclanthology.org/2024.findings-eacl.148](https://aclanthology.org/2024.findings-eacl.148)
-
-3. *Evtikhiev, M., Bogomolov, E., Sokolov, Y., & Bryksin, T. (2023).* Out of the BLEU: How Should We Assess Quality of the Code Generation Models?  
+2. *Evtikhiev, M., Bogomolov, E., Sokolov, Y., & Bryksin, T. (2023).* Out of the BLEU: How Should We Assess Quality of the Code Generation Models?  
    Journal of Systems and Software, 203:111741.  
    [https://doi.org/10.1016/j.jss.2023.111741](https://doi.org/10.1016/j.jss.2023.111741)

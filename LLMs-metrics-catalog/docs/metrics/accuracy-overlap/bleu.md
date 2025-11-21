@@ -3,6 +3,7 @@ id: bleu
 title: BLEU
 sidebar_label: BLEU
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -106,4 +107,4 @@ Applied in code migration and generation tasks where token significance varies.
 - Eghbali, A., & Pradel, M. (2022). *CrystalBLEU: Precisely and Efficiently Measuring the Similarity of Code.*
   [https://doi.org/10.1145/3551349.3556903](https://doi.org/10.1145/3551349.3556903) 
 ### Additional References in Dataset
-- 1, 2, 3, 6, 7, 9, 10, 11, 12, 15, 18, 19, 23, 25, 26, 31, 32, 34, 37, 40, 43, 45, 46, 47, 50, 51, 58, 60, 68
+- <ReferencesIndex ids={['1','2','3','6','7','9','10','11','12','15','18','19','23','25','26','31','32','34','37','40','43','45','46','47','50','51','58','60','68']} />

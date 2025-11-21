@@ -9,7 +9,7 @@ CPU Utilization is a performance and efficiency metric that quantifies how effec
 In the context of LLM evaluation, it measures the percentage of CPU cycles actively processing tokens versus idle or waiting states, serving as a critical indicator of inference throughput, latency, and energy efficiency.
 
 This metric was emphasized by Chen et al. (2025) in A Survey on Evaluating Large Language Models in Code Generation Tasks, where CPU utilization, execution time, and energy consumption were introduced as part of performance and efficiency evaluation metrics within EffiBench and Mercury frameworks.  
-*Ditto et al. (2024)* later operationalized this metric in Inference Acceleration for Large Language Models on CPUs, demonstrating its role in optimizing LLM inference performance through parallelization, batching, and NUMA node isolation.
+Ditto et al. (2024) later operationalized this metric in Inference Acceleration for Large Language Models on CPUs, demonstrating its role in optimizing LLM inference performance through parallelization, batching, and NUMA node isolation.
 
 ## Formula and Computation  
 

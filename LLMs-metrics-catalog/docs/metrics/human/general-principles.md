@@ -7,7 +7,7 @@ sidebar_label: General Principles
 ## Introduction
 The General Principles metric in DevEval evaluates the overall quality of software design artifacts produced by LLMs. Rather than assessing correctness with respect to a specification (handled separately by the Faithfulness metric), General Principles focuses on the internal design quality of UML diagrams and architecture designs. The metric aims to capture desirable software engineering characteristics such as cohesion, decoupling, uniformity, integration, practicability, interaction complexity, and alignment with widely accepted design conventions.
 
-General Principles is applied across all design subtasks—UML Class Diagrams, UML Sequence Diagrams, and Architecture Design— with core criteria shared across them and additional subtask-specific expectations. According to the paper, “The general principles metric plays a crucial role, with each task sharing common elements while maintaining specific criteria.” (DevEval, p. 6).
+General Principles is applied across all design subtasks—UML Class Diagrams, UML Sequence Diagrams, and Architecture Design— with core criteria shared across them and additional subtask-specific expectations. According to the paper, “The general principles metric plays a crucial role, with each task sharing common elements while maintaining specific criteria.” (DevEval, p. 3).
 
 ## Formula
 DevEval does not define a mathematical formula for the General Principles metric.  
@@ -59,7 +59,7 @@ Criteria include:
 These subtasks function like contextualized variants of the General Principles metric.
 
 ## Applications in Software Engineering
-General Principles maps directly onto *classical software engineering design quality attributes*, making it an effective metric for evaluating whether LLMs can produce design artifacts that would be acceptable in real software projects.
+General Principles maps directly onto classical software engineering design quality attributes, making it an effective metric for evaluating whether LLMs can produce design artifacts that would be acceptable in real software projects.
 
 Examples include:
 

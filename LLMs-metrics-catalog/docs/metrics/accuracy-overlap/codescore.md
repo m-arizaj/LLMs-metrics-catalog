@@ -3,8 +3,9 @@ id: codescore
 title: CodeScore
 sidebar_label: CodeScore
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
-## Overview
+## Introduction
 CodeScore is an execution-informed evaluation metric designed to measure the functional correctness of generated code without requiring direct code execution. It was introduced in the paper CodeScore: Evaluating Code Generation by Learning Code Execution (Dong et al., 2023) as a learned model-based proxy for traditional execution-based metrics. Unlike BLEU or CodeBLEU, which rely on textual overlap, CodeScore uses a trained model to infer how well generated code would perform on hidden test cases by learning representations of execution behavior.
 The metric outputs a continuous score between 0 and 1 that reflects both executability and behavioral similarity between generated and reference code. It has been widely adopted in software engineering evaluation benchmarks, offering a balance between reliability and computational efficiency.
 
@@ -49,7 +50,7 @@ Overall, CodeScore offers an efficient and generalizable approach to evaluating 
 
 ## References
 1. Dong, Y., Ding, J., Jiang, X., Li, G., Li, Z., & Jin, Z. (2023). CodeScore: Evaluating Code Generation by Learning Code Execution.  
-[https://arxiv.org/abs/2301.09043](https://arxiv.org/abs/2301.09043)
+[https://doi.org/10.48550/arXiv.2301.09043](https://doi.org/10.48550/arXiv.2301.09043)
 
-### Additional References in Dataset
-- 26, 37
+### Additional Reference in Dataset
+- <ReferencesIndex ids={['26']} />

@@ -3,6 +3,7 @@ id: f1-score
 title: F1-Score
 sidebar_label: F1-Score
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -46,11 +47,9 @@ It is widely applied in Named Entity Recognition (NER), token-level classificati
 
 | Context | Example Benchmarks/Datasets | Purpose |
 |----------|-----------------|----------|
-| **Bug Detection / Repair** | Defects4J, QuixBugs | Evaluates detection and repair accuracy in software faults |
-| **Code Generation** | CodeXGLUE, General LLM Evaluation | Measures correctness in generated code classification |
-| **Clone Detection** | BigCloneBench | Assesses semantic similarity between code fragments |
-| **Reasoning / QA** | Commonsense datasets, NaturalQuestions | Quantifies reasoning accuracy in LLMs |
-| **NER / Token Classification** | SELU | Evaluates entity-level prediction balance (micro-averaged F1) |
+| **Bug Detection / Repair** | Defects4J, QuixBugs [6,7]| Evaluates detection and repair accuracy in software faults |
+| **Code Generation** | CodeXGLUE [32,43] | Measures correctness in generated code classification |
+| **Clone Detection** | BigCloneBench [32] | Assesses semantic similarity between code fragments |
 
 ## Interpretation and Limitations
 
@@ -74,4 +73,4 @@ Therefore, while F1 remains a standard metric, it should be complemented by Prec
    [https://doi.org/10.48550/arXiv.2103.10201](https://doi.org/10.48550/arXiv.2103.10201)
 
 ## Additional References in Dataset
-- 2, 3, 4, 5, 6, 7, 9, 10, 26, 32, 43, 50, 55, 61
+- <ReferencesIndex ids={['2','3','4','5','6','7','9','10','26','32','43','50','55','61']} />

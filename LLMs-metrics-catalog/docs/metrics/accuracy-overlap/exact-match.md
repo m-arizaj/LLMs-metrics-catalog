@@ -3,6 +3,7 @@ id: exact-match
 title: Exact Match
 sidebar_label: Exact Match
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -25,7 +26,7 @@ It yields a binary outcome per instance (1 = exact match, 0 = otherwise), averag
 Several extensions of Exact Match have emerged to handle structural or semantic differences in Software Engineering tasks:
 
 ### **1. Exact Match (Standard)**
-Used to evaluate functional correctness, syntactic accuracy, and translation accuracy in benchmarks such as *CodeXGLUE*, *HumanEval*, *CONCODE*, and *Bugs2Fix*. It measures strict equality between predicted and reference code outputs.
+Used to evaluate functional correctness, syntactic accuracy, and translation accuracy in benchmarks such as *CodeXGLUE*, and *HumanEval*. It measures strict equality between predicted and reference code outputs.
 
 ### **2. Fuzzy Match**
 Allows small deviations (e.g. whitespace or minor tokenization changes). Applied in *OpenAI Evals* for automatic evaluation of near-identical text outputs.
@@ -36,11 +37,8 @@ Balances between strict Exact Match and fuzzy similarity. Used in several datase
 ### **4. Single-line Exact Match**
 Used in *MultiPL-E* for fill-in-the-middle or code completion tasks where correctness is evaluated at the line level.
 
-### **5. Syntax Match / SyntaxMatch**
-Compares structural equivalence of code syntax trees rather than surface tokens. Applied in Code Generation & Migration and Custom Test Suites for syntactic/semantic matching.
-
-### **6. Text-Match Ratio**
-A ratio-based variant that measures cross-modal similarity between textual code descriptions and generated code.
+### **5. Syntax Match**
+Compares structural equivalence of code syntax trees rather than surface tokens. Applied in Code Generation & Migration for syntactic/semantic matching.
 
 ## Applications in Software Engineering
 
@@ -48,10 +46,8 @@ A ratio-based variant that measures cross-modal similarity between textual code 
 |----------|------------------|----------|
 | **Code Generation / Repair** | CodeXGLUE, MBPP, Bugs2Fix | Measures exact correctness of generated or repaired code |
 | **Functional Correctness** | HumanEval, CONCODE | Evaluates logical equivalence under strict matching |
-| **Translation Tasks** | Java↔C# | Assesses one-to-one translation accuracy |
 | **Reasoning / QA** | GSM8K, Dyck | Evaluates precision in reasoning and problem-solving LLMs |
 | **Automatic Evaluation** | OpenAI Evals | Directly computes exact or fuzzy correctness without human intervention |
-| **Syntactic Evaluation** | Code Migration Benchmarks | Tests structural match of syntax trees |
 | **Cross-Modal Similarity** | Plot2Code | Links text-to-code matching quality |
 
 ## Interpretation and Limitations
@@ -62,4 +58,4 @@ Its strict nature, however, makes it ideal for benchmark comparisons and regress
 
 ## References in Dataset
 
-- 3, 4, 5, 6, 9, 10, 15, 25, 26, 32, 43, 45, 52
+- <ReferencesIndex ids={['3','4','5','6','9','10','15','25','26','32','43','45','52']} />

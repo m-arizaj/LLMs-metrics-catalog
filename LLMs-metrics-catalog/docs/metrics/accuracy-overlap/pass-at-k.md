@@ -3,6 +3,7 @@ id: pass-at-k
 title: Pass@k
 sidebar_label: Pass@k
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -31,51 +32,49 @@ This estimator, introduced by OpenAI (2021), corrects bias from finite sampling 
 
 ## Variants and Derivative Metrics
 
-### 1. **Pass@1**
+### 1. Pass@1
 The most common variant, representing the probability that the first (or top-ranked) generated sample passes all tests.  
 Used as a straightforward indicator of baseline correctness and ranking performance.  
 Benchmarks: *HumanEval, MBPP, DS-1000, MathQA-Python, MultiPL-E.*
 
-### 2. **Pass@3 / Pass@5 / Pass@10 / Pass@100**
+### 2. Pass@3 / Pass@5 / Pass@10 / Pass@100
 These variants measure correctness within a larger set of model generations,  
 providing insight into the diversity and robustness of generated solutions:  
 - Pass@3 / Pass@5: Capture correctness in small sampling scopes.  
 - Pass@10: Balances computational cost and diversity.  
 - Pass@100: Often used in large-scale evaluations to assess upper-bound performance across multiple programming languages or perturbations.
 
-### 3. **Nominal Pass@k (NP@k)**
+### 3. Nominal Pass@k (NP@k)
 Introduced in *ReCode (2024)*, this variant measures nominal functional correctness, the proportion of generated solutions that conceptually satisfy the specification, even if minor implementation details differ.
 
-### 4. **Robust Pass@k (RP@k)**
+### 4. Robust Pass@k (RP@k)
 Assesses functional correctness under perturbations or robustness stress tests, accounting for 
 small variations such as renamed variables, reordered statements, or formatting changes.  
 Variants include:
 - RP@k: General robustness measure.  
 - RP10@1: Evaluates single-sample robustness at high perturbation depth.
 
-### 5. **Robust Drops@k (RDs@k)**
+### 5. Robust Drops@k (RDs@k)
 Quantifies performance degradation of pass@k after introducing noise or input perturbations.  
 Lower RDs@k indicates greater model robustness.
 
-### 6. **Robust Relatives@k (RRs@k)**
+### 6. Robust Relatives@k (RRs@k)
 Measures relative retention of correctness across perturbations,  
 indicating how well the model maintains functional performance compared to its baseline.
 
-### 7. **Filtered Pass@k**
+### 7. Filtered Pass@k
 A version that filters out trivial or invalid code generations before computing pass@k.  
 This variant focuses on the quality of valid solutions rather than raw pass counts.  
 Used in *APPS (2021)* and *HumanEval (2023)*.
 
-### 8. **Class-level Pass@k / Method-level Pass@k**
+### 8. Class-level Pass@k / Method-level Pass@k
 Introduced in *ClassEval (2024)* to evaluate hierarchical code correctness.  
 - Class-level Pass@k: Checks whether entire class implementations pass all unit tests.  
 - Method-level Pass@k: Evaluates individual function or method correctness within a class.
 
-### 9. **Granular Functional Accuracy (pass-ratio@n)**
+### 9. Granular Functional Accuracy (pass-ratio@n)
 Used in *LeetCode (2024)*, this variant measures the proportion of partially correct or subtask-passing solutions 
 at varying granularities ($n$). It bridges the gap between binary correctness and incremental success.
-
----
 
 ## #Attemptk (Attempts@k)
 
@@ -104,8 +103,6 @@ it may not reflect real developer workflows, since users do not commonly sample 
 The #Attemptk metric, in contrast, quantifies the model’s reliability in achieving correctness  
 within as few trials as possible.
 
----
-
 ## Extended Variants and Applications
 
 Although Pass@k and Pass Rate share the same conceptual foundation, the proportion of generated outputs that successfully pass all test cases, numerous variants have emerged to evaluate different granularities and contexts within software engineering and LLM-based code generation.
@@ -127,22 +124,16 @@ Although Pass@k and Pass Rate share the same conceptual foundation, the proporti
 ## Applications in Software Engineering and LLM Evaluation
 
 - **Code Generation Benchmarks:**  
-  Used in *HumanEval*, *MBPP*, *APPS*, *CodeContests*, *EvalPlus*, *MathQA-Python*, and *RealHumanEval*  
-  to evaluate functional correctness across different code tasks.
-
-- **Industrial Software Evaluation:**  
-  Applied in *ASML Custom Benchmark (2025)* for large-scale testing and unit-test-based correctness evaluation.
+  Used in *HumanEval*, *MBPP*, *APPS*, *CodeContests* and *EvalPlus* to evaluate functional correctness across different code tasks.
 
 - **Multilingual Code Intelligence:**  
   Benchmarks like *MultiPL-E*, *HumanEval-X*, and *HumanEval+* use Pass@k variants to measure cross-language consistency and code accuracy.
 
 - **Robustness and Perturbation Testing:**  
-  Frameworks such as *ReCode* and *HumanEval+Mini* leverage RP@k and RDs@k  
-  to analyze resilience against code mutation and syntax changes.
+  Frameworks such as *ReCode* leverage RP@k and RDs@k to analyze resilience against code mutation and syntax changes.
 
 - **LLM Evaluation and Ranking:**  
-  Pass@k serves as a key target metric for optimizing model sampling strategies  
-  and for ranking-based training approaches.
+  Pass@k serves as a key target metric for optimizing model sampling strategies and for ranking-based training approaches.
 
 
 ## Limitations
@@ -156,7 +147,7 @@ Although Pass@k and Pass Rate share the same conceptual foundation, the proporti
 ## References
 
 - *Top Pass: Improve Code Generation by Pass@k-Maximized Code Ranking.*  
-  (2024). [arXiv:2408.05715](https://arxiv.org/html/2408.05715v1)
+  (2024). [https://doi.org/10.48550/arXiv.2408.05715](https://doi.org/10.48550/arXiv.2408.05715)
 
 - Ghosh Paul, S., Miah, R., & Zhu, H. (2024). Benchmarks and Metrics for Evaluations of Code Generation: A Critical Review.  
   Oxford Brookes University. (Also listed in the references database)
@@ -164,5 +155,5 @@ Although Pass@k and Pass Rate share the same conceptual foundation, the proporti
 
 
 ### Additional References in Dataset 
-- 3, 6, 7, 10, 13, 17, 18, 19, 20, 21, 22, 23, 25, 27, 28, 31, 33, 35, 36, 37, 38, 40, 41, 44, 45, 46, 48, 51, 58, 63, 68
+- <ReferencesIndex ids={['3','6','7','10','13','17','18','19','20','21','22','23','25','27','28','31','33','35','36','37','38','40','41','44','45','46','48','51','58','63','68']} />
 

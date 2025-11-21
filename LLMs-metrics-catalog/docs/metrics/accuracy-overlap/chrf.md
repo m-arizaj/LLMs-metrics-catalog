@@ -3,6 +3,7 @@ id: chrf
 title: chrF
 sidebar_label: chrF
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 chrF is a character-level evaluation metric proposed to assess text similarity between system outputs and human references.  
@@ -52,4 +53,4 @@ In software engineering contexts, chrF is valuable for quick model comparisons a
    [https://arxiv.org/abs/2212.10297](https://arxiv.org/abs/2212.10297)  
 
 ### Additional References in Dataset
-- 11, 12, 19, 25, 26
+- <ReferencesIndex ids={['11','12','19','25','26']} />

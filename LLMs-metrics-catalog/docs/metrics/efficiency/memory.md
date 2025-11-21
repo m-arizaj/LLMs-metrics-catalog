@@ -3,66 +3,87 @@ id: memory
 title: Memory Metrics
 sidebar_label: Memory Metrics
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
-## Overview
-Memory-related metrics quantify how efficiently a model utilizes system memory during inference, training, or evaluation.  
-In the context of Large Language Models (LLMs) and software engineering, these metrics are essential to evaluate scalability, efficiency, and resource constraints, especially when dealing with long-context reasoning, code generation, or multi-session tasks.
-Recent studies, such as HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading (Luo et al., 2025), have emphasized the importance of quantifying and reducing memory usage to enable high-performance inference under limited GPU resources.  
-Memory metrics are used to assess both performance-efficiency trade-offs and memorization behavior in generative and analytical models.
+## Introduction
+Memory-related metrics quantify how efficiently a model utilizes system or GPU memory during inference, training, or long-context evaluation. In the context of Large Language Models (LLMs) and Software Engineering (SE), these metrics are essential for assessing scalability, efficiency, and the feasibility of running large models under constrained hardware.  
+Recent work, such as *HeadInfer* (Luo et al., 2025), highlights the importance of tracking and reducing GPU memory footprint through techniques like head-wise KV-cache offloading. Meanwhile, *LoCoBench* (Qiu et al., 2025) introduces memory-retention metrics to evaluate multi-session information persistence, and *Stein et al. (2023)* analyze memorization behavior in generative models using memorization ratios. Together, these perspectives connect computational memory usage with cognitive-style memory behaviors in LLM systems.
 
 ## Formula and Structure
-Depending on the metric variant, memory-related evaluation can be expressed as:
 
-1. *Memory Usage*
-   $$
-   Memory\ Usage = \max_t(M_t)
-   $$
-   where $M_t$ represents the memory consumed at time step $t$.
+Because the reviewed papers do not present unified formulas for all memory metrics, the following expressions reflect *generalized formulations* consistent with concepts explicitly present in the literature.
 
-2. *Memory Efficiency*
-   $$
-   Memory\ Efficiency = \frac{Processed\ Tokens}{Memory\ Usage}
-   $$
+### 1. Memory Usage (Hardware-Level)
+Represents the peak memory requirement during execution (as used in HeadInfer):
+$$
+Memory\ Usage = \max_{t}(M_t)
+$$
+where $M_t$ is the memory consumed at time step $t$.  
+This aligns with measurements of GPU memory footprint, KV-cache size, and offloaded-cache proportions.
 
-3. *Memorization Ratio*
-   $$
-   Memorization\ Ratio = \frac{Reproduced\ Instances}{Total\ Instances}
-   $$
+### 2. Memory Reduction / Savings
+HeadInfer reports memory savings as:
+$$
+Memory\ Reduction = \frac{M_{\text{baseline}} - M_{\text{optimized}}}{M_{\text{baseline}}}
+$$
 
-4. *Multi-Session Memory Retention*
-   $$
-   Retention\ Score = \frac{Relevant\ Information_{retrieved}}{Relevant\ Information_{expected}}
-   $$
+### 3. Memorization Ratio (Generative Models)
+Adapted from Stein et al. (2023), measuring the extent to which generated outputs replicate training data:
+$$
+Memorization\ Ratio = \frac{N_{\text{reproduced}}}{N_{\text{total}}}
+$$
+Used for datasets such as CIFAR10, ImageNet, FFHQ, and LSUN-Bedroom to quantify training-data recall.
 
-These formulations allow assessing not only memory consumption but also the trade-offs between efficiency, recall, and contextual stability.
+### 4. Multi-Session Memory Retention (Long-Context Models)
+LoCoBench evaluates how much information a model successfully recalls across multiple sessions.  
+A generalized form is:
+$$
+Retention\ Score = \frac{Relevant\ Information_{\text{retrieved}}}{Relevant\ Information_{\text{expected}}}
+$$
+This matches the purpose of LoCoBench’s MMR metric, even though the paper does not define a closed-form equation.
+
 
 ## Variants
 
-- *Memory Usage:* Quantifies memory consumption during model execution (in GB or percentage of GPU utilization).  
-- *Memorization Ratio:* Captures how much of the output content stems from memorized examples rather than generalization.  
-- *Multi-Session Memory Retention:* Measures a model’s ability to retain and reuse information over extended interactions or context windows.  
-Each of these variants can be combined with runtime or accuracy metrics to form efficiency composites (for instance, tokens per second per GB).
+### Memory Usage
+Measures memory footprint during inference or training (e.g., GPU allocation, KV-cache size).  
+Used primarily in efficiency studies such as HeadInfer.
+
+### Memory Reduction / Offloading Efficiency
+Evaluates the effectiveness of optimizations that reduce memory consumption by offloading parts of the model state or KV-cache.
+
+### Memorization Ratio
+Quantifies the degree of memorization in generative models, indicating whether outputs reproduce training data.  
+Important for privacy, generalization, and overfitting analysis.
+
+### Multi-Session Memory Retention
+Assesses how well a model retains information across long interactions or multiple sessions, as introduced in LoCoBench.
+
 
 ## Applications in Software Engineering
 
-Memory metrics have been applied across multiple software engineering benchmarks.  
-Benchmarks such as EffiBench and Mercury use memory usage to analyze the balance between performance and efficiency in code generation tasks.  
-Other works, like LoCoBench, explore multi-session memory retention to assess long-context utilization in systems that process extended code or documentation sequences.  
-Meanwhile, datasets such as CIFAR10 and ImageNet1k employ the memorization ratio to quantify how much generative models reproduce or recall previously seen patterns rather than generalize.  
-Together, these applications illustrate how memory evaluation provides insights into both the computational and cognitive efficiency of LLM-based systems.
+Memory metrics appear in SE-related LLM evaluations in several ways:
+
+- *Efficiency Benchmarks* (e.g., HeadInfer): measure GPU memory footprint when running code-related models or long-context agents.  
+- *Long-Context SE Tasks* (e.g., LoCoBench): test models' ability to retain and recall extended sequences such as long code files or documentation.  
+- *Generative Model Memorization* (Stein et al., 2023): relevant when assessing whether models leak or reproduce training data embedded in software repositories or documentation datasets.
+
+These applications help characterize both the computational and memory-behavior properties of systems used for code generation, analysis, and long-context reasoning.
+
 
 ## Interpretation
 
-In LLM-based systems, memory metrics reflect a trade-off between model capacity and hardware constraints:
-- High memory usage may signal inefficient architecture or unoptimized caching.
-- Low memory efficiency can indicate wasteful computation or redundant token processing.
-- Memorization ratio highlights risks of overfitting or data leakage, relevant for model reliability.
-- Memory retention is critical for long-context reasoning and conversational consistency.
+Memory metrics illuminate the balance between hardware constraints, efficiency, and cognitive-style behavior in LLMs:
 
-These metrics serve as fundamental indicators of system-level optimization and scalability in both research and applied settings.
+- High memory usage may indicate inefficient caching or insufficient optimization for long-context inference.  
+- Effective memory reduction suggests improved deployability on limited hardware.  
+- Memorization ratios reveal potential overfitting, privacy risk, or lack of generalization.  
+- Memory retention performance is crucial for conversational continuity and multi-step code-reasoning tasks.
+
+Together, these measures provide system-level insights essential for scaling LLMs in both research and applied software engineering settings.
 
 ## References
-1. Luo, S., Xu, M., Zhang, W., & Zhou, A. (2025). HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading. arXiv preprint. [https://arxiv.org/abs/2502.12574](https://arxiv.org/abs/2502.12574)
+1. Luo, S., Xu, M., Zhang, W., & Zhou, A. (2025). HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading. arXiv preprint. [https://doi.org/10.48550/arXiv.2502.12574](https://doi.org/10.48550/arXiv.2502.12574)
 
 ### Additional References in Dataset
-- 10, 21, 54, 67
+- <ReferencesIndex ids={['10','21','54','67']} />

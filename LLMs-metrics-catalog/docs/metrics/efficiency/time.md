@@ -3,6 +3,7 @@ id: time
 title: Time Metrics
 sidebar_label: Time Metrics
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 Time-based metrics measure the temporal efficiency of Large Language Models (LLMs) and software engineering systems during code generation, testing, or execution. These metrics capture how quickly a model performs inference, generates code, executes tests, or completes a task. They are central to evaluating performance, efficiency, and resource utilization, particularly when balancing speed against quality or correctness.
@@ -36,15 +37,16 @@ Common representations include:
 These formulations provide detailed profiling at microsecond precision to assess performance bottlenecks.
 
 ## Variants
-1. *Execution Time:* Measures overall duration of model execution or code runtime.  
-2. *Runtime / Average Normalized Runtime:* Focuses on total time for task completion, often normalized against a baseline.  
-3. *Latency:* Measures inference delay or reaction time during generation.  
-4. *Median Time to Generate Tests:* Used in test generation tasks.  
-5. *Response Time and Run Duration:* Applied in symbolic regression and evolutionary code generation benchmarks.  
-6. *Timeout Rate / Timeout Ratio:* Quantifies performance degradation when tasks exceed runtime limits.  
-7. *Task Completion Time:* Measures end-to-end productivity for multi-step coding workflows.  
-8. *Average Refactoring Time:* Used in refactoring or code editing tasks to measure time efficiency.  
-9. *Time Taken:* Tracks total duration of automated program repair or specification synthesis.
+1. *Execution Time:* Measures overall duration of model execution or code runtime. [10,42] 
+2. *Runtime / Average Normalized Runtime:* Focuses on total time for task completion, often normalized against a baseline. 
+[21,38]  
+3. *Latency:* Measures inference delay or reaction time during generation. [28]  
+4. *Median Time to Generate Tests:* Used in test generation tasks. [64] 
+5. *Response Time and Run Duration:* Applied in symbolic regression and evolutionary code generation benchmarks. [30] 
+6. *Timeout Rate / Timeout Ratio:* Quantifies performance degradation when tasks exceed runtime limits. [20,31]
+7. *Task Completion Time:* Measures end-to-end productivity for multi-step coding workflows. [19] 
+8. *Average Refactoring Time:* Used in refactoring or code editing tasks to measure time efficiency. [18]  
+9. *Time Taken:* Tracks total duration of automated program repair or specification synthesis. [65]
 
 ## Interpretation
 Runtime-based metrics offer a direct measure of efficiency and responsiveness in LLM-assisted code generation.  
@@ -61,4 +63,4 @@ Recent studies such as lm-Meter (Wang et al., 2025) emphasize detailed profiling
    arXiv preprint. https://arxiv.org/abs/2510.06126  
 
 ### Additional References in Dataset
-- 10, 18, 19, 20, 21, 28, 30, 31, 38, 42, 64, 65
+- <ReferencesIndex ids={['10','18','19','20','21','28','30','31','38','42','64','65']} />

@@ -3,6 +3,7 @@ id: complexity
 title: Complexity Metrics
 sidebar_label: Complexity Metrics
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction 
 Complexity metrics evaluate how difficult code is to understand, maintain, or modify.  
@@ -112,4 +113,4 @@ In LLM evaluation contexts, these metrics are used to:
 4. Halstead, M. H. (1977). Elements of Software Science. Elsevier.
 
 ### Additional References in Database
-- 10, 13, 14
+- <ReferencesIndex ids={['10','13','14']} />

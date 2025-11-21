@@ -3,6 +3,7 @@ id: kendall
 title: Kendall’s τ
 sidebar_label: Kendall’s τ
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 Kendall’s τ (Kendall’s tau) is a rank correlation coefficient that measures the degree of agreement between two ranked variables. It evaluates how consistently two sets of rankings (for example, human judgments and automatic metric scores) order the same items. In software engineering evaluation, it is widely applied to assess how well an automatic metric correlates with human or functional correctness evaluations, particularly in code generation, metric validation, and LLM-based assessments.
@@ -42,11 +43,6 @@ This indicates a moderate positive correlation between the automatic metric and 
 Kendall’s τ is a core tool for meta-evaluation of metrics in software engineering. It quantifies how well automated evaluation metrics reproduce human-like rankings of generated code or model outputs.
 Recent studies (Deutsch et al., 2023) show that Kendall’s τ can struggle with ties in modern metrics and propose improved formulations such as pairwise accuracy and tie calibration to enhance its sensitivity and robustness.
 
-## Usage Across Datasets
-In recent evaluations, Kendall’s τ has been applied widely across code generation and LLM benchmarks.  
-For instance, CoNaLa, Card2Code, APR-Assess, and Summary-Assess (2025) use it to measure the correlation between automatic metrics and human judgment.  
-Similarly, HumanEval (2024) employs it to analyze both alignment with human evaluation and functional correctness correlations.   
-These consistent applications demonstrate its value as a statistical backbone for assessing agreement and reliability among automated and human evaluations in software engineering.
 
 ## Interpretation
 In SE metric analysis:
@@ -58,7 +54,7 @@ This makes Kendall’s τ a benchmark correlation measure for assessing reliabil
 
 ## References
 1. *Deutsch, D., Foster, G., & Freitag, M. (2023).* Ties Matter: Meta-Evaluating Modern Metrics with Pairwise Accuracy and Tie Calibration.  
-[https://arxiv.org/abs/2305.14324](https://arxiv.org/abs/2305.14324)
+[https://doi.org/10.48550/arXiv.2305.14324](https://doi.org/10.48550/arXiv.2305.14324)
 
 ### Additional References in Dataset
-- 11, 12, 24, 37, 40
+- <ReferencesIndex ids={['11','12','24','37','40']} />

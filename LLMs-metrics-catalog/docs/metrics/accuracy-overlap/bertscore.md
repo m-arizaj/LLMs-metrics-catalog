@@ -79,7 +79,7 @@ In practice, BERTScore and CodeBERTScore are most effective when combined with e
 
 ## References
 1. *Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q., & Artzi, Y. (2019).* BERTScore: Evaluating Text Generation with BERT.  
-   [https://arxiv.org/abs/1904.09675](https://arxiv.org/abs/1904.09675)  
+   [https://doi.org/10.48550/arXiv.1904.09675](https://doi.org/10.48550/arXiv.1904.09675)  
 
 2. *Hanna, M., & Bojar, O. (2021).* A Fine-Grained Analysis of BERTScore.  
    In Proceedings of the Sixth Conference on Machine Translation (WMT 2021).  

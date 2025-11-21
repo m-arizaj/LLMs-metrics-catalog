@@ -3,6 +3,7 @@ id: accuracy
 title: Accuracy
 sidebar_label: Accuracy
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -68,7 +69,7 @@ $$
 ### 5. Coreference Resolution Accuracy
 Evaluates whether pronouns or entities are resolved correctly in text.  
 Applied in fairness and bias evaluation datasets such as WinoBias and WinoGender,  
-this metric measures linguistic precision related to *gender bias* and referential correctness.
+this metric measures linguistic precision related to gender bias and referential correctness.
 
 ### 6. Selective Accuracy
 Used in *selective prediction* scenarios, where a model can abstain from answering.  
@@ -105,7 +106,7 @@ The following areas have used *Accuracy* and its variants as their primary evalu
   Execution Accuracy, Strict Accuracy, and Functional Correctness in datasets like HumanEval, MBPP, APPS, EvalPlus, and CodeContests.  
 
 - **Defect Detection and Vulnerability Analysis:**  
-  Accuracy for classifying defective vs. clean code (e.g., Devign, CodeXGLUE).  
+  Accuracy for classifying defective vs. clean code.  
 
 - **Fairness and Bias Evaluation:**  
   Coreference Resolution Accuracy in WinoBias and WinoGender for detecting gender bias.   
@@ -126,13 +127,13 @@ The following areas have used *Accuracy* and its variants as their primary evalu
 
 ## References
 
-- Moussa, A., & Sarro, F. (2022). *On the Use of Evaluation Measures for Defect Prediction Studies.*  
+- Moussa, A., & Sarro, F. (2022). On the Use of Evaluation Measures for Defect Prediction Studies.  
   [PDF link](https://solar.cs.ucl.ac.uk/pdf/MoussaISSTA22.pdf)
-- Opitz, J. et al. (2024). *A Closer Look at Classification Evaluation Metrics and a Critical Reflection of Common Evaluation Practice.*  
-  *Transactions of the Association for Computational Linguistics.*  
+- Opitz, J. et al. (2024). A Closer Look at Classification Evaluation Metrics and a Critical Reflection of Common Evaluation Practice. [https://doi.org/10.1162/tacl_a_00675](https://doi.org/10.1162/tacl_a_00675) 
+- Transactions of the Association for Computational Linguistics.  
   [Link](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00675/122720/A-Closer-Look-at-Classification-Evaluation-Metrics)
 - Google Developers. *Accuracy, Precision, Recall (Crash Course).*  
   [https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
 
 ### Additional References in Dataset
-- 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 18, 19, 26, 28, 31, 32, 34, 37, 40, 43, 48, 49, 50, 51, 54, 55, 57, 60, 61
+- <ReferencesIndex ids={['1','2','3','4','5','6','7','8','9','10','15','16','18','19','26','28','31','32','34','37','40','43','48','49','50','51','54','55','57','60','61']} />
