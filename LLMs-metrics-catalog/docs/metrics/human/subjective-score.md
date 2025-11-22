@@ -83,5 +83,4 @@ The HCE framework uses the Subjective Score to rate models across three core dim
 
 ## Key References
 
-* Guo, Y., Wang, J., Ji, K., Wen, F., Zhang, Z., Zhu, X., Li, C., & Zhai, G. (2025). *Human-Centric Evaluation for Foundation Models*. https://doi.org/10.48550/arXiv.2506.01793
-* (Excel Data: Paper 66)
+* Guo, Y., Wang, J., Ji, K., Wen, F., Zhang, Z., Zhu, X., Li, C., & Zhai, G. (2025). Human-centric evaluation for foundation models. arXiv. https://doi.org/10.48550/arXiv.2506.01793

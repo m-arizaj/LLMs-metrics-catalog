@@ -48,5 +48,6 @@ The primary purpose of SIDE is to assess the quality of machine-generated code s
 
 ## Key References
 
-* Mastropaolo, A., Ciniselli, M., Penta, M. D., & Bavota, G. (2024). *Evaluating code summarization techniques: A new metric and an empirical characterization*. Proceedings of the 46th IEEE/ACM International Conference on Software Engineering (ICSE 2024). https://doi.org/10.1145/3597503.3639174
-* Zhou, X., Kim, K., Zhang, T., et al. (2025). *SE-Jury: An LLM-as-Ensemble-Judge Metric for Narrowing the Gap with Human Evaluation in SE*.https://doi.org/10.48550/arXiv.2505.20854
+*Mastropaolo, A., Ciniselli, M., Di Penta, M., & Bavota, G. (2024). Evaluating code summarization techniques: A new metric and an empirical characterization. En Proceedings of the 46th IEEE/ACM International Conference on Software Engineering (pp. 1–13). ACM. https://doi.org/10.1145/3597503.3639174
+
+* Zhou, X., Kim, K., Zhang, T., Lo, D., & Han, D. G. (2025). SE-Jury: An LLM-as-ensemble-judge metric for narrowing the gap with human evaluation in SE. arXiv. https://doi.org/10.48550/arXiv.2505.20854

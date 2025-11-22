@@ -45,5 +45,4 @@ This metric aims to comprehensively evaluate a model's performance in a real-wor
 
 ## References
 
-* Chen, L., Guo, Q., Jia, H., Zeng, Z., Wang, X., Xu, Y., Wu, J., Wang, Y., Gao, Q., Wang, J., Ye, W., & Zhang, S. (2025). *A Survey on Evaluating Large Language Models in Code Generation Tasks*. https://doi.org/10.48550/arXiv.2408.16498
-* (Excel Data: Paper 10)
+* Chen, L., Guo, Q., Jia, H., Zeng, Z., Wang, X., Xu, Y., Wu, J., Wang, Y., Gao, Q., Wang, J., Ye, W., & Zhang, S. (2024). A survey on evaluating large language models in code generation tasks. arXiv. https://doi.org/10.48550/arXiv.2408.16498

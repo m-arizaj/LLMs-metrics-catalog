@@ -59,6 +59,6 @@ The primary purpose of KD/KID is to serve as a **ranking metric** for the overal
 
 ## Key References
 
-* Bińkowski, M., Sutherland, D. J., Arbel, M., & Gretton, A. (2018). *Demystifying MMD GANs*. In *International Conference on Learning Representations*.
-* Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E. T., & Loaiza-Ganem, G. (2023). Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models (arXiv:2306.04675v2). arXiv. https://doi.org/10.48550/arXiv.2306.04675
-* (Excel Data: Paper 67)
+* Bińkowski, M., Sutherland, D. J., Arbel, M., & Gretton, A. (2018). *Demystifying MMD GANs*. In *International Conference on Learning Representations*. https://doi.org/10.48550/arXiv.1801.01401
+
+* Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., Liu, Z., Caterini, A. L., Taylor, J. E. T., & Loaiza-Ganem, G. (2023). Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models. arXiv. https://doi.org/10.48550/arXiv.2306.04675

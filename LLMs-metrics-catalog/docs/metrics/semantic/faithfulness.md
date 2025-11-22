@@ -6,7 +6,7 @@ sidebar_label: Faithfulness
 
 ## Definition
 
-**Faithfulness** is an evaluation metric used within the **DevEval** benchmark to measure "Design Fidelity" [User provided data]. It is not a single score but a principle of evaluation, specifically assessing the extent to which a Large Language Model (LLM) adheres to specified instructions when generating software design artifacts.
+**Faithfulness** is an evaluation metric used within the **DevEval** benchmark to measure "Design Fidelity" . It is not a single score but a principle of evaluation, specifically assessing the extent to which a Large Language Model (LLM) adheres to specified instructions when generating software design artifacts.
 
 The core idea is to measure how accurately and strictly the model's output (e.g., UML diagrams, architecture design) aligns with the given **Product Requirement Document (PRD)**, ensuring all functionalities are met "without making any hallucinations and additions".
 
@@ -61,6 +61,4 @@ The purpose of the Faithfulness metric is to quantify a model's ability to **str
 
 ## Key References
 
-* Li, B., Wu, W., Tang, Z., et al. (2024). *Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study*. [https://doi.org/10.48550/arXiv.2403.08604](https://doi.org/10.48550/arXiv.2403.08604)
-
-* (Excel Data: Paper 13)
+* Li, B., Wu, W., Tang, Z., & Shi, S. (2024). Prompting large language models to tackle the full software development lifecycle: A case study. arXiv. https://doi.org/10.48550/arXiv.2403.08604

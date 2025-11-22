@@ -3,6 +3,7 @@ id: factuality
 title: Factuality
 sidebar_label: Factuality
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 **Factuality** in the context of Large Language Models (LLMs) refers to the extent to which the information or answers provided by the model align with **real-world truths and verifiable facts**.
@@ -37,7 +38,7 @@ Factuality significantly impacts the reliability of downstream applications. Inc
 
 ## Benchmarks
 
-* **HELM** (Holistic Evaluation of Language Models) [User provided data]
+* **HELM** (Holistic Evaluation of Language Models) 
 * **TruthfulQA:** A dataset specifically designed to cause models to make mistakes and test truthfulness.
 * **Natural Questions:** Used to assess internal knowledge capabilities.
 * **TriviaQA:** Used to assess internal knowledge capabilities.
@@ -61,11 +62,19 @@ Factuality significantly impacts the reliability of downstream applications. Inc
 ***
 
 ## Key References
-* Chang, Y., Wang, X., Wang, J., et al. (2023). *A Survey on Evaluation of Large Language Models*. [https://doi.org/10.48550/arXiv.2307.03109](https://doi.org/10.48550/arXiv.2307.03109)
-* Lin, S., Hilton, J., & Evans, O. (2021). *Truthfulqa: Measuring how models mimic human falsehoods*. 
-* Wang, C., Cheng, S., Xu, Z., et al. (2023). *Evaluating open question answering evaluation*. 
-* Min, S., Krishna, K., Lyu, X., et al. (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*.
-* Honovich, O., Aharoni, R., Herzig, J., et al. (2022). *TRUE: Re-evaluating factual consistency evaluation*. 
-* Gekhman, Z., Herzig, J., Aharoni, R., et al. (2023). *Trueteacher: Learning factual consistency evaluation with large language models*.
-* Manakul, P., Liusie, A., & Gales, M. (2023). *Selfcheckgpt: Zero-resource black-box hallucination detection for generative large language models*. 
-* (Excel Data: Paper 9)
+
+* Lin, S., Hilton, J., & Evans, O. (2021). TruthfulQA: Measuring how models mimic human falsehoods. arXiv. https://doi.org/10.48550/arXiv.2109.07958
+
+* Wang, C., Cheng, S., Xu, Z., et al. (2023). Evaluating open question answering evaluation. arXiv. https://doi.org/10.48550/arXiv.2305.12421
+
+* Min, S., Krishna, K., Lyu, X., et al. (2023). FActScore: Fine-grained atomic evaluation of factual precision in long form text generation. arXiv. https://doi.org/10.48550/arXiv.2305.14251
+
+* Honovich, O., Aharoni, R., Herzig, J., et al. (2022). TRUE: Re-evaluating factual consistency evaluation. arXiv. https://doi.org/10.48550/arXiv.2204.04991
+
+* Gekhman, Z., Herzig, J., Aharoni, R., et al. (2023). TrueTeacher: Learning factual consistency evaluation with large language models. arXiv. https://doi.org/10.48550/arXiv.2305.11171
+
+* Manakul, P., Liusie, A., & Gales, M. (2023). SelfCheckGPT: Zero-resource black-box hallucination detection for generative large language models. arXiv. https://doi.org/10.48550/arXiv.2303.08896
+
+### Additional References in Dataset 
+
+- <ReferencesIndex ids={['9']} />

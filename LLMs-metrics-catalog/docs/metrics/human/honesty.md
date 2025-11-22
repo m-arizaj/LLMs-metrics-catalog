@@ -3,6 +3,7 @@ id: honesty
 title: Honesty
 sidebar_label: Honesty
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 **Honesty** is a core principle used in the **Human Evaluation** of Large Language Models (LLMs). It is part of the "3H rule" — **Helpfulness, Honesty, and Harmlessness** — which serves as a foundational concept for developing detailed human assessment criteria.
@@ -53,6 +54,8 @@ Honesty, as a human evaluation criterion, is applied within broader evaluation f
 ***
 
 ## Key References
-* Chang, Y., Wang, X., Wang, J., et al. (2023). *A Survey on Evaluation of Large Language Models*. [https://doi.org/10.48550/arXiv.2307.03109](https://doi.org/10.48550/arXiv.2307.03109)
-* Askell, A., Bai, Y., Chen, A., et al. (2021). *A general language assistant as a laboratory for alignment*. arXiv preprint arXiv:2112.00861. (Cited in Paper 9 as the source of the 3H rule) 
-* (Excel Data: Paper 9)
+
+* Askell, A., Bai, Y., Chen, A., et al. (2021). *A general language assistant as a laboratory for alignment*. https://doi.org/10.48550/arXiv.2112.00861
+
+### Additional References in Dataset 
+- <ReferencesIndex ids={['9']} />

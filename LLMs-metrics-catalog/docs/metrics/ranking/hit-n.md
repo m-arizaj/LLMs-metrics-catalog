@@ -3,6 +3,7 @@ id: hit-n
 title: Hit-N
 sidebar_label: Hit-N
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 **Hit-N** (also referred to as Hit-N (multi-defects)) is an evaluation metric used in fault localization. It is specifically "designed for multi-defects".
@@ -43,7 +44,9 @@ The primary purpose of Hit-N is to evaluate the effectiveness of fault localizat
 ***
 
 ## Key References
-* Chen, X., Hu, X., Huang, Y. et al. Deep learning-based software engineering: progress, challenges, and opportunities. Sci. China Inf. Sci. 68, 111102 (2025). https://doi.org/10.1007/s11432-023-4127-5
-* The paper (50.pdf) cites the following work in relation to the Hit-N metric:
-    * Li Y, Wang S, Nguyen T N. (2022). Fault localization to detect co-change fixing locations. *In: Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, New York. 659-671*. https://doi.org/10.1145/3540250.3549137
-* (Excel Data: Paper 50)
+
+* Li Y, Wang S, Nguyen T N. (2022). Fault localization to detect co-change fixing locations. *In: Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, New York. 659-671*. https://doi.org/10.1145/3540250.3549137
+
+
+### Additional References in Dataset 
+- <ReferencesIndex ids={['50']} />

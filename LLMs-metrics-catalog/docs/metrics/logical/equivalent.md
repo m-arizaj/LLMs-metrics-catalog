@@ -31,7 +31,7 @@ To provide a robust measure of **mathematical correctness** for models evaluated
 
 ## Domains
 
-* LLM Evaluation / Mathematics [User provided data]
+* LLM Evaluation / Mathematics 
 * Reasoning 
 * Mathematical Reasoning
 

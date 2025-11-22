@@ -3,8 +3,10 @@ id: spatial-fid
 title: Spatial FID (sFID)
 sidebar_label: Spatial FID (sFID)
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
+
 **Spatial FID (sFID)** is an alternative metric for ranking generative models, introduced as a variation of the standard Fréchet Inception Distance (FID).
 
 The key difference is the source of the feature representations. While the standard FID uses activations from the final `pool3` layer (2048-dimensional) of the Inception-V3 network, **sFID computes the FID using activations from an earlier, intermediate layer**.
@@ -13,6 +15,7 @@ Specifically, it uses the **`mixed_6/conv` layer** of the Inception-V3 network.
 ***
 
 ## Formula (General Idea)
+
 The underlying mathematical calculation for sFID is the same Fréchet Distance (FD) formula used by the standard FID:
 
 $$
@@ -28,22 +31,19 @@ The distinction is that these $\mu$ and $\Sigma$ values are derived from the fea
 ***
 
 ## Purpose
+
 The purpose of sFID is to serve as an alternative to the standard FID for ranking generative models. By using an intermediate layer, it presumably captures different (more spatial and less class-abstracted) features than the final pooling layer used by FID.
 
 ***
 
 ## Domains
+
 * Generative Models / Image Generation 
 
 ***
 
-## Benchmarks
-* sFID evaluation is dependent on the **Inception-V3** model.
-* The Inception-V3 model used is the one trained on **ImageNet1k**.
-
-***
-
 ## Advantages
+
 * (Source 67 identifies sFID as an alternative ranking metric  but does not explicitly state its advantages over the standard FID.)
 
 ***
@@ -55,6 +55,7 @@ The purpose of sFID is to serve as an alternative to the standard FID for rankin
 ***
 
 ## Key References
-* Stein, G., Cresswell, J. C., Hosseinzadeh, R., Sui, Y., Ross, B. L., Villecroze, V., ... & Loaiza-Ganem, G. (2023). *Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models*. https://doi.org/10.48550/arXiv.2306.04675
-* (Excel Data: Paper 67)
-* Nash, C., Menick, J., Dieleman, S., & Battaglia, P. W. (2021). *Generating images with sparse representations*. https://doi.org/10.48550/arXiv.2103.03841
+
+* Nash, C., Menick, J., Dieleman, S., & Battaglia, P. W. (2021). Generating images with sparse representations. arXiv. https://doi.org/10.48550/arXiv.2103.03841
+### Additional References in Dataset 
+- <ReferencesIndex ids={['67']} />

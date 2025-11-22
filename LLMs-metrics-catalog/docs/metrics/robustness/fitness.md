@@ -6,7 +6,7 @@ sidebar_label: Fitness Function
 
 ## Definition
 
-A **Fitness Function Value** is the score assigned to a candidate solution in an Evolutionary Algorithm (EA), such as Genetic Programming (GP) or LLM_GP. It is a "problem-dependent fitness measure"  that quantifies the quality or "Functional Performance" of a solution (e.g., a piece of generated code) [User provided data].
+A **Fitness Function Value** is the score assigned to a candidate solution in an Evolutionary Algorithm (EA), such as Genetic Programming (GP) or LLM_GP. It is a "problem-dependent fitness measure"  that quantifies the quality or "Functional Performance" of a solution (e.g., a piece of generated code) .
 
 This value is calculated by an **evaluation operator**, which "iteratively test[s] each solution and calculate[s] its fitness". This fitness score is then used by the **selection operator** to choose which solutions will "parent" the next generation.
 
@@ -65,4 +65,3 @@ The purpose of the fitness function is to "assess the quality of the response/ou
 ## Key References
 
 * Hemberg, E., Moskal, S. & O’Reilly, UM. Evolving code with a large language model. Genet Program Evolvable Mach 25, 21 (2024) [https://doi.org/10.1007/s10710-024-09494-2](https://doi.org/10.1007/s10710-024-09494-2)
-* (Excel Data: Paper 30)

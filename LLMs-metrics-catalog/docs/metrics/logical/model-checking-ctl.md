@@ -3,6 +3,7 @@ id: model-checking-ctl
 title: Model Checking (CTL Properties)
 sidebar_label: Model Checking (CTL)
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
@@ -71,7 +72,7 @@ Specific goals include:
 
 ## Key References
 
-* Busch, D., Bainczyk, A., Smyth, S. et al. LLM-based code generation and system migration in language-driven engineering. Int J Softw Tools Technol Transfer 27, 137–147 (2025). https://doi.org/10.1007/s10009-025-00798-x
-* Clarke, E.M., Emerson, E.A., & Sistla, A.P. (1986). **Automatic verification of finite-state concurrent systems using temporal logic specifications.** *ACM Trans. Program. Lang. Syst., 8*, 244–263. https://doi.org/10.1145/5397.5399
+- Clarke, E. M., Emerson, E. A., & Sistla, A. P. (1986). Automatic verification of finite-state concurrent systems using temporal logic specifications. ACM Transactions on Programming Languages and Systems, 8(2), 244–263. https://doi.org/10.1145/5397.5399
 
-* (Excel Data: Paper 29)
+### Additional References in Dataset 
+- <ReferencesIndex ids={['29']} />

@@ -57,5 +57,4 @@ The primary purpose of the SAS is to move evaluation beyond mere functional corr
 
 ## Key References
 
-* Qiu, J., Liu, Z., Liu, Z., Murthy, R., Zhang, J., Chen, H., ... & Wang, H. (2025). *LoCoBench: A Benchmark for Long-Context Large Language Models in Complex Software Engineering*. https://doi.org/10.48550/arXiv.2509.09614
-* (Excel Data: Paper 54)
+Qiu, J., Liu, Z., Liu, Z., Murthy, R., Zhang, J., Chen, H., Wang, S., Zhu, M., Yang, L., Tan, J., Cen, Z., Qian, C., Heinecke, S., Yao, W., Savarese, S., Xiong, C., & Wang, H. (2025). LoCoBench: A benchmark for long-context large language models in complex software engineering. arXiv. https://doi.org/10.48550/arXiv.2509.09614

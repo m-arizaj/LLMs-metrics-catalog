@@ -14,6 +14,7 @@ In the evaluation of Large Language Models (LLMs) and the systems they generate,
 This document covers both variants based on the provided contexts.
 
 ## 1. Inference Efficiency (Runtime / Speed)
+
 ### Definition
 Inference Efficiency metrics measure the computational cost and speed of a language model when it is performing its primary function: generating text (making predictions). This is distinct from *Training Efficiency*, which measures the resources used to create the model (Source 4). These metrics are crucial for assessing the practical usability and deployment cost of a model.
 
@@ -68,9 +69,9 @@ The purpose is to automatically validate the functional correctness and reliabil
 | **Behavioral Model Inference Rate** | Verification / Reliability | Success rate (%) of automatically *deriving* a correct behavioral automaton from a system. | Software Engineering, LDE | 29 |
 
 ## References
-* Busch, D., Bainczyk, A., Smyth, S. et al. LLM-based code generation and system migration in language-driven engineering. Int J Softw Tools Technol Transfer 27, 137–147 (2025). https://doi.org/10.1007/s10009-025-00798-x
-* Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., et al. (2024). *Holistic Evaluation of Language Models (HELM)*. https://doi.org/10.48550/arXiv.2211.09110
-* Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., et al. (2024). *A survey on large language model based autonomous agents*. 
-https://doi.org/10.48550/arXiv.2308.11432
+* Busch, D., Bainczyk, A., & Smyth, S. (2025). LLM-based code generation and system migration in language-driven engineering. International Journal on Software Tools for Technology Transfer, 27, 137–147. https://doi.org/10.1007/s10009-025-00798-x
 
-* (Excel Data: Papers 4, 29, 49)
+* Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., Yasunaga, M., Zhang, Y., Narayanan, D., Wu, Y., Kumar, A., Newman, B., Yuan, B., Yan, B., Zhang, C., Cosgrove, C., Manning, C. D., Ré, C., Acosta-Navas, D., Hudson, D. A., ... Koreeda, Y. (2022). Holistic evaluation of language models (HELM). arXiv. https://doi.org/10.48550/arXiv.2211.09110
+
+
+* Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., Zhang, J., Chen, Z., Tang, J., Chen, X., Lin, Y., Zhao, W. X., Wei, Z., & Wen, J.-R. (2023). A survey on large language model based autonomous agents. arXiv. https://doi.org/10.48550/arXiv.2308.11432

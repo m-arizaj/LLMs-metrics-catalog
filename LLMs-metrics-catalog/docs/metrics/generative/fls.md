@@ -3,6 +3,7 @@ id: fls
 title: FLS (Feature Likelihood Score)
 sidebar_label: FLS (Feature Likelihood Score)
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Introduction
 
@@ -10,7 +11,7 @@ sidebar_label: FLS (Feature Likelihood Score)
 
 The method works by fitting a Kernel Density Estimate (KDE) to the feature representations (e.g., from an Inception-V3 encoder) of the **generated** samples. The bandwidth for this KDE is optimized to maximize the log-likelihood of the **training** data. The final FLS score is then derived from the log-likelihood of the **test** data under this fitted KDE.
 
-FLS is used as a metric for ranking the overall quality of models [User provided data], but it also produces a diagnostic sub-metric, **FLS-POG**, which is specifically designed to measure memorization.
+FLS is used as a metric for ranking the overall quality of models , but it also produces a diagnostic sub-metric, **FLS-POG**, which is specifically designed to measure memorization.
 
 ## 1. FLS (Feature Likelihood Score)
 
@@ -24,7 +25,7 @@ To provide a "Ranking / Overall Quality" score for generative models by approxim
 
 ### Applications
 
-* Generative Models / Image Generation [User provided data]
+* Generative Models / Image Generation 
 * Ranking generative models
 
 ### Benchmarks
@@ -65,8 +66,7 @@ FLS-POG has been shown to be an unreliable metric for memorization.
 
 ## 4. References
 
-* Stein, G., Cresswell, J. C., Hosseinzadeh, R., et al. (2023). *Exposing flaws of generative model evaluation metrics and their unfair treatment of diffusion models*. [https://doi.org/10.48550/arXiv.2306.04675](https://doi.org/10.48550/arXiv.2306.04675)
+* Jiralerspong, M., Bose, A. J., & Gidel, G. (2023). *Feature likelihood score: Evaluating generalization of generative models using samples*.  https://doi.org/10.48550/arXiv.2302.04440
 
-* Jiralerspong, M., Bose, A. J., & Gidel, G. (2023). *Feature likelihood score: Evaluating generalization of generative models using samples*. 
-
-* (Excel Data: Paper 67)
+### Additional References in Dataset 
+- <ReferencesIndex ids={['67']} />

@@ -3,6 +3,7 @@ id: usefulness-score
 title: Usefulness Score
 sidebar_label: Usefulness Score
 ---
+import { ReferencesIndex } from '@site/src/components/References';
 
 ## Definition
 
@@ -53,11 +54,9 @@ The purpose of the Usefulness Score is to capture a human developer's judgment o
 
 ## Key References
 
-* Zhuo, T. Y. (2024). *ICE-Score: Instructing Large Language Models to Evaluate Code*. https://doi.org/10.48550/arXiv.2304.14317
-* Evtikhiev, M., Bogomolov, E., Sokolov, Y., & Bryksin, T. (2023). *Out of the bleu: how should we assess quality of the code generation models?* 
-https://doi.org/10.48550/arXiv.2208.03133
+* Evtikhiev, M., Bogomolov, E., Sokolov, Y., & Bryksin, T. (2023). Out of the BLEU: How should we assess quality of the code generation models? arXiv. https://doi.org/10.48550/arXiv.2208.03133
 
-* Yin, P., Deng, B., Chen, E., Vasilescu, B., & Neubig, G. (2018). *Learning to mine aligned code and natural language pairs from stack overflow*. 
-https://doi.org/10.48550/arXiv.1805.08949
+* Yin, P., Deng, B., Chen, E., Vasilescu, B., & Neubig, G. (2018). Learning to mine aligned code and natural language pairs from stack overflow. En Proceedings of the 15th International Conference on Mining Software Repositories (pp. 476–486). Association for Computing Machinery. https://doi.org/10.1145/3196398.3196408
 
-* (Excel Data: Paper 12)
+### Additional References in Dataset 
+- <ReferencesIndex ids={['12']} />

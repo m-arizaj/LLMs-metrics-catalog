@@ -60,10 +60,10 @@ This metric provides a direct, quantitative measure of the sustainability and ef
 | **Energy Consumption (Mercury)** | Code Generation | Generated Code (Runtime) | Energy consumed by the output code during execution  |
 
 ## References
-- L. Lin, D. Zhu and J. Shang, "Overview of the Comprehensive Evaluation of Large Language Models," 2024 IEEE Smart World Congress (SWC), Nadi, Fiji, 2024, pp. 1504-1512, doi: 10.1109/SWC62898.2024.00231.
+- Lin, L., Zhu, D., & Shang, J. (2024). Overview of the comprehensive evaluation of large language models. In 2024 IEEE Smart World Congress (SWC) (pp. 1504–1512). IEEE. https://doi.org/10.1109/SWC62898.2024.00231
 
-- Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., Yasunaga, M., ... & Ré, C. (2022). *Holistic Evaluation of Language Models*.[https://doi.org/10.48550/arXiv.2211.09110](https://doi.org/10.48550/arXiv.2211.09110)
+- Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., Yasunaga, M., Zhang, Y., Narayanan, D., Wu, Y., Kumar, A., Newman, B., Yuan, B., Yan, B., Zhang, C., Cosgrove, C., Manning, C. D., Ré, C., Acosta-Navas, D., ... & Koren, Y. (2022). Holistic evaluation of language models. arXiv. https://doi.org/10.48550/arXiv.2211.09110
 
-- Chen, L., Guo, Q., Jia, H., Zeng, Z., Wang, X., Xu, Y., ... & Zhang, S. (2024). *A Survey on Evaluating Large Language Models in Code Generation Tasks*. doi: [https://doi.org/10.48550/arXiv.2408.16498](https://doi.org/10.48550/arXiv.2408.16498).
+- Chen, L., Guo, Q., Jia, H., Zeng, Z., Wang, X., Xu, Y., & Zhang, S. (2024). A survey on evaluating large language models in code generation tasks. arXiv. https://doi.org/10.48550/arXiv.2408.16498
 
-Chang, Y., et al. (2023). A survey on evaluation of large language models (arXiv:2307.03109). arXiv. https://doi.org/10.48550/arXiv.2307.03109
+- Chang, Y., Wang, X., Wang, J., Wu, Y., Yang, L., Zhu, K., Chen, H., Yi, X., Wang, C., Wang, Y., Ye, W., Zhang, Y., Chang, Y., Yu, P. S., Yang, Q., & Xing, X. (2023). A survey on evaluation of large language models. arXiv. https://doi.org/10.48550/arXiv.2307.03109

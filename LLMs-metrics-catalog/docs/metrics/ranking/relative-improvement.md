@@ -19,13 +19,12 @@ The metric is a prose-based comparison rather than a strict formula in the provi
 A common calculation for relative improvement (though not explicitly written as a formula in the source) would be:
 
 $$
-\text{RImp} = \frac{\text{Statements}_{\text{baseline}} - \text{Statements}_{\text{FL_technique}}}{\text{Statements}_{\text{baseline}}}
+\text{RImp} = \frac{\text{Statements}_{\text{baseline}} - \text{Statements}_{\text{FL\_technique}}}{\text{Statements}_{\text{baseline}}}
 $$
 
 Where:
 * $\text{Statements}_{\text{baseline}}$ = Total statements examined to find all faults without the FL approach.
-* $\text{Statements}_{\text{FL_technique}}$ = Total statements examined to find all faults using the FL approach.
-
+* $\text{Statements}_{\text{FL\_technique}}$ = Total statements examined to find all faults using the FL approach.
 ***
 
 ## Purpose
@@ -50,19 +49,22 @@ The purpose of RImp is to quantify the practical benefit or efficiency gain prov
 
 ***
 
-## Limitations
-* The provided source does not specify limitations for this particular metric.
-
 ***
 
 ## Key References
-* Chen, X., Hu, X., Huang, Y. et al. Deep learning-based software engineering: progress, challenges, and opportunities. Sci. China Inf. Sci. 68, 111102 (2025). https://doi.org/10.1007/s11432-023-4127-5
+- Chen, X., Hu, X., Huang, Y., Ma, L., Wang, H., Wang, J., Xia, X., Yang, Y., Yu, Z., Zhang, Y., & Xie, T. (2025). Deep learning-based software engineering: Progress, challenges, and opportunities. Science China Information Sciences, 68, 111102. https://doi.org/10.1007/s11432-023-4127-5
 
-* RImp was used in 6 of the surveyed fault localization papers.
-* Zhang, Z., Lei, Y., Tan, Q., et al. (2017). *Deep learning-based fault localization with contextual information*. https://doi.org/10.1587/transinf.2017EDL8143
-* Zhang, Z., Lei, Y., Mao, X. G., et al. (2019). *CNN-FL: an effective approach for localizing faults using convolutional neural networks*.https://doi.org/10.1109/SANER.2019.8668002
-* Zhang, Z., Lei, Y., Mao, X., et al. (2023). *Context-aware neural fault localization*. https://doi.org/10.1109/TSE.2023.3279125
-* Yu, J., Lei, Y., Xie, H., et al. (2022). *Context-based cluster fault localization*. https://doi.org/10.1145/3524610.3527891
-* Lei, Y., Wen, T., Xie, H., et al. (2023). *Mitigating the effect of class imbalance in fault localization using context-aware generative adversarial network*. 
-https://doi.org/10.48550/arXiv.2303.06644
-* Zhang, Z., Lei, Y., Su, T., et al. (2023). *Influential global and local contexts guided trace representation for fault localization*.https://doi.org/10.1145/3576043
+- Zhang, Z., Lei, Y., Tan, Q., Mao, X., & Zeng, P. (2017). Deep learning-based fault localization with contextual information. IEICE Transactions on Information and Systems, E100.D(12), 3027–3030. https://doi.org/10.1587/transinf.2017EDL8143
+
+
+- Zhang, Z., Lei, Y., Mao, X., & Zeng, P. (2019). CNN-FL: An effective approach for localizing faults using convolutional neural networks. 2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER), 445–455. IEEE. https://doi.org/10.1109/SANER.2019.8668002
+
+
+- Zhang, Z., Lei, Y., Mao, X., & Zeng, P. (2023). Context-aware neural fault localization. IEEE Transactions on Software Engineering, 49(7), 3862–3883. https://doi.org/10.1109/TSE.2023.3279125
+
+
+- Yu, J., Lei, Y., Xie, H., & Mao, X. (2022). Context-based cluster fault localization. Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension, 184–195. Association for Computing Machinery. https://doi.org/10.1145/3524610.3527891
+
+- Lei, Y., Wen, T., Xie, H., & Mao, X. (2023). Mitigating the effect of class imbalance in fault localization using context-aware generative adversarial network. arXiv. https://doi.org/10.48550/arXiv.2303.06644
+
+- Zhang, Z., Lei, Y., Su, T., Tan, Q., & Mao, X. (2024). Influential global and local contexts guided trace representation for fault localization. ACM Transactions on Software Engineering and Methodology, 33(2), 1–33. https://doi.org/10.1145/3576043

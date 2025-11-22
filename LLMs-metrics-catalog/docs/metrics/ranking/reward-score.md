@@ -48,11 +48,10 @@ The purpose of the Reward Score is to provide a "concrete, measurable insight"  
 ***
 
 ## Key References
-* Wang, L., Ma, C., Feng, X. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi.org/10.1007/s11704-024-40231-1
+* Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., Zhang, J., Chen, Z., Tang, J., Chen, X., Lin, Y., Zhao, W. X., Wei, Z., & Wen, J.-R. (2024). A survey on large language model based autonomous agents. Frontiers of Computer Science, 18(6), 186345. https://doi.org/10.1007/s11704-024-40231-1
 
+* Zhang, H., Du, W., Shan, J., Zhou, Q., Du, Y., Tenenbaum, J. B., Shu, T., & Gan, C. (2024). Building cooperative embodied agents modularly with large language models. arXiv. https://doi.org/10.48550/arXiv.2307.02485
 
-* Zhang, H., Du, W., Shan, J., Zhou, Q., Du, Y., Tenenbaum, J. B., Shu, T., & Gan, C. (2024). *Building cooperative embodied agents modularly with large language models*. https://doi.org/10.48550/arXiv.2307.02485
-
-* Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K. R., & Cao, Y. (2023). *ReAct: synergizing reasoning and acting in language models*. https://doi.org/10.48550/arXiv.2210.03629
+* Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). ReAct: Synergizing reasoning and acting in language models. arXiv. https://doi.org/10.48550/arXiv.2210.03629
 
 * Mehta, N., Teruel, M., Sanz, P. F., Deng, X., Awadallah, A. H., & Kiseleva, J. (2024). *Improving grounded language understanding in a collaborative environment by interacting with agents through help feedback*.https://doi.org/10.48550/arXiv.2304.10750
