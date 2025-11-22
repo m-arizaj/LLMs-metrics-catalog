@@ -14,6 +14,11 @@ Its primary objective is to offer a unified reference that enables researchers, 
 - Identify gaps, biases, and methodological limitations in current assessment practices.  
 - Support reproducible research by clarifying the conceptual foundations of each metric category.
 
+## Visit the Catalog
+
+You can explore the full interactive version of the catalog at the following link:
+
+- [https://m-arizaj.github.io/LLMs-metrics-catalog/](https://m-arizaj.github.io/LLMs-metrics-catalog/)
 
 ## Repository Structure
 
