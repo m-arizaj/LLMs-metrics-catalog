@@ -3,45 +3,111 @@ id: intro
 title: Introduction
 ---
 
-Welcome to the **LLMs Metrics Catalog**, a structured repository designed to document, classify, and analyze the **evaluation metrics** used to assess **Large Language Models (LLMs)** in **software engineering** tasks.
+# LLMs Metrics Catalog  
+A comprehensive and structured repository for the systematic analysis of evaluation metrics applied to Large Language Models (LLMs) in Software Engineering.
 
-This catalog compiles a wide range of quantitative and qualitative metrics drawn from academic research and industry benchmarks, covering domains such as:
 
-- Code generation (e.g., Pass@k, CodeBLEU, Execution Accuracy)  
-- Test generation and bug fixing (e.g., Non-Trivial Assertion Rate, Timeout Rate)  
-- Documentation and natural language tasks (e.g., BLEU, ROUGE-L, BERTScore)  
-- Human and semantic evaluation (e.g., Subjective Score, Helpfulness, Truthfulness)
+## Overview
 
-Each entry in the catalog includes:
-- A definition of the metric  
-- Its purpose and evaluation dimension (performance, robustness, quality, etc.)  
-- The source paper or benchmark where it was introduced or used  
+The LLMs Metrics Catalog is a research-oriented repository designed to provide a rigorous, organized, and transparent overview of the evaluation metrics used to assess Large Language Models (LLMs) within the domain of software engineering.  
+This catalog consolidates definitions, conceptual explanations, and classification criteria extracted from academic literature, empirical studies, and domain-specific benchmarks.
 
----
+Its primary objective is to offer a unified reference that enables researchers, practitioners, and students to:
 
-### Purpose
+- Understand how LLMs are evaluated in software engineering contexts.  
+- Compare evaluation dimensions across studies.  
+- Identify gaps, biases, and methodological limitations in current assessment practices.  
+- Support reproducible research by clarifying the conceptual foundations of each metric category.
 
-The goal of this catalog is to serve as a centralized reference for researchers and practitioners exploring how LLMs are evaluated in the context of software engineering.  
-It helps identify which metrics dominate current literature, where there are gaps in evaluation coverage, and how new metrics contribute to improving model reliability and interpretability.
 
----
+## Purpose of the Project
 
-### Structure
+The purpose of this project is to establish a centralized, structured, and academically grounded catalog that documents how evaluation metrics are conceptualized, grouped, and applied to LLM-based tasks related to software engineering.  
+Instead of presenting metrics in isolation, the catalog organizes them into coherent conceptual categories that reflect the nature of the evaluation, such as performance, structural quality, semantic fidelity, reasoning, robustness, human judgment, or system-level properties.
 
-The catalog is organized by metric category and evaluation goal, allowing users to easily navigate:
-- Accuracy and Performance  
-- Semantic and Structural Quality  
-- Robustness and Stability  
-- Human and Subjective Evaluation  
-- Novelty and Memorization  
+Ultimately, this work seeks to:
 
-Each section includes definitions, examples, and contextual explanations to promote understanding and comparison across metrics.
+- Facilitate metric selection for academic and industrial studies.  
+- Promote methodological clarity for future research.  
+- Provide a reproducible and extensible framework for analyzing metric usage trends.  
+- Enable comparisons between evaluation paradigms used across different SE tasks (code generation, debugging, testing, summarization, etc.).
 
----
 
-### Research Context
+## Classification Framework
 
-This catalog was developed as part of a research project on LLM evaluation in software engineering, aiming to provide a reproducible and transparent reference for metric selection in academic and applied studies.
+The catalog is structured into distinct folders, each representing a high-level evaluation dimension rather than individual metrics.  
+These categories reflect what aspect of model behavior is being evaluated, ensuring conceptual clarity and usability.
 
----
+A brief overview of each folder’s nature and conceptual scope is as follows:
+
+1. **Core Accuracy & Overlap Metrics**  
+   Focuses on direct comparisons between model outputs and reference solutions, emphasizing correctness and matching behavior.
+
+2. **Statistical & Correlation Metrics**  
+   Includes metrics that analyze statistical relationships, score consistency, or agreement between model outputs and human or model-based benchmarks.
+
+3. **Code Quality & Structural Metrics**  
+   Captures structural, stylistic, or syntactic properties of generated code, emphasizing maintainability, complexity, and structural coherence.
+
+4. **Functional & Test-based Evaluation**  
+   Measures behavioral correctness through execution, test-case validation, or functional performance.
+
+5. **Human & Subjective Evaluation**  
+   Covers assessments relying on human judgment, including perceived quality, helpfulness, fairness, readability, or relevance.
+
+6. **Generative & Distribution Metrics**  
+   Examines alignment between generated outputs and target data distributions, including coverage, diversity, and realism of generative behavior.
+
+7. **Logical Reasoning & Verification**  
+   Focuses on model reasoning ability, formal verification, logical consistency, and equivalence under transformations.
+
+8. **Robustness, Security & Reliability**  
+   Evaluates stability under perturbations, vulnerability to attacks, security properties, and failure modes.
+
+9. **Efficiency & Resource Usage**  
+   Addresses runtime performance, memory consumption, latency, and overall computational efficiency.
+
+10. **Architectural & System-level Metrics**  
+   Investigates system-wide characteristics, architectural behavior, and high-level performance across integrated SE workflows.
+
+11. **Creativity, Diversity & Novelty**  
+   Encompasses originality, diversity, innovation, and the degree to which outputs differ meaningfully from existing data.
+
+12. **Ranking, Reward & Optimization**  
+   Includes preference modeling, evaluation-by-ranking, reinforcement-derived scoring, and optimization-based assessments.
+
+13. **Semantic, Coherence & Hallucination Metrics**  
+   Focuses on semantic fidelity, truthfulness, factual grounding, consistency, and the presence or absence of hallucinations.
+
+Each folder contains conceptual explanations, definitions, contextual usage notes, and references to the original sources where the metrics in that category were proposed or applied.
+
+
+## License
+
+This project and its written content are licensed under the  
+**Creative Commons Attribution 4.0 International License (CC BY 4.0)**.  
+This allows sharing and adaptation for any purpose, including commercial use, provided appropriate credit is given.
+
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">
+  <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+</a>
+
+You can view the full license details at:  
+[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+
+
+## How to Cite This Project
+
+Please cite this project if you use it in academic work, research, or documentation.  
+A suggested citation structure is provided below; you may adapt it to your preferred citation style (APA, IEEE, MLA, ACM, etc.):
+
+- **Ariza Jimenez, M. A., Obando Novoa, J. D., Linares Vasquez, M** (2025). *Analysis and Classification of Evaluation Metrics for LLMs Applied to Software Engineering*. GitHub Repository. Available at: https://github.com/m-arizaj/LLMs-metrics-catalog
+
+
+## How to Contribute
+
+Contributions to this catalog are welcome.  
+For detailed contribution guidelines, please refer to the repository’s README:
+- [https://github.com/m-arizaj/LLMs-metrics-catalog/blob/main/README.md](https://github.com/m-arizaj/LLMs-metrics-catalog/blob/main/README.md)
+
 
