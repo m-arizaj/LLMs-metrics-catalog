@@ -23,10 +23,10 @@ You can explore the full interactive version of the catalog at the following lin
 ## Repository Structure
 
 Metrics are organized into folders representing high-level evaluation dimensions (e.g., accuracy, structural quality, robustness, reasoning, human evaluation, etc.).  
-Each folder contains conceptual explanations and the documentation for the metrics belonging to that category.
+In the introduction page, there are conceptual explanations for the metrics belonging to that category.
 
 If you wish to add a metric that does not fit into any existing folder, you may create a new category.  
-Make sure the new folder is included in the introduction's folder section describing the conceptual nature of the new evaluation dimension.  
+Make sure the new folder is included in the classification framework section of the introduction page, where the conceptual nature of the new evaluation dimension is described.  
 
 
 ## How to Contribute
@@ -118,7 +118,7 @@ Review feedback may be requested before merging.
 
 ### 7. Adding New Metrics or New Categories
 If the metric fits within the description of an existing folder, create your `.md` file inside the appropriate folder. 
-If not, then create a folder and inside it create the metric file. Make sure to explain the addition of the folder in the Pull Request. 
+If not, then create a folder and inside it create the metric file.
 
 
 ## License
