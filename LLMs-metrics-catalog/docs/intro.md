@@ -3,7 +3,7 @@ id: intro
 title: Introduction
 ---
 
-# LLMs Metrics Catalog  
+# LLMs Metrics Catalog for Software Engineering 
 A comprehensive and structured repository for the systematic analysis of evaluation metrics applied to Large Language Models (LLMs) in Software Engineering.
 
 
@@ -85,15 +85,16 @@ Each folder contains conceptual explanations, definitions, contextual usage note
 ## License
 
 This project and its written content are licensed under the  
-**Creative Commons Attribution 4.0 International License (CC BY 4.0)**.  
-This allows sharing and adaptation for any purpose, including commercial use, provided appropriate credit is given.
+**Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)**.  
+This license allows sharing the material as long as proper credit is given,  
+but **does not permit commercial use** nor the creation of **derivative works**.
 
-<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">
-  <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="license">
+  <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
 </a>
 
 You can view the full license details at:  
-[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+[https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
 ## How to Cite This Project
@@ -101,7 +102,7 @@ You can view the full license details at:
 Please cite this project if you use it in academic work, research, or documentation.  
 A suggested citation structure is provided below; you may adapt it to your preferred citation style (APA, IEEE, MLA, ACM, etc.):
 
-- **Ariza Jimenez, M. A., Obando Novoa, J. D., Linares Vasquez, M** (2025). *Analysis and Classification of Evaluation Metrics for LLMs Applied to Software Engineering*. GitHub Repository. Available at: https://github.com/m-arizaj/LLMs-metrics-catalog
+- **Ariza-Jimenez, M. A., Obando-Novoa, J. D., Linares-Vásquez, M** (2025). *Analysis and Classification of Evaluation Metrics for LLMs Applied to Software Engineering*. Universidad de Los Andes. GitHub Repository. Available at: https://github.com/m-arizaj/LLMs-metrics-catalog
 
 
 ## How to Contribute
