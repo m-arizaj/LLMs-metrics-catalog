@@ -13,7 +13,7 @@ It is not an automated metric but rather a rubric for human annotation, where ex
 
 ***
 
-## Formula (GrC:\Users\Daniel\Downloads\VSC\Metricas\12.pdfading Scale)
+## Grading Scale
 
 The metric is defined by the following 5-point scale, as detailed in the `ICE-Score` paper's appendix:
 

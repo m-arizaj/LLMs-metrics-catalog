@@ -5,30 +5,30 @@ sidebar_label: Sentiment Polarity
 ---
 
 ## Definition
-**Sentiment Polarity Shift** no es una métrica única, sino una categoría de evaluación diseñada para medir el sesgo social (Social Bias). Cuantifica cómo la polaridad del sentimiento (positiva, negativa o neutra) de la respuesta de un LLM cambia cuando se condiciona a diferentes grupos sociales (por ejemplo, por género, raza o religión).
+**Sentiment Polarity Shift** is not a single metric, but an evaluation category designed to measure Social Bias. It quantifies how the sentiment polarity (positive, negative, or neutral) of an LLM's response changes when conditioned on different social groups (e.g., by gender, race, or religion).
 
-Este enfoque evalúa si el modelo asocia a ciertos grupos con connotaciones sociales más negativas o positivas. Las métricas específicas que implementan esta idea incluyen:
+This approach evaluates whether the model associates certain groups with more negative or positive social connotations. Specific metrics that implement this concept include:
 
-* **Regard Score**: Mide la "polaridad hacia... grupos sociales" o la connotación social positiva/negativa.
-* **Counterfactual Sentiment Bias**: Compara las distribuciones de sentimiento de dos frases generadas a partir de prompts contrafácticos (por ejemplo, donde solo se cambia el grupo social).
-* **Score Parity**: Mide la consistencia con la que un modelo genera lenguaje (evaluado por un clasificador de sentimiento) con respecto a un atributo protegido.
+* **Regard Score:** Measures "polarity towards... social groups" or the positive/negative social connotation.
+* **Counterfactual Sentiment Bias:** Compares the sentiment distributions of two sentences generated from counterfactual prompts (e.g., where only the social group is changed).
+* **Score Parity:** Measures the consistency with which a model generates language (evaluated by a sentiment classifier) with respect to a protected attribute.
 
 ***
 
 ## Calculation (General Idea)
-Estas métricas generalmente dependen de un modelo clasificador auxiliar para puntuar el texto generado en busca de sentimiento o toxicidad.
+These metrics generally rely on an auxiliary classifier model to score the generated text for sentiment or toxicity.
 
-1.  **Prompting**: Se proporcionan al LLM prompts que contienen descriptores de grupos sociales. A menudo, estos se presentan en pares contrafácticos (p.ej., "El hombre [Grupo A] era..." vs. "El hombre [Grupo B] era...").
-2.  **Generation**: El LLM genera texto o continuaciones para cada prompt.
-3.  **Classification**: Un clasificador externo (p.ej., un clasificador de sentimiento o toxicidad) puntúa la polaridad de cada texto generado.
-4.  **Comparison**: El "cambio" (shift) se calcula comparando las puntuaciones de sentimiento o las distribuciones entre los diferentes grupos sociales. Por ejemplo, *Counterfactual Sentiment Bias* utiliza la distancia de Wasserstein-1 para medir la diferencia entre las distribuciones de sentimiento resultantes.
+1.  **Prompting:** The LLM is provided with prompts containing descriptors of social groups. These are often presented in counterfactual pairs (e.g., "The [Group A] man was..." vs. "The [Group B] man was...").
+2.  **Generation:** The LLM generates text or continuations for each prompt.
+3.  **Classification:** An external classifier (e.g., a sentiment or toxicity classifier) scores the polarity of each generated text.
+4.  **Comparison:** The "shift" is calculated by comparing the sentiment scores or distributions between the different social groups. For example, *Counterfactual Sentiment Bias* uses the Wasserstein-1 distance to measure the difference between the resulting sentiment distributions.
 
 ***
 
 ## Purpose
-El objetivo principal es cuantificar los sesgos sociales y culturales mediante la identificación de un sentimiento o polaridad dispar en los resultados del modelo asociados con diferentes grupos.
+The main objective is to quantify social and cultural biases by identifying disparate sentiment or polarity in model outputs associated with different groups.
 
-Esto ayuda a detectar daños representacionales como la **estereotipación** (donde un modelo asocia a un grupo con atributos negativos) o la **misma representación** (donde un modelo clasifica incorrectamente declaraciones sobre grupos estigmatizados como negativas).
+This helps detect representational harms such as **stereotyping** (where a model associates a group with negative attributes) or **misrepresentation** (where a model incorrectly classifies statements about stigmatized groups as negative).
 
 ***
 
@@ -36,23 +36,22 @@ Esto ayuda a detectar daños representacionales como la **estereotipación** (do
 * Fairness / Bias Evaluation
 * Social / Cultural Bias
 * Text Generation (Open-Ended)
-* Sentiment Analysis 
+* Sentiment Analysis
 
 ***
 
-
 ## Advantages
-* Mide directamente un daño representacional específico y bien conocido (sentimiento dispar) en el texto generado.
-* Se puede aplicar a modelos de caja negra, ya que solo requiere el texto de salida para ser puntuado por un clasificador externo.
-* Captura sesgos más sutiles que la simple toxicidad, como los estereotipos negativos o las microagresiones.
+* **Measures Specific Harm:** Directly quantifies a specific and well-known representational harm (disparate sentiment) in generated text.
+* **Black-Box Applicable:** Can be applied to black-box models, as it only requires the output text to be scored by an external classifier.
+* **Subtle Bias Detection:** Captures more subtle biases than simple toxicity, such as negative stereotypes or microaggressions.
 
 ***
 
 ## Limitations
-* La métrica es **altamente dependiente del clasificador auxiliar** (p.ej., de sentimiento o toxicidad) utilizado, el cual puede tener sus propios sesgos.
-* Los clasificadores de sentimiento pueden clasificar incorrectamente las declaraciones sobre grupos estigmatizados (p.ej., personas con discapacidades o enfermedades mentales) como negativas, sesgando así la métrica.
-* Los prompts de texto abierto pueden ser ambiguos; el sesgo puede referirse al grupo en el prompt o a un grupo mencionado en la continuación, lo que dificulta la atribución del sesgo.
-* Las elecciones de los parámetros de decodificación (p.ej., temperatura, top-k) pueden cambiar drásticamente el nivel de sesgo medido, lo que lleva a resultados contradictorios.
+* The metric is **highly dependent on the auxiliary classifier** (e.g., sentiment or toxicity) used, which may have its own biases.
+* Sentiment classifiers may incorrectly classify statements about stigmatized groups (e.g., people with disabilities or mental illnesses) as negative, thus skewing the metric.
+* Open-ended text prompts can be ambiguous; bias may refer to the group in the prompt or a group mentioned in the continuation, making bias attribution difficult.
+* Decoding parameter choices (e.g., temperature, top-k) can drastically change the level of measured bias, leading to contradictory results.
 
 ***
 
