@@ -139,8 +139,7 @@ module.exports = {
         'metrics/robustness/performance',
         'metrics/robustness/robustness',
         'metrics/robustness/security-analysis-score',
-
-
+        'metrics/robustness/solution-metrics',
         'metrics/robustness/reliability',
       ],
     },
