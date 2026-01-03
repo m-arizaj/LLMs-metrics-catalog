@@ -78,6 +78,8 @@ $$
 
 ## References
 
-- Anand, A., Chopra, S., & Arora, M. (2025). *Analysis of LLM Code Synthesis in Software Productivity.* *Proceedings of the 2025 International Conference on Computing and Communication Systems (I3CS).* [Paper 18]
-- Qiu, J., Liu, Z., Liu, Z., et al. (2025). *LoCoBench: A Benchmark for Long-Context Large Language Models in Complex Software Engineering.* arXiv preprint arXiv:2509.09614. [Paper 54]
-- Hemberg, E., Moskal, S., & O'Reilly, U.-M. (2024). *Evolving code with a large language model.* *Genetic Programming and Evolvable Machines*, 25(21). https://doi.org/10.1007/s10710-024-09494-2 [Paper 30]
+- Anand, A., Chopra, S., & Arora, M. (2024). Analysis of LLM Code Synthesis in Software Productivity. In Applied Intelligence and Computing. Soft Computing Research Society. https://doi.org/10.56155/978-81-955020-9-7-24 
+
+- Qiu, J., Liu, Z., Liu, Z., Murthy, R., Zhang, J., Chen, H., Wang, S., Zhu, M., Yang, L., Tan, J., Cen, Z., Qian, C., Heinecke, S., Yao, W., Savarese, S., Xiong, C., & Wang, H. (2025). LoCoBench: A Benchmark for Long-Context Large Language Models in Complex Software Engineering (Version 1). arXiv. https://doi.org/10.48550/arXiv.2509.09614 
+
+- Hemberg, E., Moskal, S., & O'Reilly, U.-M. (2024). *Evolving code with a large language model.* *Genetic Programming and Evolvable Machines*, 25(21). https://doi.org/10.1007/s10710-024-09494-2 
